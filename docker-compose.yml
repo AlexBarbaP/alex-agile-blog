@@ -1,10 +1,29 @@
 version: '3'
 
+services:
+  apache:
+    build:
+      dockerfile: ./docker/apache/Dockerfile
+      context: .
+    environment:
+      - APACHE_RUN_USER=www-data
+      - APACHE_RUN_GROUP=www-data
+      - APACHE_SERVER_ADMIN=alexagile@alexagile.com
+    networks:
+      myapp-network:
+        aliases:
+          - apache
+        ipv4_address: 172.28.0.10
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - .:/var/www/public
+
 networks:
   myapp-network:
-    driver: default
+    driver: bridge
     ipam:
       driver: default
       config:
         - subnet: 172.28.0.0/16
-

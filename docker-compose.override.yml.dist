@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  apache:
+    build:
+      args:
+        - APP_NAME=myapp
+        - APP_DOC_ROOT=/var/www/public
+    environment:
+      - APP_DOMAIN=myapp.local
+      - APACHE_SERVERNAME=myapp-server

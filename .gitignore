@@ -22,3 +22,6 @@
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+# Docker
+docker-compose.override.yml
