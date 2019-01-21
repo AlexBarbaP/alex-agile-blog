@@ -9,4 +9,10 @@ services:
         - APP_NAME=myapp
     environment:
       - APP_DOMAIN=myapp.local
+      - PHP_PROXY_ALIAS=php
+      - PHP_PROXY_PORT=9000
       - APACHE_SERVERNAME=myapp-server
+  php:
+    build:
+      args:
+      - WORKDIR=/var/www/public

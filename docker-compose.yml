@@ -20,6 +20,20 @@ services:
     volumes:
       - .:/var/www/public
 
+  php:
+    build:
+      dockerfile: ./docker/php/Dockerfile
+      context: .
+    expose:
+      - 9000
+    networks:
+      myapp-network:
+        aliases:
+          - php
+        ipv4_address: 172.28.0.20
+    volumes:
+      - .:/var/www/public
+
 networks:
   myapp-network:
     driver: bridge
