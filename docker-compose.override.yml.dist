@@ -12,6 +12,12 @@ services:
       - PHP_PROXY_ALIAS=php
       - PHP_PROXY_PORT=9000
       - APACHE_SERVERNAME=myapp-server
+  mysql:
+    environment:
+      - MYSQL_ROOT_PASSWORD=root-passwd
+      - MYSQL_DATABASE=db-name
+      - MYSQL_USER=db-user
+      - MYSQL_PASSWORD=db-user-passwd
   php:
     build:
       args:

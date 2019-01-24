@@ -20,6 +20,19 @@ services:
     volumes:
       - .:/var/www/public
 
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    networks:
+      myapp-network:
+        aliases:
+          - mysql
+        ipv4_address: 172.28.0.20
+    volumes:
+      - myapp_mysql-data:/var/lib/mysql
+
   php:
     build:
       dockerfile: ./docker/php/Dockerfile
@@ -40,3 +53,7 @@ networks:
       driver: default
       config:
         - subnet: 172.28.0.0/16
+
+volumes:
+  myapp_mysql-data:
+    driver: local
