@@ -30,7 +30,6 @@ services:
       myapp-network:
         aliases:
           - php
-        ipv4_address: 172.28.0.20
     volumes:
       - .:/var/www/public
 

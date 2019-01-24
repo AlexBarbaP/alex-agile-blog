@@ -25,3 +25,6 @@
 
 # Docker
 docker-compose.override.yml
+
+# Php
+/vendor/
