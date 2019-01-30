@@ -1,10 +1,10 @@
 FROM php:7.2-fpm
 
+MAINTAINER Alex Agile <alexagile@alexagile.com>
+
 ARG WORKDIR
 
 ENV WORKDIR $WORKDIR
-
-MAINTAINER Alex Agile <alexagile@alexagile.com>
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \

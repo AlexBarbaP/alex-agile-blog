@@ -1,5 +1,7 @@
 FROM httpd:2.4
 
+MAINTAINER Alex Agile <alexagile@alexagile.com>
+
 ARG APP_DOC_ROOT
 ARG APP_ENV
 ARG APP_NAME

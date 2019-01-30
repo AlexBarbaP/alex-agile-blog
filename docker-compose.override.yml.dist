@@ -6,12 +6,12 @@ services:
       args:
         - APP_DOC_ROOT=/var/www/public
         - APP_ENV=dev #dev|ci|prod
-        - APP_NAME=myapp
+        - APP_NAME=growonic
     environment:
-      - APP_DOMAIN=myapp.local
+      - APP_DOMAIN=growonic.local
       - PHP_PROXY_ALIAS=php
       - PHP_PROXY_PORT=9000
-      - APACHE_SERVERNAME=myapp-server
+      - APACHE_SERVERNAME=growonic-server
   mysql:
     environment:
       - MYSQL_ROOT_PASSWORD=root-passwd
