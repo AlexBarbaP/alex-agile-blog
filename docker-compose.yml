@@ -8,7 +8,6 @@ services:
     environment:
       - APACHE_RUN_USER=www-data
       - APACHE_RUN_GROUP=www-data
-      - APACHE_SERVER_ADMIN=alexagile@alexagile.com
     networks:
       growonic-network:
         aliases:
@@ -18,7 +17,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - .:/var/www/public
+      - .:/var/www
 
   mysql:
     container_name: mysql
@@ -44,7 +43,7 @@ services:
         aliases:
           - php
     volumes:
-      - .:/var/www/public
+      - .:/var/www
 
 networks:
   growonic-network:

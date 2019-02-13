@@ -65,9 +65,16 @@
     
     docker-compose up -d
         
+##### 5. Setup Symfony parameters:
+
+  - Copy the default .env file to a local and test environment ones:
+  
+        cp ./.env ./.env.local
+        cp ./.env ./.env.test
+
 ##### 4. Install the composer dependencies:
 
-    docker-compose run php composer install
+    docker-compose exec php composer install
         
 ## Run the webapp:
 

@@ -12,6 +12,7 @@ services:
       - PHP_PROXY_ALIAS=php
       - PHP_PROXY_PORT=9000
       - APACHE_SERVERNAME=growonic-server
+      - APACHE_SERVER_ADMIN=info@example.com
   mysql:
     environment:
       - MYSQL_ROOT_PASSWORD=root-passwd
@@ -21,4 +22,4 @@ services:
   php:
     build:
       args:
-      - WORKDIR=/var/www/public
+      - WORKDIR=/var/www
