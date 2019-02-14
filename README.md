@@ -76,6 +76,14 @@
 
     docker-compose exec php composer install
         
+##### 5. Modify Symfony generated folders permissions:
+
+    docker-compose exec php chmod -R 777 var/cache var/log
+
+##### 6. Execute tests:
+
+    docker-compose exec php vendor/bin/simple-phpunit 
+        
 ## Run the webapp:
 
 Load [http://localhost](http://localhost) on your browser
