@@ -17,6 +17,9 @@
     "doctrine/common": {
         "version": "v2.10.0"
     },
+    "doctrine/data-fixtures": {
+        "version": "v1.3.1"
+    },
     "doctrine/dbal": {
         "version": "v2.9.2"
     },
@@ -88,6 +91,9 @@
     },
     "league/event": {
         "version": "2.2.0"
+    },
+    "league/tactician": {
+        "version": "v1.0.3"
     },
     "monolog/monolog": {
         "version": "1.24.0"

@@ -16,14 +16,26 @@ doctrine:
             collate: utf8mb4_unicode_ci
 
         url: '%env(resolve:DATABASE_URL)%'
+
+        types:
+            Email:
+                class: Growonic\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail
+                commented: true
+            Password:
+                class: Growonic\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePassword
+                commented: true
+            UserId:
+                class: Growonic\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUserId
+                commented: true
+
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
         mappings:
-            Growonic:
+            User:
                 is_bundle: false
-                type: annotation
-                dir: '%kernel.project_dir%/src'
-                prefix: 'Growonic'
-                alias: Growonic
+                type: xml
+                dir: '%kernel.project_dir%/src/Growonic/Infrastructure/Persistence/Doctrine/User/Mapping'
+                prefix: 'Growonic\Domain\User'
+                alias: User
