@@ -14,25 +14,25 @@ services:
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
-    Growonic\:
-        resource: '../src/Growonic/'
-        exclude: '../src/Growonic/{Kernel.php}'
+    AlexAgile\:
+        resource: '../src/AlexAgile/'
+        exclude: '../src/AlexAgile/{Kernel.php}'
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
-    Growonic\Infrastructure\Symfony\Controller\:
-        resource: '../src/Growonic/Infrastructure/Symfony/Controller'
+    AlexAgile\Infrastructure\Symfony\Controller\:
+        resource: '../src/AlexAgile/Infrastructure/Symfony/Controller'
         tags: ['controller.service_arguments']
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
     # service aliases
-    Growonic\Domain\User\UserRepositoryInterface: '@Growonic\Infrastructure\Persistence\Doctrine\User\UserRepositoryDoctrineAdapter'
+    AlexAgile\Domain\User\UserRepositoryInterface: '@AlexAgile\Infrastructure\Persistence\Doctrine\User\UserRepositoryDoctrineAdapter'
 
     # service factories
     League\Tactician\CommandBus:
-        factory: 'Growonic\Infrastructure\Messaging\CommandBus\Tactician\TacticianCommandBusFactory:create'
+        factory: 'AlexAgile\Infrastructure\Messaging\CommandBus\Tactician\TacticianCommandBusFactory:create'
 
     League\Event\EmitterInterface:
-        factory: 'Growonic\Infrastructure\Messaging\EventBus\League\LeagueEventBusFactory:create'
+        factory: 'AlexAgile\Infrastructure\Messaging\EventBus\League\LeagueEventBusFactory:create'

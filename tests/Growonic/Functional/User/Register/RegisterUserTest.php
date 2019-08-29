@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Growonic\Tests\Functional\User\Register;
+namespace AlexAgile\Tests\Functional\User\Register;
 
-use Growonic\Tests\DoctrineAwareTestTrait;
+use AlexAgile\Tests\DoctrineAwareTestTrait;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class RegisterUserTest extends WebTestCase

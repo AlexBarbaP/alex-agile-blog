@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Growonic\Tests\Unit\Domain\User\Register;
+namespace AlexAgile\Tests\Unit\Domain\User\Register;
 
-use Growonic\Application\User\Register\UserRegisteredEventListener;
-use Growonic\Domain\User\Register\RegisterUserService;
-use Growonic\Domain\User\User;
-use Growonic\Domain\ValueObject\Email;
-use Growonic\Domain\ValueObject\Password;
-use Growonic\Infrastructure\Messaging\EventBus\InMemory\InMemoryEventBus;
-use Growonic\Infrastructure\Persistence\InMemory\User\UserRepositoryInMemoryAdapter;
+use AlexAgile\Application\User\Register\UserRegisteredEventListener;
+use AlexAgile\Domain\User\Register\RegisterUserService;
+use AlexAgile\Domain\User\User;
+use AlexAgile\Domain\ValueObject\Email;
+use AlexAgile\Domain\ValueObject\Password;
+use AlexAgile\Infrastructure\Messaging\EventBus\InMemory\InMemoryEventBus;
+use AlexAgile\Infrastructure\Persistence\InMemory\User\UserRepositoryInMemoryAdapter;
 use League\Event\EmitterInterface;
 use PHPUnit\Framework\TestCase;
 
@@ -62,7 +62,7 @@ class RegisterUserServiceTest extends TestCase
 
     /**
      * @test
-     * @expectedException \Growonic\Domain\User\Register\UserAlreadyExistsException
+     * @expectedException \AlexAgile\Domain\User\Register\UserAlreadyExistsException
      */
     public function registerUser_whenUserAlreadyExists_shouldThrowAnException(): void
     {

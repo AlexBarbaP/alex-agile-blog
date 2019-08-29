@@ -1,6 +1,6 @@
 <?php
 
-use Growonic\Kernel;
+use AlexAgile\Kernel;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
 

@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Growonic\Tests;
+namespace AlexAgile\Tests;
 
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Loader;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
 use Doctrine\ORM\EntityManager;
-use Growonic\Infrastructure\Persistence\Doctrine\DoctrineEntityManagerFactory;
-use Growonic\Tests\Integration\Fixture\User\DoctrineUserFixtureLoader;
+use AlexAgile\Infrastructure\Persistence\Doctrine\DoctrineEntityManagerFactory;
+use AlexAgile\Tests\Integration\Fixture\User\DoctrineUserFixtureLoader;
 
 trait DoctrineAwareTestTrait
 {
@@ -18,7 +18,7 @@ trait DoctrineAwareTestTrait
     protected function setUpEntityManager(): void
     {
         $entityPaths = [
-            __DIR__ . '/../../src/Growonic/Infrastructure/Persistence/Doctrine/User/Mapping' => 'Growonic\Domain\User',
+            __DIR__ . '/../../src/AlexAgile/Infrastructure/Persistence/Doctrine/User/Mapping' => 'AlexAgile\Domain\User',
         ];
 
         $dbParams = [

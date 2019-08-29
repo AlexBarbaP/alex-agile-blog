@@ -6,12 +6,12 @@ services:
       args:
         - APP_DOC_ROOT=/var/www/public
         - APP_ENV=dev #dev|ci|prod
-        - APP_NAME=growonic
+        - APP_NAME=alexagile
     environment:
-      - APP_DOMAIN=growonic.local
+      - APP_DOMAIN=alexagile.local
       - PHP_PROXY_ALIAS=php
       - PHP_PROXY_PORT=9000
-      - APACHE_SERVERNAME=growonic-server
+      - APACHE_SERVERNAME=alexagile-server
       - APACHE_SERVER_ADMIN=info@example.com
   mysql:
     environment:

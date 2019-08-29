@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Growonic\Tests\Integration;
+namespace AlexAgile\Tests\Integration;
 
-use Growonic\Domain\User\Register\RegisterUserService;
-use Growonic\Infrastructure\Messaging\CommandBus\Tactician\TacticianCommandBusFactory;
-use Growonic\Infrastructure\Messaging\EventBus\League\LeagueEventBusFactory;
-use Growonic\Infrastructure\Persistence\Doctrine\User\UserRepositoryDoctrineAdapter;
-use Growonic\Tests\DoctrineAwareTestTrait;
+use AlexAgile\Domain\User\Register\RegisterUserService;
+use AlexAgile\Infrastructure\Messaging\CommandBus\Tactician\TacticianCommandBusFactory;
+use AlexAgile\Infrastructure\Messaging\EventBus\League\LeagueEventBusFactory;
+use AlexAgile\Infrastructure\Persistence\Doctrine\User\UserRepositoryDoctrineAdapter;
+use AlexAgile\Tests\DoctrineAwareTestTrait;
 use League\Event\EmitterInterface;
 use League\Tactician\CommandBus;
 use PHPUnit\Framework\TestCase;

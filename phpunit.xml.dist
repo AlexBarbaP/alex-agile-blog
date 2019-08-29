@@ -9,7 +9,7 @@
 >
 <php>
     <ini name="error_reporting" value="-1" />
-    <env name="KERNEL_CLASS" value="Growonic\Kernel" />
+    <env name="KERNEL_CLASS" value="AlexAgile\Kernel" />
     <env name="SHELL_VERBOSITY" value="-1" />
 
     <!-- define your env variables for the test env here -->

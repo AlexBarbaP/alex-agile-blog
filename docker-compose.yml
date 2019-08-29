@@ -9,7 +9,7 @@ services:
       - APACHE_RUN_USER=www-data
       - APACHE_RUN_GROUP=www-data
     networks:
-      growonic-network:
+      alexagile-network:
         aliases:
           - apache
         ipv4_address: 172.28.0.10
@@ -25,7 +25,7 @@ services:
     ports:
       - 3306:3306
     networks:
-      growonic-network:
+      alexagile-network:
         aliases:
           - mysql
         ipv4_address: 172.28.0.20
@@ -39,14 +39,14 @@ services:
     expose:
       - 9000
     networks:
-      growonic-network:
+      alexagile-network:
         aliases:
           - php
     volumes:
       - .:/var/www
 
 networks:
-  growonic-network:
+  alexagile-network:
     driver: bridge
     ipam:
       driver: default

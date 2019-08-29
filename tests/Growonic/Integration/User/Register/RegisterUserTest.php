@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Growonic\Tests\Integration\User\Register;
+namespace AlexAgile\Tests\Integration\User\Register;
 
-use Growonic\Domain\User\Register\RegisterUserCommand;
-use Growonic\Tests\Integration\IntegrationTestAbstract;
+use AlexAgile\Domain\User\Register\RegisterUserCommand;
+use AlexAgile\Tests\Integration\IntegrationTestAbstract;
 
 class RegisterUserTest extends IntegrationTestAbstract
 {
@@ -26,7 +26,7 @@ class RegisterUserTest extends IntegrationTestAbstract
 
     /**
      * @test
-     * @expectedException \Growonic\Domain\User\Register\UserAlreadyExistsException
+     * @expectedException \AlexAgile\Domain\User\Register\UserAlreadyExistsException
      */
     public function registerUser_whenUserAlreadyExists_shouldThrowAnException(): void
     {

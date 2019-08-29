@@ -1,5 +1,5 @@
 {
-    "name": "myapp/myapp",
+    "name": "alex-agile/alex-agile-blog",
     "description": "Dockerized Apache2 Php and MySQL infrastructure",
     "type": "project",
     "authors": [
@@ -54,12 +54,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Growonic\\": "src/Growonic/"
+            "AlexAgile\\": "src/AlexAgile/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Growonic\\Tests\\": "tests/Growonic/"
+            "AlexAgile\\Tests\\": "tests/AlexAgile/"
         }
     },
     "replace": {

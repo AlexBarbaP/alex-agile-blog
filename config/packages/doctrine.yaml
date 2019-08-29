@@ -19,13 +19,13 @@ doctrine:
 
         types:
             Email:
-                class: Growonic\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail
                 commented: true
             Password:
-                class: Growonic\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePassword
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePassword
                 commented: true
             UserId:
-                class: Growonic\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUserId
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUserId
                 commented: true
 
     orm:
@@ -36,6 +36,6 @@ doctrine:
             User:
                 is_bundle: false
                 type: xml
-                dir: '%kernel.project_dir%/src/Growonic/Infrastructure/Persistence/Doctrine/User/Mapping'
-                prefix: 'Growonic\Domain\User'
+                dir: '%kernel.project_dir%/src/AlexAgile/Infrastructure/Persistence/Doctrine/User/Mapping'
+                prefix: 'AlexAgile\Domain\User'
                 alias: User
