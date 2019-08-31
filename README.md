@@ -65,25 +65,36 @@
     
     docker-compose up -d
         
-##### 5. Setup Symfony parameters:
+##### 4. Setup Symfony parameters:
 
   - Copy the default .env file to a local and test environment ones:
   
         cp ./.env ./.env.local
         cp ./.env ./.env.test
 
-##### 4. Install the composer dependencies:
+##### 5. Install the composer dependencies:
 
     docker-compose exec php composer install
         
-##### 5. Modify Symfony generated folders permissions:
+##### 6. Modify Symfony generated folders permissions:
 
     docker-compose exec php chmod -R 777 var/cache var/log
+    
+##### 7. Using webpack
+    
+    # compile assets once
+    docker-compose exec php yarn encore dev
+    
+    # recompile assets automatically when files change
+    docker-compose exec php yarn encore dev --watch
+    
+    # create a production build
+    docker-compose exec php yarn encore production
 
-##### 6. Execute tests:
+##### 7. Execute tests:
 
     docker-compose exec php vendor/bin/simple-phpunit 
         
-## Run the webapp:
+##### 8. Run the webapp:
 
 Load [http://localhost](http://localhost) on your browser
