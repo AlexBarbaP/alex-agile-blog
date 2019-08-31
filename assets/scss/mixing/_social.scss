@@ -1,0 +1,19 @@
+@mixin socialIcons($margin-left, $margin-top) {
+  margin-left: $margin-left;
+  margin-top: $margin-top;
+
+  .social-icon {
+    display: inline-block;
+    height: 12px;
+    margin-right: 25px;
+    width: 12px;
+  }
+
+  .linkedin {
+    background-image: url('../../images/menu/social/social-icon-linkedin.png');
+  }
+
+  .twitter {
+    background-image: url('../../images/menu/social/social-icon-twitter.png');
+  }
+}

@@ -1,0 +1,751 @@
+/* Desktop */
+html, body {
+  #flex-wrapper {
+    #center-element {
+      #center-flex-wrapper {
+
+        #content {
+          @include flex(0 0 798px);
+          background-color: $white-color;
+          font-family: 'Catamaran', sans-serif;
+
+          .link {
+            @include link ($black-color, $black-color, $blue-experience-right-color, $black-color);
+          }
+
+          .row1-container {
+            display: table;
+            width: 100%;
+
+            .intro-container {
+              background-color: $about-background-green-color;
+              display: table-cell;
+              padding-bottom: 68px;
+              padding-left: 50px;
+              padding-right: 50px;
+              padding-top: 55px;
+              vertical-align: top;
+              width: 50%;
+
+              .title {
+                font-size: 24px;
+                font-weight: 700;
+              }
+
+              .other-info-container {
+                line-height: 1.0em;
+                margin-left: 20px;
+
+                .field {
+                  font-size: 12px;
+                  font-weight: 300;
+                }
+
+                .content {
+                  font-size: 13px;
+                  font-weight: 400;
+                }
+
+                .location {
+                  margin-top: 10px;
+                  margin-bottom: 30px;
+                }
+
+                .block-container {
+                  margin-top: 15px;
+                }
+              }
+            }
+
+            .skills-container {
+              background-color: $about-background-yellow-color;
+              display: table-cell;
+              padding-bottom: 60px;
+              vertical-align: middle;
+              width: 50%;
+
+              .skills-left-container {
+                display: table-cell;
+                position: relative;
+                vertical-align: middle;
+                width: 60px;
+
+                .vertical-text-container {
+                  -moz-transform: rotate(180deg);
+                  -ms-transform: rotate(180deg);
+                  -o-transform: rotate(180deg);
+                  -webkit-transform: rotate(180deg);
+                  font-size: 17px;
+                  font-weight: 700;
+                  margin-left: 20px;
+                  text-transform: uppercase;
+                  transform: rotate(180deg);
+                  white-space: nowrap;
+                  writing-mode: vertical-rl;
+                }
+              }
+
+              .skills-right-container {
+                display: table-cell;
+                padding-right: 30px;
+
+                .skill-container {
+                  display: table;
+                  width: 100%;
+
+                  .skill-title {
+                    display: table-cell;
+                    font-size: 14px;
+                    font-weight: 700;
+                  }
+
+                  .skill-bar {
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 100px;
+
+                    .skill-dots-wrapper {
+                      display: table;
+                      width: 100%;
+
+                      .skill-dot-container {
+                        display: table-cell;
+
+                        .skill-dot {
+                          -moz-border-radius: 4px;
+                          -webkit-border-radius: 4px;
+                          border-radius: 4px;
+                          display: table-cell;
+                          height: 8px;
+                          margin-left: 2px;
+                          width: 8px;
+                        }
+
+                        .coloured {
+                          background-color: $about-background-green-color;
+                        }
+
+                        .gray {
+                          background-color: $gray-skill-dots-color;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .row2-container {
+            display: table;
+            position: relative;
+            width: 100%;
+
+            .row2-left-container {
+              display: table-cell;
+              vertical-align: top;
+              width: 50%;
+
+              .cover-title-container {
+                @include verticalCategories(0, 80px, 25px, $about-background-yellow-color);
+
+                top: -20px;
+                vertical-align: top;
+
+                .line {
+                  margin-bottom: 12px;
+                  margin-right: -1px;
+                }
+
+                .title {
+                  color: $about-background-yellow-color;
+                  font-size: 18px;
+                  font-weight: 700;
+                  text-transform: uppercase;
+                }
+              }
+
+              .cover-text-container {
+                display: table-cell;
+              }
+            }
+
+            .row2-right-container {
+              display: table-cell;
+              vertical-align: top;
+              width: 50%;
+
+              .cover-text-container {
+                padding-bottom: 20px;
+                padding-left: 50px;
+                padding-right: 30px;
+                padding-top: 140px;
+              }
+            }
+
+            .certificates-container {
+              background-color: $white-color;
+              border: 14px solid $about-background-yellow-color;
+              border-top: 0;
+              display: table;
+              position: absolute;
+              top: -68px;
+              left: 50%;
+              width: 50%;
+
+              .certificates-title-container {
+                @include verticalCategories(0, 70px, 20px, $about-background-yellow-color);
+
+                vertical-align: middle;
+
+                .title {
+                  color: $about-background-yellow-color;
+                  font-size: 18px;
+                  font-weight: 700;
+                  text-transform: uppercase;
+                }
+              }
+
+              .certificates-text-container {
+                display: table-cell;
+
+                .certificate-container {
+                  color: $gray-menu-color;
+                  font-size: 13px;
+                  margin-bottom: 25px;
+                  margin-top: 25px;
+
+                  .title {
+                    font-weight: 600;
+                  }
+                  .organization {
+                    font-weight: 400;
+                  }
+                  .date {
+                    font-weight: 400;
+                  }
+                }
+              }
+            }
+
+            .cover-text {
+              color: $gray-menu-color;
+              font-size: 12px;
+              font-weight: 400;
+              padding-right: 25px;
+              padding-bottom: 25px;
+              padding-top: 45px;
+            }
+          }
+
+          .row3-container {
+            div {
+            }
+            display: table;
+            width: 100%;
+
+            .experience-left-container {
+              display: table-cell;
+              padding-top: 42px;
+              vertical-align: top;
+              width: 50%;
+
+              .experience-left-wrapper-container {
+                display: table;
+                width: 100%;
+
+                .experience-title-container {
+                  @include verticalCategories(0, 80px, 25px, $black-color);
+
+                  background-color: $about-background-green-color;
+                  padding-top: 50px;
+                  vertical-align: top;
+
+                  .line {
+                    margin-bottom: 12px;
+                    margin-right: -1px;
+                  }
+
+                  .title {
+                    color: $black-color;
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                  }
+                }
+
+                .experiences-container {
+                  background-color: $about-background-green-color;
+                  display: table-cell;
+                  padding-bottom: 40px;
+                  padding-right: 35px;
+                  padding-top: 15px;
+
+                  .experience-container {
+                    font-size: 12.5px;
+                    font-weight: 400;
+                    line-height: 1.6em;
+                    margin-top: 25px;
+
+                    .title {
+                      font-size: 13px;
+                      font-weight: 700;
+                    }
+
+                    .description {
+                      margin-top: 20px;
+                    }
+                  }
+                }
+              }
+            }
+
+            .experience-right-wrapper {
+              display: table-cell;
+              width: 50%;
+
+              .experience-right-container {
+                background-color: $white-color;
+                border: 14px solid $about-background-green-color;
+                left: -30px;
+                padding-bottom: 30px;
+                padding-left: 60px;
+                padding-top: 5px;
+                position: relative;
+
+                .experience-container {
+                  font-size: 12.5px;
+                  font-weight: 400;
+                  line-height: 1.6em;
+                  margin-top: 35px;
+
+                  .title {
+                    color: $blue-experience-right-color;
+                    font-size: 13px;
+                    font-weight: 700;
+                  }
+
+                  .description {
+                    margin-top: 20px;
+                  }
+                }
+              }
+            }
+          }
+
+          .row4-container {
+            display: table;
+            width: 100%;
+
+            .languages-container {
+              display: table-cell;
+              vertical-align: top;
+              width: 50%;
+
+              .languages-title-container {
+                @include verticalCategories(0, 80px, 25px, $black-color);
+
+                position: relative;
+                top: -60px;
+                vertical-align: top;
+
+                .line {
+                  margin-bottom: 12px;
+                  margin-right: -1px;
+                }
+
+                .title {
+                  color: $black-color;
+                  font-size: 18px;
+                  font-weight: 700;
+                  text-transform: uppercase;
+                }
+              }
+
+              .content-container {
+                display: table-cell;
+                padding-bottom: 40px;
+
+                .language-container {
+                  display: inline-block;
+                  font-size: 12.5px;
+                  font-weight: 400;
+                  line-height: 1.6em;
+                  margin-top: 45px;
+                  width: 45%;
+
+                  .name {
+                    color: $about-background-green-color;
+                    font-size: 13px;
+                    font-weight: 700;
+                  }
+                }
+              }
+            }
+
+            .instruction-wrapper {
+              display: table-cell;
+              width: 50%;
+
+              .instruction-container {
+                background-color: $about-background-yellow-color;
+                font-size: 12.5px;
+                font-weight: 400;
+                margin-left: 14px;
+                padding-bottom: 35px;
+                padding-top: 35px;
+                padding-left: 30px;
+                position: relative;
+                top: -20px;
+                width: 353px;
+
+                .title {
+                  font-size: 13px;
+                  font-weight: 700;
+                  padding-bottom: 10px;
+                  text-transform: uppercase;
+                }
+
+                .sub-title {
+                  font-size: 13px;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large screens */
+@media all and (max-width: 1040px) {
+  html, body {
+    #flex-wrapper {
+      #center-element {
+        #center-flex-wrapper {
+
+          #content {
+            @include flex(1 0 auto);
+
+            .row1-container {
+              display: block;
+
+              .intro-container {
+                display: block;
+                padding-bottom: 45px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 50px;
+                width: 100%;
+
+                .other-info-container {
+                  line-height: 1.0em;
+                  margin-left: 0;
+
+                  .field {
+                    font-size: 14px;
+                  }
+
+                  .content {
+                    font-size: 15px;
+                  }
+                }
+              }
+
+              .skills-container {
+                background-color: $about-background-green-color;
+                display: block;
+                padding-bottom: 50px;
+                padding-left: 20px;
+                padding-right: 20px;
+                width: 100%;
+
+                .skills-left-container {
+                  display: block;
+                  position: static;
+                  width: 100%;
+
+                  .vertical-text-container {
+                    -moz-transform: none;
+                    -ms-transform: none;
+                    -o-transform: none;
+                    -webkit-transform: none;
+                    margin-left: 0;
+                    transform: none;
+                    writing-mode: horizontal-tb;
+                  }
+                }
+
+                .skills-right-container {
+                  display: block;
+                  padding-right: 30px;
+                  padding-top: 15px;
+
+                  .skill-container {
+                    display: block;
+                    padding-bottom: 10px;
+                    width: 100%;
+
+                    .skill-title {
+                      display: block;
+                      font-size: 16px;
+                      font-weight: 700;
+                    }
+
+                    .skill-bar {
+                      display: block;
+                      vertical-align: middle;
+                      width: 130px;
+
+                      .skill-dots-wrapper {
+                        display: table;
+                        width: 100%;
+
+                        .skill-dot-container {
+                          display: table-cell;
+
+                          .skill-dot {
+                            -moz-border-radius: 5px;
+                            -webkit-border-radius: 5px;
+                            border-radius: 5px;
+                            display: table-cell;
+                            height: 10px;
+                            margin-left: 4px;
+                            width: 10px;
+                          }
+
+                          .coloured {
+                            background-color: $about-background-yellow-color;
+                          }
+
+                          .gray {
+                            background-color: $gray-skill-dots-color;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .row2-container {
+              display: block;
+              padding-top: 30px;
+              position: static;
+
+              .row2-left-container {
+                display: block;
+                width: 100%;
+
+                .cover-title-container {
+                  @include horizontalCategories(0, 20px, $about-background-yellow-color);
+
+                  top: 0;
+
+                  .line {
+                    margin-bottom: 5px;
+                    margin-right: 15px;
+                  }
+                }
+
+                .cover-text-container {
+                  display: table-cell;
+                }
+              }
+
+              .row2-right-container {
+                display: block;
+                width: 100%;
+
+                .cover-text-container {
+                  padding: 0;
+                  padding-bottom: 20px;
+                }
+              }
+
+              .certificates-container {
+                border: none;
+                display: block;
+                position: static;
+                left: 0;
+                width: 100%;
+
+                .certificates-title-container {
+                  @include horizontalCategories(0, 20px, $about-background-yellow-color);
+                }
+
+                .certificates-text-container {
+                  display: block;
+                  padding-left: 20px;
+                  padding-right: 20px;
+
+                  .certificate-container {
+                    font-size: 15px;
+                  }
+                }
+              }
+
+              .cover-text {
+                font-size: 14px;
+                padding: 20px;
+                padding-bottom: 0;
+              }
+            }
+
+            .row3-container {
+              display: block;
+
+              .experience-left-container {
+                display: block;
+                padding-top: 10px;
+                width: 100%;
+
+                .experience-left-wrapper-container {
+                  display: block;
+                  width: 100%;
+
+                  .experience-title-container {
+                    @include horizontalCategories(0, 20px, $black-color);
+
+                    padding-top: 30px;
+
+                    .line {
+                      margin-bottom: 5px;
+                      margin-right: 15px;
+                    }
+                  }
+
+                  .experiences-container {
+                    display: block;
+                    padding-bottom: 0;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    padding-top: 0;
+
+                    .experience-container {
+                      font-size: 14.5px;
+                      margin-top: 0;
+                      padding-top: 20px;
+
+                      .title {
+                        font-size: 15px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .experience-right-wrapper {
+                display: block;
+                width: 100%;
+
+                .experience-right-container {
+                  background-color: $about-background-green-color;
+                  border: none;
+                  left: 0;
+                  padding-bottom: 30px;
+                  padding-left: 20px;
+                  padding-right: 20px;
+                  padding-top: 0;
+                  position: static;
+
+                  .experience-container {
+                    font-size: 14.5px;
+                    margin-top: 0;
+                    padding-top: 20px;
+
+                    .title {
+                      color: $black-color;
+                      font-size: 15px;
+                    }
+                  }
+                }
+              }
+            }
+
+            .row4-container {
+              display: block;
+
+              .languages-container {
+                display: block;
+                width: 100%;
+
+                .languages-title-container {
+                  @include horizontalCategories(0, 20px, $black-color);
+
+                  padding-top: 30px;
+                  position: static;
+                  top: 0;
+
+                  .line {
+                    margin-bottom: 5px;
+                    margin-right: 15px;
+                  }
+                }
+
+                .content-container {
+                  display: block;
+                  padding-bottom: 30px;
+                  padding-left: 20px;
+                  padding-right: 20px;
+                  padding-top: 0;
+
+                  .language-container {
+                    display: block;
+                    font-size: 14.5px;
+                    margin-top: 20px;
+                    width: 100%;
+
+                    .name {
+                      font-size: 15px;
+                    }
+                  }
+                }
+              }
+
+              .instruction-wrapper {
+                display: block;
+                width: 100%;
+
+                .instruction-container {
+                  font-size: 14.5px;
+                  margin-left: 0;
+                  position: static;
+                  top: 0;
+                  width: 100%;
+
+                  .title {
+                    font-size: 15px;
+                  }
+
+                  .sub-title {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium screens */
+@media all and (max-width: 600px) {
+  html, body {
+    #flex-wrapper {
+      #center-element {
+        #center-flex-wrapper {
+
+          #content {
+          }
+        }
+      }
+    }
+  }
+}

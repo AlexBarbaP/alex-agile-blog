@@ -1,0 +1,18 @@
+@mixin postQuote($borderColor, $margin-left, $vertical-margin, $font-size) {
+  .post-quote {
+    border-left: 6px solid $borderColor;
+    font-weight: 500;
+    font-size: $font-size;
+    line-height: 1.4;
+    margin-left: $margin-left;
+    margin-bottom: $vertical-margin;
+    margin-top: $vertical-margin;
+    padding-left: 45px;
+  }
+
+  @media all and (max-width: 1040px) {
+    .post-quote {
+      padding-left: 20px;
+    }
+  }
+}

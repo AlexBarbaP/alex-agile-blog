@@ -1,0 +1,15 @@
+<div class="picture-container">
+    <div class="picture" style="background-image: url('{{ picture }}');"></div>
+</div>
+
+<div class="content-container">
+    <div class="title">{{ title }}</div
+    ><div class="date">{{ date }}</div>
+    <div class="content">
+        {% if onReplyTo != '' %}
+            <span class="link referral">@{{ onReplyTo }} </span>
+        {% endif %}
+        {{ content }}
+    </div>
+    <div class="link">{{ link }}</div>
+</div>

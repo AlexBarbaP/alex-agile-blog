@@ -1,0 +1,176 @@
+/* Desktop */
+html, body {
+  #flex-wrapper {
+    #center-element {
+      #center-flex-wrapper {
+
+        #content {
+          @include flex(0 0 798px);
+          background-color: $white-color;
+          font-family: 'Catamaran', sans-serif;
+          margin-left: 242px;
+
+          .post-container {
+            display: table-row;
+
+            .categories {
+              @include verticalCategories(110px, 95px, 55px, $blue-light-bullet-color);
+            }
+
+            .post {
+
+              .link {
+                @include link ($black-color, $black-color, $black-color, $black-color);
+              }
+
+              display: table-cell;
+              padding-top: 55px;
+              vertical-align: top;
+
+              .image {
+                height: 460px;
+                width: 700px;
+              }
+
+              .title {
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 1.2em;
+                margin-top: 20px;
+              }
+
+              .description {
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 1.3em;
+                margin-top: 18px;
+              }
+
+              .info {
+                font-size: 14px;
+                font-weight: 100;
+                margin-top: 24px;
+              }
+            }
+
+            .post-separator {
+              display: none;
+            }
+          }
+
+          .pagination-container {
+            display: table;
+            font-size: 1.15em;
+            font-weight: 300;
+            margin: 70px auto 70px;
+            text-align: center;
+            width: 100%;
+
+            .previous {
+              display: table-cell;
+              padding-right: 30px;
+              text-align: right;
+              vertical-align: middle;
+              width: 49.9%;
+            }
+
+            .separator {
+              background-color: $black-color;
+              display: table-cell;
+              height: 54px;
+              vertical-align: middle;
+              width: 1px;
+            }
+
+            .next {
+              display: table-cell;
+              padding-left: 30px;
+              text-align: left;
+              vertical-align: middle;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large screens */
+@media all and (max-width: 1040px) {
+  html, body {
+    #flex-wrapper {
+      #center-element {
+        #center-flex-wrapper {
+          #content {
+            @include flex(1 0 auto);
+            -webkit-backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            margin-left: 0px;
+            z-index: 20;
+
+            .post-container {
+              display: block;
+
+              .categories {
+                @include horizontalCategories(10px, 20px, $blue-light-bullet-color);
+              }
+
+              .post {
+                display: block;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 0px;
+
+                .image {
+                  height: auto;
+                  width: 100%;
+                }
+
+                .title {
+                  margin-top: 13px;
+                  margin-left: 6px;
+                }
+
+                .description {
+                  margin-top: 18px;
+                  margin-left: 6px;
+                }
+
+                .info {
+                  margin-top: 13px;
+                  margin-left: 6px;
+                }
+              }
+
+              .post-separator {
+                background-color: $gray-menu-text-color;
+                display: block;
+                height: 1px;
+                margin: auto;
+                margin-bottom: 14px;
+                margin-top: 16px;
+                width: 90%;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium screens */
+@media all and (max-width: 600px) {
+  html, body {
+    #flex-wrapper {
+      #center-element {
+        #center-flex-wrapper {
+          #content {
+          }
+        }
+      }
+    }
+  }
+}

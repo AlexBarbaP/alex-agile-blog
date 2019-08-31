@@ -1,0 +1,28 @@
+{% extends 'Layout/BaseLayout.html.twig' %}
+
+{% block body %}
+    <div id="content">
+
+        <div class="row1-container">
+            {% include 'About/Template/Intro.html.twig' %}
+            {% include 'About/Template/Skills.html.twig' %}
+        </div>
+
+        <div class="row2-container">
+            {% include 'About/Template/Cover1.html.twig' %}
+            {% include 'About/Template/Cover2.html.twig' %}
+            {% include 'About/Template/Certificates.html.twig' %}
+        </div>
+
+        <div class="row3-container">
+            {% include 'About/Template/ExperienceLeft.html.twig' %}
+            {% include 'About/Template/ExperienceRight.html.twig' %}
+        </div>
+
+        <div class="row4-container">
+            {% include 'About/Template/Languages.html.twig' %}
+            {% include 'About/Template/Education.html.twig' %}
+        </div>
+
+    </div>
+{% endblock %}

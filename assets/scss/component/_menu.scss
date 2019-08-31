@@ -1,0 +1,113 @@
+/* Desktop */
+html, body {
+  #flex-wrapper {
+    #center-element {
+      #center-flex-wrapper {
+
+        .link {
+          @include link ($white-color, $white-color, $white-color, $white-color);
+        }
+
+        #menu {
+          @include flex(1 0 auto);
+          background-color: $gray-menu-color;
+          height: 100%;
+          position: fixed;
+          width: 242px;
+
+          .logo {
+            background-image: url("../../images/menu/logo/logo.jpg");
+            height: 56px;
+            margin-top: 55px;
+            margin-left: 92px;
+            width: 56px;
+          }
+
+          .title {
+            color: $gray-menu-text-color;
+            font-family: 'Catamaran', sans-serif;
+            font-style: normal;
+            font-size: 22px;
+            font-weight: 900;
+            line-height: 1.2em;
+            margin-top: 20px;
+            margin-left: 74px;
+            text-decoration: none;
+          }
+
+          .social-icons-container {
+            @include socialIcons(58px, 28px);
+          }
+
+          .navigation-container {
+            margin-top: 165px;
+
+            .link-container {
+              margin-top: -5px;
+
+              .bullet {
+                display: inline-block;
+                height: 3px;
+                margin-top: 17px;
+                vertical-align: top;
+                width: 7px;
+              }
+
+              .blue-bullet {
+                background-color: $blue-bullet-color;
+              }
+
+              .green-bullet {
+                background-color: $green-bullet-color;
+              }
+
+              .pink-bullet {
+                background-color: $pink-bullet-color;
+              }
+
+              .purple-bullet {
+                background-color: $purple-bullet-color;
+              }
+
+              .link {
+                @include link ($gray-menu-text-color, $gray-menu-text-color, $gray-dark-menu-text-color, $gray-menu-text-color);
+                display: inline-block;
+                font-family: 'Catamaran', sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 300;
+                margin-left: 46px;
+                vertical-align: top;
+              }
+
+              .dark-link {
+                @include link ($gray-dark-menu-text-color, $gray-dark-menu-text-color, $white-color, $gray-dark-menu-text-color);
+                margin-left: 57px;
+              }
+            }
+
+            .link-separator {
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large screens */
+@media all and (max-width: 1040px) {
+  html, body {
+    #flex-wrapper {
+      #center-element {
+        #center-flex-wrapper {
+
+          #menu {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    {# Site Head #}
+    {{ include('Layout/Head.html.twig') }}
+
+    {# Site Body #}
+    <body>
+
+        {# Global content #}
+        <div id="flex-wrapper">
+
+            {# Blog content #}
+            <div id="center-element">
+                <div id="center-flex-wrapper">
+
+                    {# Desktop menu #}
+                    {{ include('Layout/DesktopMenuLayout.html.twig') }}
+
+                    {# Mobile menu #}
+                    {{ include('Layout/MobileMenuLayout.html.twig') }}
+
+                    {# Content #}
+                    {% block body %}{% endblock %}
+
+                </div>
+            </div>
+
+            {# Left side margin #}
+            <div id="left-element" class="side-element"></div>
+
+            {# Right side margin #}
+            <div id="right-element" class="side-element"></div>
+
+        </div>
+
+    </body>
+
+    {# Site Javascript files #}
+    {{ include('Layout/Javascript.html.twig') }}
+</html>

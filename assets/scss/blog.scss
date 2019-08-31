@@ -1,0 +1,80 @@
+/* TODO embed fonts */
+@import 'mixing/_flex-vendors';
+@import 'mixing/_horizontal-categories';
+@import 'mixing/_vertical-categories';
+@import 'mixing/_social';
+@import 'mixing/_post-quote';
+@import 'mixing/_post-comment-block';
+@import 'mixing/_post-placeholders';
+@import '_colors';
+@import '_globals';
+@import '_content-homepage';
+@import '_content-post';
+@import '_content-about';
+@import 'component/_menu';
+@import 'component/_mobile-menu';
+@import 'component/_mobile-menu-animation';
+
+/* Desktop */
+html, body {
+  height: 100%;
+  margin: 0;
+
+  #flex-wrapper {
+    @include flexbox();
+    @include flex(1);
+    align-items: stretch;
+    flex-direction: row;
+    min-height: 100%;
+
+    #center-element {
+      @include flex(0 0 1040px);
+      flex-direction: row;
+
+      #center-flex-wrapper {
+        @include flexbox();
+      }
+    }
+
+    #left-element {
+      @include order(-1);
+      background-color: $gray-menu-color;
+    }
+
+    .side-element {
+      @include flex(1 0 auto);
+    }
+  }
+}
+
+/* Large screens */
+@media all and (max-width: 1040px) {
+  html, body {
+    #flex-wrapper {
+      #center-element {
+        @include flex(0 0 100%);
+        #center-flex-wrapper {
+          align-items: stretch;
+          flex-direction: column;
+        }
+      }
+      .side-element {
+        @include flex(1 0 0);
+      }
+    }
+  }
+}
+
+/* Medium screens */
+@media all and (max-width: 600px) {
+  html, body {
+    #flex-wrapper {
+      #center-element {
+        #center-flex-wrapper {
+        }
+      }
+      .side-element {
+      }
+    }
+  }
+}

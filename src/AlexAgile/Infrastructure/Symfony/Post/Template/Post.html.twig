@@ -1,0 +1,245 @@
+{% extends 'Layout/BaseLayout.html.twig' %}
+
+{% block body %}
+    <div id="content">
+        <div id="post-content">
+
+            <div class="title-container">
+
+                <div class="categories">
+                    <div class="vertical-text-container">
+                        <span class="category blue">Agile</span>
+                        <span class="category pink">Scrum</span>
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img class="image"
+                         src="{{ asset('build/assets/images/posts/001-inspiring-your-workflow/post-image.jpg') }}">
+
+                    {#{{ include('AlexAgileFrontBundle:Component:Social.html.twig') }}#}
+                </div>
+
+            </div>
+
+            <div class="title">
+                <div class="title-container">
+                    Alex Agile, inspiring your workflow
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div class="item-container">
+                    <div class="icon date"></div>
+                    <div class="text">January 6th, 2019</div>
+                </div>
+                {#<div class="item-container">#}
+                {#<div class="icon comments"></div>#}
+                {#<div class="text">77 comments</div>#}
+                {#</div>#}
+                {#<div class="item-container">#}
+                {#<div class="icon views"></div>#}
+                {#<div class="text">2.056 views</div>#}
+                {#</div>#}
+                {#<div class="item-container">#}
+                {#<div class="icon shared"></div>#}
+                {#<div class="text">50 shares</div>#}
+                {#</div>#}
+            </div>
+
+            <div class="content-container">
+
+                <div class="content-margin"></div>
+
+                <div class="categories">
+                    <div class="vertical-text-container">
+                        <span class="category blue">Agile</span>
+                        <span class="category pink">Scrum</span>
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <div class="text">
+                    I’m Alejandro Barba but I prefer to be called Alex, Alex Agile. I’m a Spanish software engineer even if, right now, I’m based in the Netherlands.
+                    <br><br>
+                    My technical expertise is in Agile frameworks and Web development but my passion is in people and their interactions.
+                    <br><br>
+                    I think that everyone can become a good software expert, it just depends on how hard you try and how much time you decide to invest, but people is a completely different subject, no matter how hard you try, how experienced you are or how much effort you put into it, people will always find ways to surprise you. Every person can be a completely different world, this is why I love it, you can always learn something new.
+                    <br><br>
+                    During my career, I have worked as a developer, sysadmin, software architect, project manager, Scrum master, Agile coach, entrepreneur and, even, I have been a Chief Technical Officer.
+                    <br><br>
+                    After almost a fifteen year career, I have discovered quite a lot about my strengths and limitations.
+                    <br>
+                    I have discovered that I can be a good developer, create high-quality code, design highly scalable architectures and create fault-tolerant systems. But I have also discovered that I can deliver a lot more value collaborating with people, either being helped to accelerate my own work or contributing to creating happier and better performing teams.
+                    <br><br>
+                    This is why I had the idea to write this blog. I wanted to share my Agile experience in order to help other teams to grow and enjoy the same happiness that I have felt in the teams I have been part of.
+                    <br><br>
+                    To be Agile doesn’t only mean to do stand-up meetings every morning, to have retrospectives every other week or to move cards in a Kanban board.
+                    <br><br>
+                    To be Agile is a mindset, the kind of one that empowers individuals to pursue happiness through Agile values and teamwork. If you want to become a good Agilist the first thing you need to learn is to forget about yourself. You don’t matter anymore, your team and your organization should your first priority. You will discover that, if you are part of a happy team and a happy organization, you will be happy too.
+                    <br><br>
+                    The easiest and fastest way to achieve your personal goals will be through your team and organization. Align your goals to the people around you and they will help you to achieve anything. It will be faster and more efficient thanks to the power of synergy. You will discover a whole that is greater than the sum of its parts.
+
+                    {% include 'Layout/Component/PostQuote.html.twig' with {'content': 'Align your goals to the people around you and you will discover the power of synergy, you will discover a whole that is greater than the sum of its parts.'} %}
+
+                    To be Agile, technically speaking, means that your team delivers new functionality every few weeks in an iterative way. Every iteration the team will manage to deliver more complex and perfectly working software. That means efficiency and speed, but it also means quality and learning.
+                    <br>
+                    You shouldn’t expect your team to continuously deliver new software if you weren’t fast, but you shouldn’t expect it as well if the quality of the code wasn’t high.
+                    <br><br>
+                    What happens if you spend a quarter of your time fixing bugs on the previous iteration of code produced and another quarter testing the new code? And talking about quarters I think I’m being very optimist, I have seen worse.
+                    <br><br>
+                    This is why you should expect me one day writing about how to run an efficient planning meeting or retrospective, but another one talking about acceptance testing, domain driven design or automatic branch environments in a dockerized codebase.
+                    <br><br>
+                    Agile is not only the frameworks, Scrum, Kanban, etc. Agile means to be efficient, performant and accurate. A good Agile team is the closest thing I have ever seen to a Formula1 team. Every millisecond counts. You can’t expect to win a race with the best pilot and the worst car but you should neither expect to win with the worst pilot and the best car. Every team member counts.
+                    <br><br>
+                    Patrick Lencioni wrote in his book The Five Dysfunctions of a Team:
+                    <br>
+                    Not finance. Not strategy. Not technology. It is teamwork that remains the ultimate competitive advantage, both because it is so powerful and so rare.
+                    <br><br>
+                    Teamwork is a rare jewel, I have seen maybe one hundred teams during my career but only a couple of them doing real teamwork. What these teams were able to achieve can’t be compared to any other one. These teams were easy to handle, profitable for the organization, motivational for the team members but also something bigger, they were happy and made of happy individuals.
+                    <br><br>
+                    These were the kind of teams you would like to be part of, the ones you would like to have in your company and the ones you would like to help to create. And this is what I want to talk about in this blog. I want to help you to create autonomous hyper-performing teams…
+                    <br><br>
+                    I want to inspire your workflow.
+                    <br><br>
+                    <br><br>
+                </div>
+
+            </div>
+
+            {#<div class="signature-container">#}
+
+            {#<div class="picture-container">#}
+            {#<div class="picture" style="background-image: url('../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg');"></div>#}
+            {#<div class="signature-text-container">#}
+            {#<div class="written-by">Written by</div>#}
+            {#<div class="author">Alejandro Barba</div>#}
+            {#</div>#}
+            {#</div#}
+
+            {#><div class="author-description-container">#}
+            {#<div class="author-description">#}
+            {#Lorem ipsum dolor sit amet.<br>#}
+            {#adipiscing elit dolor sit ametdolor sit amet.<br>#}
+            {#Lorem ipsum dolor sit amet amet.#}
+            {#</div>#}
+            {#<div class="author-links">#}
+            {#Follow Alejandro on#}
+            {#<span class="link">Facebook</span>,#}
+            {#<span class="link">Twitter</span>,#}
+            {#<span class="link">Instagram</span>#}
+            {#</div>#}
+            {#</div>#}
+
+            {#</div>#}
+
+            {#<div class="comments-container">#}
+
+            {#<div class="title">Comments</div>#}
+
+            {#<div class="comment-container">#}
+
+            {#<div class="comment-block">#}
+            {#{% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with {#}
+            {#'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
+            {#'title': 'pineipol',#}
+            {#'date': '2 hours ago',#}
+            {#'content': 'Enhorabuena por tu blog, Alejandro!! Me ha encantado toda la serie sobre Scrum. ¿Cuando podremos empezar a ver estas cosas aplicadas en algún proyecto?',#}
+            {#'link': 'reply',#}
+            {#'onReplyTo': ''#}
+            {#} %}#}
+            {#</div>#}
+
+            {#<div class="comment-replay-block">#}
+            {#{% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with {#}
+            {#'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
+            {#'title': 'Alejandro Barba',#}
+            {#'date': '3 hours ago',#}
+            {#'content': 'Hola Pineipol, la próxima serie de posts, que será más corta que ésta, tratará sobre cómo montar un servidor completo en Amazon Web Services, paso previo a empezar con nuestro primer proyecto Agile. Paciencia, ya mismo empezamos!!',#}
+            {#'link': 'reply',#}
+            {#'onReplyTo': 'pineipol'#}
+            {#} %}#}
+            {#</div>#}
+
+            {#<div class="comment-replay-block">#}
+            {#{% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with {#}
+            {#'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
+            {#'title': 'Alejandro Barba',#}
+            {#'date': '3 hours ago',#}
+            {#'content': 'Hola Pineipol, la próxima serie de posts, que será más corta que ésta, tratará sobre cómo montar un servidor completo en Amazon Web Services, paso previo a empezar con nuestro primer proyecto Agile. Paciencia, ya mismo empezamos!!',#}
+            {#'link': 'reply',#}
+            {#'onReplyTo': 'pineipol'#}
+            {#} %}#}
+            {#</div>#}
+
+            {#<div class="comment-block">#}
+            {#{% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with {#}
+            {#'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
+            {#'title': 'pineipol',#}
+            {#'date': '2 hours ago',#}
+            {#'content': 'Enhorabuena por tu blog, Alejandro!! Me ha encantado toda la serie sobre Scrum. ¿Cuando podremos empezar a ver estas cosas aplicadas en algún proyecto?',#}
+            {#'link': 'reply',#}
+            {#'onReplyTo': ''#}
+            {#} %}#}
+            {#</div>#}
+
+            {#</div>#}
+
+            {#<div class="new-comment-container">#}
+
+            {#<form method="post" class="comment-form">#}
+            {#<div class="picture-container">#}
+            {#<div class="picture-input" style="background-image: url('');"></div>#}
+            {#</div>#}
+
+            {#<div class="content-container">#}
+
+            {#<div class="name-input-container">#}
+            {#<input name="name-input" class="input-class input-text" placeholder="Your name">#}
+            {#</div>#}
+
+            {#<div class="email-input-container">#}
+            {#<input name="email-input" class="input-class input-text" placeholder="Your email">#}
+            {#</div>#}
+
+            {#<div class="comment-input-container">#}
+            {#<textarea name="comment-input" class="input-class input-textarea" placeholder="Your comment"></textarea>#}
+            {#</div>#}
+
+            {#</div>#}
+
+            {#<div class="send-button-container">#}
+            {#<input type="submit" value="send" class="button">#}
+            {#</div>#}
+            {#</form>#}
+            {#</div>#}
+
+            {#</div>#}
+
+            {#<div class="related-container">#}
+
+            {#<div class="title-container">#}
+            {#<div class="title">#}
+            {#Read more#}
+            {#</div>#}
+            {#<div class="line"></div>#}
+            {#</div>#}
+
+            {#<div class="related-posts-container">#}
+            {#<div class="linked-post-left">#}
+            {#Eventos de Scrum. Reuniones de Grooming o refinamiento del Backlog.#}
+            {#</div>#}
+            {#<div class="linked-post-center">#}
+            {#Eventos de Scrum. Reuniones de Grooming o refinamiento del Backlog.#}
+            {#</div>#}
+            {#<div class="linked-post-right">#}
+            {#Eventos de Scrum. Reuniones de Grooming o refinamiento del Backlog.#}
+            {#</div>#}
+            {#</div>#}
+
+            {#</div>#}
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+<div class="skill-dots-wrapper">
+    {% for i in 1..coloured if coloured > 0 %}
+        <div class="skill-dot-container">
+            <div class="skill-dot coloured"></div>
+        </div>
+    {% endfor %}
+    {% for i in 1..gray if gray > 0 %}
+        <div class="skill-dot-container">
+            <div class="skill-dot gray"></div>
+        </div>
+    {% endfor %}
+</div>

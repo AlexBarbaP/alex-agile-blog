@@ -1,0 +1,54 @@
+@mixin horizontalCategories($padding-bottom, $margin-left, $line-color) {
+  display: block;
+  padding-bottom: $padding-bottom;
+  position: relative;
+  vertical-align: bottom;
+  width: 100%;
+
+  .vertical-text-container {
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    -webkit-transform: none;
+    margin-left: $margin-left;
+    margin-top: 10px;
+    transform: none;
+    white-space: nowrap;
+    writing-mode: horizontal-tb;
+  }
+
+  .category {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.0em;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 8px;
+  }
+
+  .purple {
+    color: $purple-bullet-color;
+  }
+
+  .green {
+    color: $green-bullet-color;
+  }
+
+  .pink {
+    color: $pink-bullet-color;
+  }
+
+  .blue {
+    color: $blue-light-bullet-color;
+  }
+
+  .line {
+    background-color: $line-color;
+    display: inline-block;
+    height: 2px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    margin-top: 6px;
+    width: 47px;
+  }
+}

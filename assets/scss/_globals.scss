@@ -1,0 +1,33 @@
+/* Desktop */
+#center-element {
+  div {
+    box-sizing: border-box;
+    border: 0px dotted $red-color;
+  }
+}
+
+@mixin link ($link, $visited, $hover, $active) {
+  & {
+    color: $link;
+    text-decoration: none;
+    &:visited {
+      color: $visited;
+    }
+    &:hover {
+      color: $hover;
+    }
+    &:active, &:focus {
+      color: $active;
+    }
+  }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+
+}
+
+/* Medium screens */
+@media all and (min-width: 600px) {
+
+}

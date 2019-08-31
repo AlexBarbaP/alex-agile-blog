@@ -1,0 +1,50 @@
+@mixin postPlaceholders() {
+  input::-webkit-input-placeholder {
+    color: $gray-dark-content-color !important;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 0.95em;
+    font-weight: 700;
+  }
+  input:-moz-placeholder {
+    color: $gray-dark-content-color !important;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 0.95em;
+    font-weight: 700;
+  }
+  input::-moz-placeholder {
+    color: $gray-dark-content-color !important;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 0.95em;
+    font-weight: 700;
+  }
+  input:-ms-input-placeholder {
+    color: $gray-dark-content-color !important;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 0.95em;
+    font-weight: 700;
+  }
+  textarea::-webkit-input-placeholder {
+    color: $gray-dark-menu-text-color !important;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.0em;
+    font-weight: 300;
+  }
+  textarea:-moz-placeholder {
+    color: $gray-dark-menu-text-color !important;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.0em;
+    font-weight: 300;
+  }
+  textarea::-moz-placeholder {
+    color: $gray-dark-menu-text-color !important;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.0em;
+    font-weight: 300;
+  }
+  textarea:-ms-input-placeholder {
+    color: $gray-dark-menu-text-color !important;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.0em;
+    font-weight: 300;
+  }
+}

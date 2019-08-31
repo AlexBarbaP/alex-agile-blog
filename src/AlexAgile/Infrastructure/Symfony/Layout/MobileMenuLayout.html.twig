@@ -1,0 +1,19 @@
+<header id="mobile-menu">
+    <div id="toggle-menu-container">
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="title-container">
+        <a href="{{ path('home') }}" class="link">
+            <div class="logo"></div>
+            <div class="title">Alex Agile</div>
+        </a>
+    </div>
+
+    <div id="mobile-menu-wrapper">
+        {{ render(controller('AlexAgile\\Infrastructure\\Symfony\\Menu\\MenuController')) }}
+
+        {#{{ include('AlexAgileFrontBundle:Component:Social.html.twig') }}#}
+    </div>
+</header>

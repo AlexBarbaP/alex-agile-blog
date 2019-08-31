@@ -1,0 +1,60 @@
+@mixin postCommentBlock() {
+  .picture-container {
+    display: table-cell;
+    vertical-align: top;
+    width: 100px;
+
+    .picture {
+      background-size: 100% 100%;
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  .content-container {
+    display: table-cell;
+    padding: 0px;
+    vertical-align: top;
+
+    .title {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.7em;
+      font-weight: 700;
+      vertical-align: top;
+      width: 70%;
+    }
+    .date {
+      text-align: right;
+      color: $gray-disabled-text-color;
+      display: inline-block;
+      font-size: 0.7em;
+      font-weight: 400;
+      vertical-align: top;
+      width: 30%;
+    }
+    .content {
+      margin-top: 5px;
+      font-size: 0.8em;
+      font-weight: 400;
+
+    }
+    .link {
+      color: $blue-referral-color;
+      font-size: 0.7em;
+      font-weight: 400;
+      margin-top: 5px;
+    }
+
+    .referral {
+      font-size: 1.0em;
+      text-transform: uppercase;
+    }
+  }
+
+  @media all and (max-width: 1040px) {
+    .picture-container {
+      width: 65px;
+    }
+  }
+}
