@@ -18,6 +18,30 @@ doctrine:
         url: '%env(resolve:DATABASE_URL)%'
 
         types:
+            CategoryId:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineCategoryId
+                commented: true
+            Color:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineColor
+                commented: true
+            Content:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineContent
+                commented: true
+            ImageUrl:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineImageUrl
+                commented: true
+            Order:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineOrder
+                commented: true
+            PostId:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePostId
+                commented: true
+            Title:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineTitle
+                commented: true
+            UrlSlug:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUrlSlug
+                commented: true
             Email:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail
                 commented: true
@@ -33,6 +57,18 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
         mappings:
+            Category:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/src/AlexAgile/Infrastructure/Persistence/Doctrine/Category/Mapping'
+                prefix: 'AlexAgile\Domain\Category'
+                alias: Category
+            Post:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/src/AlexAgile/Infrastructure/Persistence/Doctrine/Post/Mapping'
+                prefix: 'AlexAgile\Domain\Post'
+                alias: Post
             User:
                 is_bundle: false
                 type: xml

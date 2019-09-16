@@ -3,9 +3,11 @@ declare(strict_types=1);
 
 namespace AlexAgile\Tests\Integration;
 
+use AlexAgile\Domain\Post\GetPostService;
 use AlexAgile\Domain\User\Register\RegisterUserService;
 use AlexAgile\Infrastructure\Messaging\CommandBus\Tactician\TacticianCommandBusFactory;
 use AlexAgile\Infrastructure\Messaging\EventBus\League\LeagueEventBusFactory;
+use AlexAgile\Infrastructure\Persistence\Doctrine\Post\PostRepositoryDoctrineAdapter;
 use AlexAgile\Infrastructure\Persistence\Doctrine\User\UserRepositoryDoctrineAdapter;
 use AlexAgile\Tests\DoctrineAwareTestTrait;
 use League\Event\EmitterInterface;
@@ -19,8 +21,14 @@ class IntegrationTestAbstract extends TestCase
     /** @var UserRepositoryDoctrineAdapter */
     protected $userRepositoryDoctrineAdapter;
 
+    /** @var PostRepositoryDoctrineAdapter */
+    protected $postRepositoryDoctrineAdapter;
+
     /** @var RegisterUserService */
     protected $registerUserService;
+
+    /** @var GetPostService */
+    protected $getPostService;
 
     /** @var CommandBus */
     protected $commandBus;
@@ -40,10 +48,12 @@ class IntegrationTestAbstract extends TestCase
         $this->fixturesLoader();
 
         $this->userRepositoryDoctrineAdapter = new UserRepositoryDoctrineAdapter($this->entityManager);
+        $this->postRepositoryDoctrineAdapter = new PostRepositoryDoctrineAdapter($this->entityManager);
 
         $this->setupEventBus();
 
         $this->registerUserService = new RegisterUserService($this->userRepositoryDoctrineAdapter, $this->eventBus);
+        $this->getPostService = new GetPostService($this->postRepositoryDoctrineAdapter);
 
         $this->setupCommandBus();
     }
@@ -59,6 +69,7 @@ class IntegrationTestAbstract extends TestCase
     {
         $commandBusFactory = new TacticianCommandBusFactory(
             $this->registerUserService,
+            $this->getPostService,
             $this->eventBus
         );
 

@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace AlexAgile\Infrastructure\Persistence\Doctrine\CustomType;
 
-use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\GuidType;
 use AlexAgile\Domain\ValueObject\Password;
+use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Doctrine\DBAL\Types\StringType;
 
-class DoctrinePassword extends GuidType
+class DoctrinePassword extends StringType
 {
     /**
      * @return string

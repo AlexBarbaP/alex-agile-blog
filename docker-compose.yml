@@ -20,16 +20,20 @@ services:
       - .:/var/www
 
   mysql:
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     container_name: mysql
     image: mysql:5.7
     ports:
       - 3306:3306
+    environment:
+      - MYSQL_TESTING_DATABASE=alexagile-testing
     networks:
       alexagile-network:
         aliases:
           - mysql
         ipv4_address: 172.28.0.20
     volumes:
+      - ./docker/mysql/init/01-databases.sql:/docker-entrypoint-initdb.d/01-databases.sql
       - myapp_mysql-data:/var/lib/mysql
 
   php:

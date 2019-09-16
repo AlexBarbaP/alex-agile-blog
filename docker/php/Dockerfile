@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
     libmemcached-dev \
     libzip-dev \
     sqlite3 \
+    unzip \
     yarn \
     zlib1g-dev
 

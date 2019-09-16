@@ -3,7 +3,10 @@ declare(strict_types=1);
 
 namespace AlexAgile\Infrastructure\Messaging\CommandBus\Tactician;
 
+use AlexAgile\Application\Post\GetPostCommandHandler;
 use AlexAgile\Application\User\Register\RegisterUserCommandHandler;
+use AlexAgile\Domain\Post\GetPostCommand;
+use AlexAgile\Domain\Post\GetPostService;
 use AlexAgile\Domain\User\Register\RegisterUserCommand;
 use AlexAgile\Domain\User\Register\RegisterUserService;
 use League\Event\EmitterInterface;
@@ -23,6 +26,7 @@ final class TacticianCommandBusFactory
 
     public function __construct(
         RegisterUserService $registerUserService,
+        GetPostService $getPostService,
         EmitterInterface $eventBus
     ) {
         $this->eventBus = $eventBus;
@@ -33,9 +37,11 @@ final class TacticianCommandBusFactory
 
         // register commands
         $registerUserCommandHandler = new RegisterUserCommandHandler($registerUserService, $this->eventBus);
+        $getPostCommandHandler = new GetPostCommandHandler($getPostService, $this->eventBus);
 
         $locator = new InMemoryLocator();
         $locator->addHandler($registerUserCommandHandler, RegisterUserCommand::class);
+        $locator->addHandler($getPostCommandHandler, GetPostCommand::class);
 
         $commandHandlerMiddleware = new CommandHandlerMiddleware($nameExtractor, $locator, $inflector);
 

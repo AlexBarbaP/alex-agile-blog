@@ -29,6 +29,7 @@ services:
 
     # service aliases
     AlexAgile\Domain\User\UserRepositoryInterface: '@AlexAgile\Infrastructure\Persistence\Doctrine\User\UserRepositoryDoctrineAdapter'
+    AlexAgile\Domain\Post\PostRepositoryInterface: '@AlexAgile\Infrastructure\Persistence\Doctrine\Post\PostRepositoryDoctrineAdapter'
 
     # service factories
     League\Tactician\CommandBus:

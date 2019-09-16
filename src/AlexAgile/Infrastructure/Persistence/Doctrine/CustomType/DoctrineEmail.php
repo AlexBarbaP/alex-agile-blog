@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace AlexAgile\Infrastructure\Persistence\Doctrine\CustomType;
 
-use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\GuidType;
 use AlexAgile\Domain\ValueObject\Email;
+use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Doctrine\DBAL\Types\StringType;
 
-class DoctrineEmail extends GuidType
+class DoctrineEmail extends StringType
 {
     /**
      * @return string

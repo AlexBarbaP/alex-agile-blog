@@ -3,6 +3,10 @@ declare(strict_types=1);
 
 namespace AlexAgile\Infrastructure\Symfony\Post;
 
+use AlexAgile\Domain\Post\GetPostCommand;
+use AlexAgile\Domain\Post\Post;
+use AlexAgile\Domain\Post\PostNotFoundException;
+use League\Tactician\CommandBus;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,30 +15,35 @@ use Symfony\Component\Routing\Annotation\Route;
 class PostController extends AbstractController
 {
     /**
-     * @Route("/post/inspiring-your-workflow", methods={"GET", "POST"}, name="post")
-     * Route("/post/{postName}", name="post")
+     * @var CommandBus
+     */
+    private $commandBus;
+
+    /**
+     * @param CommandBus $commandBus
+     */
+    public function __construct(CommandBus $commandBus)
+    {
+        $this->commandBus = $commandBus;
+    }
+
+    /**
+     * @Route("/post/{postName}", name="post")
      * @Template("Post/Template/Post.html.twig")
      */
-    public function __invoke(Request $request): array
+    public function __invoke(Request $request, string $postName)
     {
-        return [];
-    }
+        try {
+            $getPostCommand = new GetPostCommand($postName);
 
-    /**
-     * @Route("/post/agile-to-be-or-not-to-be", methods={"GET", "POST"}, name="post2")
-     * @Template("Post/Template/Post2.html.twig")
-     */
-    public function post2(Request $request): array
-    {
-        return [];
-    }
-
-    /**
-     * @Route("/post/the-biggest-enemy-to-hyper-performance-teams-is-you", methods={"GET", "POST"}, name="post3")
-     * @Template("Post/Template/Post3.html.twig")
-     */
-    public function post3(Request $request): array
-    {
-        return [];
+            /** @var Post $post */
+            $post = $this->commandBus->handle($getPostCommand);
+            return [
+                'post' => $post,
+                'image' => $post->getImage()
+            ];
+        } catch (PostNotFoundException $e) {
+            throw $this->createNotFoundException('The post does not exist');
+        }
     }
 }

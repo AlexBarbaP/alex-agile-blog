@@ -80,7 +80,12 @@
 
     docker-compose exec php chmod -R 777 var/cache var/log
     
-##### 7. Using webpack
+##### 7. Generate databases
+
+    docker-compose exec php bin/console doctrine:schema:update --force --env=dev
+    docker-compose exec php bin/console doctrine:schema:update --force --env=test
+    
+##### 8. Using webpack
     
     # compile assets once
     docker-compose exec php yarn encore dev
@@ -91,10 +96,10 @@
     # create a production build
     docker-compose exec php yarn encore production
 
-##### 7. Execute tests:
+##### 9. Execute tests:
 
     docker-compose exec php vendor/bin/simple-phpunit 
         
-##### 8. Run the webapp:
+##### 10. Run the webapp:
 
 Load [http://localhost](http://localhost) on your browser

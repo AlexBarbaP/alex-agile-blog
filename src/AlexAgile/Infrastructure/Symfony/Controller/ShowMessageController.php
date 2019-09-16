@@ -11,7 +11,7 @@ class ShowMessageController extends AbstractController
 {
     /**
      * @Route("/show-message/{message}", methods={"GET", "POST"}, name="show_message")
-     * @Template("show-message.html.twig")
+     * @Template("Controller/show-message.html.twig")
      */
     public function __invoke(string $message)
     {
