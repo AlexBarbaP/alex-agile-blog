@@ -8,6 +8,7 @@ use AlexAgile\Domain\Post\GetPostService;
 use AlexAgile\Domain\Post\Post;
 use AlexAgile\Domain\ValueObject\Color;
 use AlexAgile\Domain\ValueObject\Content;
+use AlexAgile\Domain\ValueObject\Description;
 use AlexAgile\Domain\ValueObject\ImageUrl;
 use AlexAgile\Domain\ValueObject\Order;
 use AlexAgile\Domain\ValueObject\Title;
@@ -22,6 +23,7 @@ class GetPostServiceTest extends TestCase
     private const VALID_CATEGORY_TITLE = 'category-title';
     private const VALID_CATEGORY_URL_SLUG = 'category';
     private const VALID_CONTENT = 'Post Content';
+    private const VALID_DESCRIPTION = 'Post Description';
     private const POST_ENABLED = true;
     private const POST_IMAGE = '/folder/image.jpg';
     private const VALID_ORDER = 1;
@@ -42,6 +44,7 @@ class GetPostServiceTest extends TestCase
         $post           = new Post(
             new ArrayCollection([$category]),
             Content::create(self::VALID_CONTENT),
+            Description::create(self::VALID_DESCRIPTION),
             self::POST_ENABLED,
             ImageUrl::create(self::POST_IMAGE),
             Order::create(self::VALID_ORDER),
@@ -68,25 +71,8 @@ class GetPostServiceTest extends TestCase
         $postRepository = new PostRepositoryInMemoryAdapter([]);
         $getPostService = new GetPostService($postRepository);
 
-        $post = $getPostService->execute([
+        $getPostService->execute([
             GetPostService::POST_URL_SLUG_KEY => UrlSlug::create(self::VALID_URL_SLUG),
         ]);
     }
-
-    //public function registerPost_whenPostIsRegistered_shouldEmitAPostRegisteredEvent(): void
-    //{
-    //    $post = new Post(
-    //        Email::create(self::VALID_EMAIL),
-    //        Password::create(self::VALID_PASSWORD)
-    //    );
-    //
-    //    $inMemoryEventBus = $this->getInMemoryEventBus();
-    //
-    //    $postRepository      = new PostRepositoryInMemoryAdapter([]);
-    //    $registerPostService = new RegisterPostService($postRepository, $inMemoryEventBus);
-    //
-    //    $registerPostService->execute([
-    //        RegisterPostService::POST_KEY => $post,
-    //    ]);
-    //}
 }

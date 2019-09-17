@@ -27,6 +27,9 @@ doctrine:
             Content:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineContent
                 commented: true
+            Description:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineDescription
+                commented: true
             ImageUrl:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineImageUrl
                 commented: true

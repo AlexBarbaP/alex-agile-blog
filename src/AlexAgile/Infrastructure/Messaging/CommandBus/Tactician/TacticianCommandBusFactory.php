@@ -3,8 +3,11 @@ declare(strict_types=1);
 
 namespace AlexAgile\Infrastructure\Messaging\CommandBus\Tactician;
 
+use AlexAgile\Application\Post\GetHomepagePostsCommandHandler;
 use AlexAgile\Application\Post\GetPostCommandHandler;
 use AlexAgile\Application\User\Register\RegisterUserCommandHandler;
+use AlexAgile\Domain\Post\GetHomepagePostsCommand;
+use AlexAgile\Domain\Post\GetHomepagePostsService;
 use AlexAgile\Domain\Post\GetPostCommand;
 use AlexAgile\Domain\Post\GetPostService;
 use AlexAgile\Domain\User\Register\RegisterUserCommand;
@@ -27,6 +30,7 @@ final class TacticianCommandBusFactory
     public function __construct(
         RegisterUserService $registerUserService,
         GetPostService $getPostService,
+        GetHomepagePostsService $getHomepagePostsService,
         EmitterInterface $eventBus
     ) {
         $this->eventBus = $eventBus;
@@ -37,11 +41,13 @@ final class TacticianCommandBusFactory
 
         // register commands
         $registerUserCommandHandler = new RegisterUserCommandHandler($registerUserService, $this->eventBus);
-        $getPostCommandHandler = new GetPostCommandHandler($getPostService, $this->eventBus);
+        $getPostCommandHandler = new GetPostCommandHandler($getPostService);
+        $getHomepagePostsCommandHandler = new GetHomepagePostsCommandHandler($getHomepagePostsService);
 
         $locator = new InMemoryLocator();
         $locator->addHandler($registerUserCommandHandler, RegisterUserCommand::class);
         $locator->addHandler($getPostCommandHandler, GetPostCommand::class);
+        $locator->addHandler($getHomepagePostsCommandHandler, GetHomepagePostsCommand::class);
 
         $commandHandlerMiddleware = new CommandHandlerMiddleware($nameExtractor, $locator, $inflector);
 

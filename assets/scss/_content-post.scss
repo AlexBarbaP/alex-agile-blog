@@ -119,7 +119,7 @@ html, body {
               }
 
               .text {
-                @include postQuote($black-color, 117px, 75px, 23px);
+                @include postQuote($black-color, 50px, 75px, 23px);
 
                 color: $gray-dark-content-color;
                 display: table-cell;

@@ -22,7 +22,7 @@ final class PostRepositoryInMemoryAdapter implements PostRepositoryInterface
         }, []);
     }
 
-    public function find(PostId $postId):? Post
+    public function find(PostId $postId): ?Post
     {
         if (!array_key_exists($postId->id(), $this->data)) {
             return null;
@@ -31,7 +31,7 @@ final class PostRepositoryInMemoryAdapter implements PostRepositoryInterface
         return clone $this->data[$postId->id()];
     }
 
-    public function findByUrlSlug(UrlSlug $urlSlug):? Post
+    public function findByUrlSlug(UrlSlug $urlSlug): ?Post
     {
         /** @var Post $post */
         foreach ($this->data as $post) {
@@ -48,5 +48,12 @@ final class PostRepositoryInMemoryAdapter implements PostRepositoryInterface
         return array_map(function (Post $post) {
             return clone $post;
         }, $this->data);
+    }
+
+    public function findAllEnabledOrderedByOrder(): array
+    {
+        return array_filter($this->data, function (Post $post) {
+            return $post->isEnabled();
+        });
     }
 }

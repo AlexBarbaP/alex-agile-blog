@@ -10,7 +10,7 @@ use AlexAgile\Tests\Integration\IntegrationTestAbstract;
 
 class GetPostTest extends IntegrationTestAbstract
 {
-    private const EXISTING_POST_URL_SLUG = 'post-slug';
+    private const EXISTING_POST_URL_SLUG = 'post-enabled-slug';
     private const NON_EXISTING_POST_URL_SLUG = 'non-existing-post-slug';
 
     /**

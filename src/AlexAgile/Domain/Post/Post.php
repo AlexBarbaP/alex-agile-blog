@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace AlexAgile\Domain\Post;
 
-use AlexAgile\Domain\Category\Category;
 use AlexAgile\Domain\ValueObject\Content;
+use AlexAgile\Domain\ValueObject\Description;
 use AlexAgile\Domain\ValueObject\ImageUrl;
 use AlexAgile\Domain\ValueObject\Order;
 use AlexAgile\Domain\ValueObject\Title;
@@ -27,6 +27,9 @@ class Post
 
     /** @var \DateTimeImmutable */
     private $created;
+
+    /** @var Description */
+    private $description = '';
 
     /** @var bool */
     private $enabled;
@@ -53,6 +56,7 @@ class Post
     public function __construct(
         Collection $categories,
         Content $content,
+        Description $description,
         bool $enabled,
         ImageUrl $image,
         Order $order,
@@ -69,6 +73,7 @@ class Post
         $this->id = $postId ?: PostId::create();
         $this->categories = $categories;
         $this->content = $content;
+        $this->description = $description;
         $this->enabled = $enabled;
         $this->image = $image;
         $this->order = $order;
@@ -91,6 +96,11 @@ class Post
     public function getContent(): Content
     {
         return $this->content;
+    }
+
+    public function getDescription(): Description
+    {
+        return $this->description;
     }
 
     public function getCreated(): \DateTimeImmutable

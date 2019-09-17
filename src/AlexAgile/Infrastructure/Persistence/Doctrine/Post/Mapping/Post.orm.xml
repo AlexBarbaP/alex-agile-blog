@@ -15,6 +15,10 @@
                 type="Content"
         />
         <field
+                name="description"
+                type="Description"
+        />
+        <field
                 name="enabled"
                 type="boolean"
         />
@@ -53,7 +57,7 @@
                     <join-column name="post_id" referenced-column-name="id" />
                 </join-columns>
                 <inverse-join-columns>
-                    <join-column name="category_id" referenced-column-name="id" unique="true" />
+                    <join-column name="category_id" referenced-column-name="id" />
                 </inverse-join-columns>
             </join-table>
         </many-to-many>

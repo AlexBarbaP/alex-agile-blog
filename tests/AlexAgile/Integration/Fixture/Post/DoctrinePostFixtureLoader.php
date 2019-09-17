@@ -5,6 +5,7 @@ namespace AlexAgile\Tests\Integration\Fixture\Post;
 
 use AlexAgile\Domain\Post\Post;
 use AlexAgile\Domain\ValueObject\Content;
+use AlexAgile\Domain\ValueObject\Description;
 use AlexAgile\Domain\ValueObject\ImageUrl;
 use AlexAgile\Domain\ValueObject\Order;
 use AlexAgile\Domain\ValueObject\Title;
@@ -17,11 +18,14 @@ use Doctrine\Common\Persistence\ObjectManager;
 class DoctrinePostFixtureLoader extends Fixture
 {
     private const POST_CONTENT = 'Post Content';
+    private const POST_DESCRIPTION = 'Post Description';
     private const POST_ENABLED = true;
+    private const POST_DISABLED = false;
     private const POST_IMAGE = '/folder/image.jpg';
     private const POST_ORDER = 1;
     private const POST_TITLE = 'Post title';
-    private const POST_URL_SLUG = 'post-slug';
+    private const POST_ENABLED_URL_SLUG = 'post-enabled-slug';
+    private const POST_DISABLED_URL_SLUG = 'post-disabled-slug';
 
     /**
      * @inheritdoc
@@ -30,17 +34,29 @@ class DoctrinePostFixtureLoader extends Fixture
     {
         $category = $this->getReference(DoctrineCategoryFixtureLoader::CATEGORY_REFERENCE);
 
-        $post = new Post(
+        $postEnabled = new Post(
             new ArrayCollection([$category]),
             Content::create(self::POST_CONTENT),
+            Description::create(self::POST_DESCRIPTION),
             self::POST_ENABLED,
             ImageUrl::create(self::POST_IMAGE),
             Order::create(self::POST_ORDER),
             Title::create(self::POST_TITLE),
-            UrlSlug::create(self::POST_URL_SLUG)
+            UrlSlug::create(self::POST_ENABLED_URL_SLUG)
+        );
+        $postDisabled = new Post(
+            new ArrayCollection([$category]),
+            Content::create(self::POST_CONTENT),
+            Description::create(self::POST_DESCRIPTION),
+            self::POST_DISABLED,
+            ImageUrl::create(self::POST_IMAGE),
+            Order::create(self::POST_ORDER),
+            Title::create(self::POST_TITLE),
+            UrlSlug::create(self::POST_DISABLED_URL_SLUG)
         );
 
-        $manager->persist($post);
+        $manager->persist($postEnabled);
+        $manager->persist($postDisabled);
         $manager->flush();
     }
 }

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace AlexAgile\Tests\Integration;
 
+use AlexAgile\Domain\Post\GetHomepagePostsService;
 use AlexAgile\Domain\Post\GetPostService;
 use AlexAgile\Domain\User\Register\RegisterUserService;
 use AlexAgile\Infrastructure\Messaging\CommandBus\Tactician\TacticianCommandBusFactory;
@@ -30,6 +31,9 @@ class IntegrationTestAbstract extends TestCase
     /** @var GetPostService */
     protected $getPostService;
 
+    /** @var GetHomepagePostsService */
+    protected $getHomepagePostsService;
+
     /** @var CommandBus */
     protected $commandBus;
 
@@ -54,6 +58,7 @@ class IntegrationTestAbstract extends TestCase
 
         $this->registerUserService = new RegisterUserService($this->userRepositoryDoctrineAdapter, $this->eventBus);
         $this->getPostService = new GetPostService($this->postRepositoryDoctrineAdapter);
+        $this->getHomepagePostsService = new GetHomepagePostsService($this->postRepositoryDoctrineAdapter);
 
         $this->setupCommandBus();
     }
@@ -70,6 +75,7 @@ class IntegrationTestAbstract extends TestCase
         $commandBusFactory = new TacticianCommandBusFactory(
             $this->registerUserService,
             $this->getPostService,
+            $this->getHomepagePostsService,
             $this->eventBus
         );
 

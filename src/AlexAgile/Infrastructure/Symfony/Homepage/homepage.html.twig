@@ -3,148 +3,42 @@
 {% block body %}
     <div id="content">
 
-        <div class="post-container">
-            <div class="categories">
-                <div class="vertical-text-container">
-                    <span class="category blue">Agile</span>
-                    <span class="category pink">Scrum</span>
-                    <div class="line"></div>
-                </div>
-            </div>
-
-            <div class="post">
-                <a href="{{ path('post', {postName:'the-biggest-enemy-to-hyper-performance-teams-is-you'}) }}" class="link">
-                    <img class="image"
-                         src="{{ asset('build/assets/images/posts/003-the-biggest-enemy-to-hyper-performance-teams-is-you/post-image.jpg') }}">
-                    <div class="title">
-                        The biggest enemy of hyper-performance is you
+        {% for post in posts %}
+            <div class="post-container">
+                <div class="categories">
+                    <div class="vertical-text-container">
+                        {% for category in post.categories %}
+                            <span class="category {{ category.color }}">{{ category.title }}</span>
+                        {% endfor %}
+                        <div class="line"></div>
                     </div>
-                    <div class="description">
-                        It isn’t an easy thing to admit. My team could be doing better. I could be doing better.
-                        <br>
-                        There is even a magic quote that sometimes gives us space to look forward to the future but,
-                        other times is just an excuse to justify lack of commitment or even failure: “we assume each of
-                        us is doing the best she can do based on her current knowledge and circumstances”.
-                        <br>
-                        <br>
-                        We put a lot of effort in everything we do. We do what we firmly believe is the best that can be
-                        done at any given moment. Is it enough in terms of effort? Is it enough in terms of smart work?
-                        And the answer, based on our current knowledge and circumstances, is probably yes, it is enough.
-                    </div>
-                </a>
-                <div class="info">
-                    {#45 comments #}
-                    February 24th, 2019
                 </div>
-            </div>
 
-            <div class="post-separator"></div>
+                <div class="post">
+                    <a href="{{ path('post', {postName: post.urlSlug}) }}" class="link">
+                        <img class="image"
+                             src="{{ asset( post.image.imageUrl ) }}">
+                        <div class="title">
+                            {{ post.title }}
+                        </div>
+                        <div class="description">
+                            {{ post.description|raw }}
+                        </div>
+                    </a>
+                    <div class="info">
+                        {#45 comments #}
+                        {{ post.created|localizeddate('long', 'none', app.request.locale) }}
+                    </div>
+                </div>
+
+                <div class="post-separator"></div>
+            </div>
+        {% endfor %}
+
+        <div class="pagination-container">
+{#            <div class="previous">previous</div>#}
+{#            <div class="separator"></div>#}
+{#            <div class="next">next</div>#}
         </div>
-
-        <div class="post-container">
-            <div class="categories">
-                <div class="vertical-text-container">
-                    <span class="category blue">Agile</span>
-                    <span class="category pink">Scrum</span>
-                    <div class="line"></div>
-                </div>
-            </div>
-
-            <div class="post">
-                <a href="{{ path('post', {postName:'agile-to-be-or-not-to-be'}) }}" class="link">
-                    <img class="image"
-                         src="{{ asset('build/assets/images/posts/002-agile-to-be-or-not-to-be/post-image.jpg') }}">
-                    <div class="title">
-                        Agile, to be or not to be...
-                    </div>
-                    <div class="description">
-                        I still remember the times of the Gantt diagrams. Maybe you never saw those but it was common in
-                        big companies. A big project planned for years, with a couple of deadlines every 6 months or so
-                        and a lot of useless overwork and stress when the deadlines were close. Depending on how much
-                        the manager did care about the project she started to demand this sooner or later but I never
-                        saw it working out.
-                        <br><br>
-                        Then companies started moving into Agile methodologies implementing frameworks like Scrum or
-                        Kanban. Sometimes because one team member had knowledge or experience with the framework, other
-                        times hiring expensive specialists like Scrum Masters or Agile Coaches.
-                    </div>
-                </a>
-                <div class="info">
-                    {#45 comments #}
-                    Januray 27th, 2019
-                </div>
-            </div>
-
-            <div class="post-separator"></div>
-        </div>
-
-        <div class="post-container">
-            <div class="categories">
-                <div class="vertical-text-container">
-                    <span class="category blue">Agile</span>
-                    <span class="category pink">Scrum</span>
-                    <div class="line"></div>
-                </div>
-            </div>
-
-            <div class="post">
-                <a href="{{ path('post', {postName:'inspiring-your-workflow'}) }}" class="link">
-                    <img class="image"
-                         src="{{ asset('build/assets/images/posts/001-inspiring-your-workflow/post-image.jpg') }}">
-                    <div class="title">
-                        Alex Agile, inspiring your workflow
-                    </div>
-                    <div class="description">
-                        To be Agile doesn’t only mean to do stand-up meetings every morning, to have retrospectives
-                        every other week or to move cards in a Kanban board.
-                        <br><br>
-                        To be Agile is a mindset, the kind of one that empowers individuals to pursue happiness through
-                        Agile values and teamwork. If you want to become a good Agilist the first thing you need to
-                        learn is to forget about yourself. You don’t matter anymore, your team and your organization
-                        should be the first of your priorities and you should be sure that, if you belong into a happy
-                        team and a happy organization, you will be happy.
-                    </div>
-                </a>
-                <div class="info">
-                    {#45 comments #}
-                    Januray 6th, 2019
-                    <br><br>
-                </div>
-            </div>
-
-            <div class="post-separator"></div>
-        </div>
-
-        {#<div class="post-container">#}
-        {#<div class="categories">#}
-        {#<div class="vertical-text-container">#}
-        {#<span class="category purple"></span>#}
-        {#<span class="category green">Scrum</span>#}
-        {#<span class="category pink">Agile</span>#}
-        {#<span class="category blue">Architecture</span>#}
-        {#<span class="line"></span>#}
-        {#</div>#}
-        {#</div>#}
-
-        {#<div class="post">#}
-        {#<img class="image" src="bundles/alexagilefront/images/posts/post-image-sample.jpg">#}
-        {#<div class="title">#}
-        {#Artefactos de Scrum. Historias de Usuario en el Product Backlog#}
-        {#</div>#}
-        {#<div class="description">#}
-        {#Cuando se habla de Scrum una de las primeras imágenes que se nos suele pasar por la cabeza es un#}
-        {#tablero con columnas, algunos gráficos y una buena cantidad de Post-Its...#}
-        {#</div>#}
-        {#<div class="info">#}
-        {#45 comments 14 Feb 2017#}
-        {#</div>#}
-        {#</div>#}
-        {#</div>#}
-
-        {#<div class="pagination-container">#}
-        {#<div class="previous">previous</div>#}
-        {#<div class="separator"></div>#}
-        {#<div class="next">next</div>#}
-        {#</div>#}
     </div>
 {% endblock %}

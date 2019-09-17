@@ -6,6 +6,7 @@ namespace AlexAgile\Infrastructure\Persistence\Doctrine;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineCategoryId;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineColor;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineContent;
+use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineDescription;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineImageUrl;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineOrder;
@@ -47,6 +48,10 @@ final class DoctrineEntityManagerFactory
 
         if (!Type::hasType('Content')) {
             Type::addType('Content', DoctrineContent::class);
+        }
+
+        if (!Type::hasType('Description')) {
+            Type::addType('Description', DoctrineDescription::class);
         }
 
         if (!Type::hasType('ImageUrl')) {
