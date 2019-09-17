@@ -17,15 +17,21 @@ use Doctrine\Common\Persistence\ObjectManager;
 
 class DoctrinePostFixtureLoader extends Fixture
 {
-    private const POST_CONTENT = 'Post Content';
-    private const POST_DESCRIPTION = 'Post Description';
-    private const POST_ENABLED = true;
-    private const POST_DISABLED = false;
-    private const POST_IMAGE = '/folder/image.jpg';
-    private const POST_ORDER = 1;
-    private const POST_TITLE = 'Post title';
-    private const POST_ENABLED_URL_SLUG = 'post-enabled-slug';
-    private const POST_DISABLED_URL_SLUG = 'post-disabled-slug';
+    public const POST1_CONTENT = 'Post One Content';
+    public const POST1_DESCRIPTION = 'Post One Description';
+    public const POST1_ENABLED = true;
+    public const POST1_IMAGE = '/folder1/image.jpg';
+    public const POST1_ORDER = 1;
+    public const POST1_TITLE = 'Post one title';
+    public const POST1_URL_SLUG = 'post-one-url-slug';
+
+    public const POST2_CONTENT = 'Post Two Content';
+    public const POST2_DESCRIPTION = 'Post Two Description';
+    public const POST2_ENABLED = false;
+    public const POST2_IMAGE = '/folder2/image.jpg';
+    public const POST2_ORDER = 2;
+    public const POST2_TITLE = 'Post two title';
+    public const POST2_URL_SLUG = 'post-two-url-slug';
 
     /**
      * @inheritdoc
@@ -36,23 +42,23 @@ class DoctrinePostFixtureLoader extends Fixture
 
         $postEnabled = new Post(
             new ArrayCollection([$category]),
-            Content::create(self::POST_CONTENT),
-            Description::create(self::POST_DESCRIPTION),
-            self::POST_ENABLED,
-            ImageUrl::create(self::POST_IMAGE),
-            Order::create(self::POST_ORDER),
-            Title::create(self::POST_TITLE),
-            UrlSlug::create(self::POST_ENABLED_URL_SLUG)
+            Content::create(self::POST1_CONTENT),
+            Description::create(self::POST1_DESCRIPTION),
+            self::POST1_ENABLED,
+            ImageUrl::create(self::POST1_IMAGE),
+            Order::create(self::POST1_ORDER),
+            Title::create(self::POST1_TITLE),
+            UrlSlug::create(self::POST1_URL_SLUG)
         );
         $postDisabled = new Post(
             new ArrayCollection([$category]),
-            Content::create(self::POST_CONTENT),
-            Description::create(self::POST_DESCRIPTION),
-            self::POST_DISABLED,
-            ImageUrl::create(self::POST_IMAGE),
-            Order::create(self::POST_ORDER),
-            Title::create(self::POST_TITLE),
-            UrlSlug::create(self::POST_DISABLED_URL_SLUG)
+            Content::create(self::POST2_CONTENT),
+            Description::create(self::POST2_DESCRIPTION),
+            self::POST2_ENABLED,
+            ImageUrl::create(self::POST2_IMAGE),
+            Order::create(self::POST2_ORDER),
+            Title::create(self::POST2_TITLE),
+            UrlSlug::create(self::POST2_URL_SLUG)
         );
 
         $manager->persist($postEnabled);

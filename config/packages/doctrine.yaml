@@ -20,40 +20,37 @@ doctrine:
         types:
             CategoryId:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineCategoryId
-                commented: true
             Color:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineColor
-                commented: true
+                commented: false
             Content:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineContent
-                commented: true
+                commented: false
             Description:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineDescription
-                commented: true
+                commented: false
             ImageUrl:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineImageUrl
-                commented: true
+                commented: false
             Order:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineOrder
-                commented: true
+                commented: false
             PostId:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePostId
-                commented: true
             Title:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineTitle
-                commented: true
+                commented: false
             UrlSlug:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUrlSlug
-                commented: true
+                commented: false
             Email:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail
-                commented: true
+                commented: false
             Password:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePassword
-                commented: true
+                commented: false
             UserId:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUserId
-                commented: true
 
     orm:
         auto_generate_proxy_classes: true

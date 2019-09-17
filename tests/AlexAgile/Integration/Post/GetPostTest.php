@@ -6,11 +6,11 @@ namespace AlexAgile\Tests\Integration\Post;
 use AlexAgile\Domain\Category\Category;
 use AlexAgile\Domain\Post\GetPostCommand;
 use AlexAgile\Domain\Post\Post;
+use AlexAgile\Tests\Integration\Fixture\Post\DoctrinePostFixtureLoader;
 use AlexAgile\Tests\Integration\IntegrationTestAbstract;
 
 class GetPostTest extends IntegrationTestAbstract
 {
-    private const EXISTING_POST_URL_SLUG = 'post-enabled-slug';
     private const NON_EXISTING_POST_URL_SLUG = 'non-existing-post-slug';
 
     /**
@@ -18,7 +18,7 @@ class GetPostTest extends IntegrationTestAbstract
      */
     public function getPost_whenPostExists_shouldReturnAPostObject(): void
     {
-        $getPostCommand = new GetPostCommand(self::EXISTING_POST_URL_SLUG);
+        $getPostCommand = new GetPostCommand(DoctrinePostFixtureLoader::POST1_URL_SLUG);
         $post = $this->commandBus->handle($getPostCommand);
 
         $this->assertInstanceOf(Post::class, $post);
@@ -29,7 +29,7 @@ class GetPostTest extends IntegrationTestAbstract
      */
     public function getPostWithCategories_whenPostExists_shouldReturnAPostObjectWithNestedCategories(): void
     {
-        $getPostCommand = new GetPostCommand(self::EXISTING_POST_URL_SLUG);
+        $getPostCommand = new GetPostCommand(DoctrinePostFixtureLoader::POST1_URL_SLUG);
         /** @var Post $post */
         $post = $this->commandBus->handle($getPostCommand);
 
