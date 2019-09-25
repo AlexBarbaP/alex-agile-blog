@@ -12,9 +12,9 @@ use Doctrine\Common\Persistence\ObjectManager;
 
 class DoctrineCategoryFixtureLoader extends Fixture
 {
-    private const CATEGORY_COLOR = 'pink';
-    private const CATEGORY_TITLE = 'category-title';
-    private const CATEGORY_URL_SLUG = 'category';
+    public const CATEGORY_COLOR = 'pink';
+    public const CATEGORY_TITLE = 'category-title';
+    public const CATEGORY_URL_SLUG = 'category';
 
     public const CATEGORY_REFERENCE = 'category';
 

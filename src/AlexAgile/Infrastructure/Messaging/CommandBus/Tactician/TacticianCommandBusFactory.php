@@ -3,12 +3,19 @@ declare(strict_types=1);
 
 namespace AlexAgile\Infrastructure\Messaging\CommandBus\Tactician;
 
+use AlexAgile\Application\Category\GetCategoriesCommandHandler;
 use AlexAgile\Application\Post\GetHomepagePostsCommandHandler;
 use AlexAgile\Application\Post\GetPostCommandHandler;
+use AlexAgile\Application\Post\GetPostsByCategoryCommandHandler;
 use AlexAgile\Application\User\Register\RegisterUserCommandHandler;
+use AlexAgile\Domain\Category\GetCategoriesCommand;
+use AlexAgile\Domain\Category\GetCategoriesService;
+use AlexAgile\Domain\Category\GetCategoryService;
 use AlexAgile\Domain\Post\GetHomepagePostsCommand;
 use AlexAgile\Domain\Post\GetHomepagePostsService;
 use AlexAgile\Domain\Post\GetPostCommand;
+use AlexAgile\Domain\Post\GetPostsByCategoryCommand;
+use AlexAgile\Domain\Post\GetPostsByCategoryService;
 use AlexAgile\Domain\Post\GetPostService;
 use AlexAgile\Domain\User\Register\RegisterUserCommand;
 use AlexAgile\Domain\User\Register\RegisterUserService;
@@ -31,6 +38,9 @@ final class TacticianCommandBusFactory
         RegisterUserService $registerUserService,
         GetPostService $getPostService,
         GetHomepagePostsService $getHomepagePostsService,
+        GetPostsByCategoryService $getPostsByCategoryService,
+        GetCategoryService $getCategoryService,
+        GetCategoriesService $getCategoriesService,
         EmitterInterface $eventBus
     ) {
         $this->eventBus = $eventBus;
@@ -43,11 +53,15 @@ final class TacticianCommandBusFactory
         $registerUserCommandHandler = new RegisterUserCommandHandler($registerUserService, $this->eventBus);
         $getPostCommandHandler = new GetPostCommandHandler($getPostService);
         $getHomepagePostsCommandHandler = new GetHomepagePostsCommandHandler($getHomepagePostsService);
+        $getPostsByCategoryCommandHandler = new GetPostsByCategoryCommandHandler($getPostsByCategoryService, $getCategoryService);
+        $getCategoriesCommandHandler = new GetCategoriesCommandHandler($getCategoriesService);
 
         $locator = new InMemoryLocator();
         $locator->addHandler($registerUserCommandHandler, RegisterUserCommand::class);
         $locator->addHandler($getPostCommandHandler, GetPostCommand::class);
         $locator->addHandler($getHomepagePostsCommandHandler, GetHomepagePostsCommand::class);
+        $locator->addHandler($getPostsByCategoryCommandHandler, GetPostsByCategoryCommand::class);
+        $locator->addHandler($getCategoriesCommandHandler, GetCategoriesCommand::class);
 
         $commandHandlerMiddleware = new CommandHandlerMiddleware($nameExtractor, $locator, $inflector);
 

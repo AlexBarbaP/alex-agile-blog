@@ -1,0 +1,18 @@
+<div class="navigation-container">
+
+    {%  for category in categories %}
+        <div class="link-container">
+            <div class="bullet {{ category.color }}-bullet"></div>
+            <a href="{{ path('category', {categoryName: category.urlSlug}) }}" class="link">{{ category.title }}</a>
+        </div>
+    {%  endfor %}
+
+    <div class="link-separator"></div>
+
+    <div class="link-container">
+        <a href="{{ path('about') }}" class="link dark-link">About me</a>
+    </div>
+    {#<div class="link-container">#}
+        {#<a href="#" class="link dark-link">Contact</a>#}
+    {#</div>#}
+</div>

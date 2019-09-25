@@ -29,7 +29,7 @@ class PostController extends AbstractController
 
     /**
      * @Route("/post/{postName}", name="post")
-     * @Template("Post/Template/Post.html.twig")
+     * @Template("Post/Post.html.twig")
      */
     public function __invoke(Request $request, string $postName)
     {
@@ -40,7 +40,6 @@ class PostController extends AbstractController
             $post = $this->commandBus->handle($getPostCommand);
             return [
                 'post' => $post,
-                'image' => $post->getImage()
             ];
         } catch (PostNotFoundException $e) {
             throw $this->createNotFoundException('The post does not exist');

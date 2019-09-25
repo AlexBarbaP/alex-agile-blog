@@ -3,8 +3,12 @@ declare(strict_types=1);
 
 namespace AlexAgile\Domain\Post;
 
-class GetHomepagePostsService
+use AlexAgile\Domain\Category\Category;
+
+class GetPostsByCategoryService
 {
+    public const CATEGORY_KEY = 'category';
+
     /** @var PostRepositoryInterface */
     private $postRepository;
 
@@ -18,6 +22,9 @@ class GetHomepagePostsService
      */
     public function execute(array $options = []): array
     {
-        return $this->postRepository->findAllEnabledOrderedByOrder();
+        /** @var Category $category */
+        $category = $options[self::CATEGORY_KEY];
+
+        return $this->postRepository->findAllEnabledByCategoryOrderedByOrder($category);
     }
 }

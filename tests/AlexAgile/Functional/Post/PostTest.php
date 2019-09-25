@@ -38,26 +38,4 @@ class PostTest extends WebTestCase
 
         $this->assertNotContains('Post One Description', $client->getResponse()->getContent());
     }
-
-    ///**
-    // * @test
-    // */
-    //public function registerUser_whenDataIsValid_shouldShowNewUserRegisteredMessage()
-    //{
-    //    $client = static::createClient();
-    //
-    //    $crawler = $client->request('GET', '/user');
-    //
-    //    $form = $crawler->selectButton('register_user[submit]')->form();
-    //
-    //    $form['register_user[email]']            = self::VALID_EMAIL;
-    //    $form['register_user[password][first]']  = self::VALID_PASSWORD;
-    //    $form['register_user[password][second]'] = self::VALID_PASSWORD;
-    //
-    //    $client->submit($form);
-    //    $client->followRedirect();
-    //
-    //    $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    //    $this->assertContains('New user registered', $client->getResponse()->getContent());
-    //}
 }

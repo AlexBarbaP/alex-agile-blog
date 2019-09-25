@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace AlexAgile\Infrastructure\Persistence\Doctrine\Post;
 
+use AlexAgile\Domain\Category\Category;
 use AlexAgile\Domain\Post\Post;
 use AlexAgile\Domain\Post\PostId;
 use AlexAgile\Domain\Post\PostNotFoundException;
@@ -28,12 +29,12 @@ final class PostRepositoryDoctrineAdapter implements PostRepositoryInterface
     {
         try {
             $query = $this->em->createQueryBuilder()
-                              ->select('p, c')
-                              ->from('AlexAgile\Domain\Post\Post', 'p')
-                              ->join('p.categories', 'c')
-                              ->where('p.postId = :postId')
-                              ->setParameter('postId', $postId)
-                              ->getQuery();
+                ->select('p, c')
+                ->from('AlexAgile\Domain\Post\Post', 'p')
+                ->join('p.categories', 'c')
+                ->where('p.postId = :postId')
+                ->setParameter('postId', $postId)
+                ->getQuery();
 
             return $query->execute();
         } catch (NoResultException $e) {
@@ -48,12 +49,12 @@ final class PostRepositoryDoctrineAdapter implements PostRepositoryInterface
     {
         try {
             $queryBuilder = $this->em->createQueryBuilder();
-            $query        = $queryBuilder->select('p, c')
-                                         ->from('AlexAgile\Domain\Post\Post', 'p')
-                                         ->join('p.categories', 'c')
-                                         ->where('p.urlSlug = :urlSlug')
-                                         ->setParameter('urlSlug', $urlSlug->urlSlug())
-                                         ->getQuery();
+            $query = $queryBuilder->select('p, c')
+                ->from('AlexAgile\Domain\Post\Post', 'p')
+                ->join('p.categories', 'c')
+                ->where('p.urlSlug = :urlSlug')
+                ->setParameter('urlSlug', $urlSlug->urlSlug())
+                ->getQuery();
 
             return $query->getSingleResult();
         } catch (NoResultException $e) {
@@ -75,13 +76,30 @@ final class PostRepositoryDoctrineAdapter implements PostRepositoryInterface
     public function findAllEnabledOrderedByOrder(): array
     {
         $queryBuilder = $this->em->createQueryBuilder();
-        $query        = $queryBuilder->select('p, c')
-                                     ->from('AlexAgile\Domain\Post\Post', 'p')
-                                     ->join('p.categories', 'c')
-                                     ->where('p.enabled = :enabled')
-                                     ->setParameter('enabled', true)
-                                     ->orderBy('p.order', 'DESC')
-                                     ->getQuery();
+        $query = $queryBuilder->select('p, c')
+            ->from('AlexAgile\Domain\Post\Post', 'p')
+            ->join('p.categories', 'c')
+            ->where('p.enabled = :enabled')
+            ->setParameter('enabled', true)
+            ->orderBy('p.order', 'DESC')
+            ->getQuery();
+
+        return $query->execute();
+    }
+
+    /**
+     * @return Post[]
+     */
+    public function findAllEnabledByCategoryOrderedByOrder(Category $category): array
+    {
+        $queryBuilder = $this->em->createQueryBuilder();
+        $query = $queryBuilder->select('p, c')
+            ->from('AlexAgile\Domain\Post\Post', 'p')
+            ->join('p.categories', 'c')
+            ->where('c.id = :categoryId')
+            ->setParameter('categoryId', $category->getId())
+            ->orderBy('p.order', 'DESC')
+            ->getQuery();
 
         return $query->execute();
     }

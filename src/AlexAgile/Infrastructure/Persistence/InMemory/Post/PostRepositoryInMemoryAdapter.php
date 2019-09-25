@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace AlexAgile\Infrastructure\Persistence\InMemory\Post;
 
+use AlexAgile\Domain\Category\Category;
 use AlexAgile\Domain\Post\Post;
 use AlexAgile\Domain\Post\PostId;
 use AlexAgile\Domain\Post\PostRepositoryInterface;
@@ -54,6 +55,13 @@ final class PostRepositoryInMemoryAdapter implements PostRepositoryInterface
     {
         return array_filter($this->data, function (Post $post) {
             return $post->isEnabled();
+        });
+    }
+
+    public function findAllEnabledByCategoryOrderedByOrder(Category $category): array
+    {
+        return array_filter($this->data, function (Post $post) use ($category) {
+            return $post->getCategories()->contains($category);
         });
     }
 }

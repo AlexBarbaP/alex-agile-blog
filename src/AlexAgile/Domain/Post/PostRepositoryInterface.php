@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace AlexAgile\Domain\Post;
 
+use AlexAgile\Domain\Category\Category;
 use AlexAgile\Domain\ValueObject\UrlSlug;
 
 interface PostRepositoryInterface
@@ -22,4 +23,7 @@ interface PostRepositoryInterface
 
     /** @return Post[] */
     public function findAllEnabledOrderedByOrder(): array;
+
+    /** @return Post[] */
+    public function findAllEnabledByCategoryOrderedByOrder(Category $category): array;
 }
