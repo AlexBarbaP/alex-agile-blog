@@ -23,6 +23,10 @@
                 type="boolean"
         />
         <field
+                name="homepage"
+                type="boolean"
+        />
+        <field
                 column="image_url"
                 name="image"
                 type="ImageUrl"

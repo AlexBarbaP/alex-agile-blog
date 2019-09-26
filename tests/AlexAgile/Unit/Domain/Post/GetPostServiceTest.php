@@ -25,6 +25,7 @@ class GetPostServiceTest extends TestCase
     private const VALID_CONTENT = 'Post Content';
     private const VALID_DESCRIPTION = 'Post Description';
     private const POST_ENABLED = true;
+    private const POST_HOMEPAGE = true;
     private const POST_IMAGE = '/folder/image.jpg';
     private const VALID_ORDER = 1;
     private const VALID_TITLE = 'Post title';
@@ -46,6 +47,7 @@ class GetPostServiceTest extends TestCase
             Content::create(self::VALID_CONTENT),
             Description::create(self::VALID_DESCRIPTION),
             self::POST_ENABLED,
+            self::POST_HOMEPAGE,
             ImageUrl::create(self::POST_IMAGE),
             Order::create(self::VALID_ORDER),
             Title::create(self::VALID_TITLE),

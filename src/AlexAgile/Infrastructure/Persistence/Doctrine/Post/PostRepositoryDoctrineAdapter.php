@@ -90,6 +90,25 @@ final class PostRepositoryDoctrineAdapter implements PostRepositoryInterface
     /**
      * @return Post[]
      */
+    public function findAllHomepageEnabledOrderedByOrder(): array
+    {
+        $queryBuilder = $this->em->createQueryBuilder();
+        $query = $queryBuilder->select('p, c')
+            ->from('AlexAgile\Domain\Post\Post', 'p')
+            ->join('p.categories', 'c')
+            ->where('p.enabled = :enabled')
+            ->setParameter('enabled', true)
+            ->andWhere('p.homepage = :homepage')
+            ->setParameter('homepage', true)
+            ->orderBy('p.order', 'DESC')
+            ->getQuery();
+
+        return $query->execute();
+    }
+
+    /**
+     * @return Post[]
+     */
     public function findAllEnabledByCategoryOrderedByOrder(Category $category): array
     {
         $queryBuilder = $this->em->createQueryBuilder();

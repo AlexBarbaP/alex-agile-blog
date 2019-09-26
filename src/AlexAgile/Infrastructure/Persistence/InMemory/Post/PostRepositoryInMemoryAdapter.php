@@ -58,6 +58,13 @@ final class PostRepositoryInMemoryAdapter implements PostRepositoryInterface
         });
     }
 
+    public function findAllHomepageEnabledOrderedByOrder(): array
+    {
+        return array_filter($this->data, function (Post $post) {
+            return $post->isEnabled() && $post->isHomepage();
+        });
+    }
+
     public function findAllEnabledByCategoryOrderedByOrder(Category $category): array
     {
         return array_filter($this->data, function (Post $post) use ($category) {

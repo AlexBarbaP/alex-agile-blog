@@ -27,6 +27,7 @@ class GetPostsByCategoryServiceTest extends TestCase
     private const POST_CONTENT = 'Post Content';
     private const POST_DESCRIPTION = 'Post Description';
     private const POST_ENABLED = true;
+    private const POST_HOMEPAGE = true;
     private const POST_IMAGE = '/folder/image.jpg';
     private const VALID_ORDER = 1;
     private const VALID_TITLE = 'Post title';
@@ -79,6 +80,7 @@ class GetPostsByCategoryServiceTest extends TestCase
                 Content::create(self::POST_CONTENT),
                 Description::create(self::POST_DESCRIPTION),
                 self::POST_ENABLED,
+                self::POST_HOMEPAGE,
                 ImageUrl::create(self::POST_IMAGE),
                 Order::create(self::VALID_ORDER),
                 Title::create(self::VALID_TITLE),
@@ -89,6 +91,7 @@ class GetPostsByCategoryServiceTest extends TestCase
                 Content::create(self::POST_CONTENT),
                 Description::create(self::POST_DESCRIPTION),
                 self::POST_ENABLED,
+                self::POST_HOMEPAGE,
                 ImageUrl::create(self::POST_IMAGE),
                 Order::create(self::VALID_ORDER),
                 Title::create(self::VALID_TITLE),

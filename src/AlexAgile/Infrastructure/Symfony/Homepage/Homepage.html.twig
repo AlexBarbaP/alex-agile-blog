@@ -2,6 +2,12 @@
 
 {% block body %}
     <div id="content">
-        {{ include('Layout/Component/PostIterator.html.twig') }}
+        {% if posts|length > 1 %}
+            {{ include('Layout/Component/PostIterator.html.twig') }}
+        {% else %}
+            {% for post in posts %}
+                {{ include('Layout/Component/Post.html.twig') }}
+            {% endfor %}
+        {% endif %}
     </div>
 {% endblock %}

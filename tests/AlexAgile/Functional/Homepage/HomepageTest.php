@@ -34,13 +34,13 @@ class HomepageTest extends WebTestCase
         
         $content = $client->getResponse()->getContent();
         $this->assertContains('Post one title', $content);
-        $this->assertContains('Post One Description', $content);
-        $this->assertContains('post/post-one-url-slug', $content);
+        $this->assertContains('Post One Content', $content);
 
         $this->assertContains('category-title', $content);
         $this->assertContains('/category', $content);
 
-        $this->assertNotContains('Post One Content', $content);
+        $this->assertNotContains('Post One Description', $content);
+        $this->assertNotContains('post/post-one-url-slug', $content);
         $this->assertNotContains('Post two title', $content);
     }
 }

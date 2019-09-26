@@ -18,6 +18,6 @@ class GetHomepagePostsService
      */
     public function execute(array $options = []): array
     {
-        return $this->postRepository->findAllEnabledOrderedByOrder();
+        return $this->postRepository->findAllHomepageEnabledOrderedByOrder();
     }
 }

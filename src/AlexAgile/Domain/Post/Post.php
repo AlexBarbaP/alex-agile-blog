@@ -34,6 +34,9 @@ class Post
     /** @var bool */
     private $enabled;
 
+    /** @var bool */
+    private $homepage;
+
     /** @var ImageUrl */
     private $image;
 
@@ -58,6 +61,7 @@ class Post
         Content $content,
         Description $description,
         bool $enabled,
+        bool $homepage,
         ImageUrl $image,
         Order $order,
         Title $title,
@@ -75,6 +79,7 @@ class Post
         $this->content = $content;
         $this->description = $description;
         $this->enabled = $enabled;
+        $this->homepage = $homepage;
         $this->image = $image;
         $this->order = $order;
         $this->title = $title;
@@ -111,6 +116,11 @@ class Post
     public function isEnabled(): bool
     {
         return $this->enabled;
+    }
+
+    public function isHomepage(): bool
+    {
+        return $this->homepage;
     }
 
     public function getImage(): ImageUrl

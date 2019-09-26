@@ -25,5 +25,8 @@ interface PostRepositoryInterface
     public function findAllEnabledOrderedByOrder(): array;
 
     /** @return Post[] */
+    public function findAllHomepageEnabledOrderedByOrder(): array;
+
+    /** @return Post[] */
     public function findAllEnabledByCategoryOrderedByOrder(Category $category): array;
 }

@@ -27,6 +27,8 @@ class GetHomepagePostsServiceTest extends TestCase
     private const VALID_DESCRIPTION = 'Post Description';
     private const POST_ENABLED = true;
     private const POST_DISABLED = false;
+    private const POST_HOMEPAGE_ENABLED = true;
+    private const POST_HOMEPAGE_DISABLED = false;
     private const POST_IMAGE = '/folder/image.jpg';
     private const VALID_ORDER = 1;
     private const VALID_TITLE = 'Post title';
@@ -35,7 +37,7 @@ class GetHomepagePostsServiceTest extends TestCase
     /**
      * @test
      */
-    public function findPostByUrlSlug_whenPostExist_shouldReturnAPost(): void
+    public function findHomepagePosts_whenPostsExist_shouldReturnAPostArray(): void
     {
         $postArray = $this->getPostArray($this->getCategoriesCollection());
 
@@ -77,6 +79,18 @@ class GetHomepagePostsServiceTest extends TestCase
                 Content::create(self::VALID_CONTENT),
                 Description::create(self::VALID_DESCRIPTION),
                 self::POST_ENABLED,
+                self::POST_HOMEPAGE_ENABLED,
+                ImageUrl::create(self::POST_IMAGE),
+                Order::create(self::VALID_ORDER),
+                Title::create(self::VALID_TITLE),
+                UrlSlug::create(self::VALID_URL_SLUG)
+            ),
+            new Post(
+                $categoriesCollection,
+                Content::create(self::VALID_CONTENT),
+                Description::create(self::VALID_DESCRIPTION),
+                self::POST_ENABLED,
+                self::POST_HOMEPAGE_DISABLED,
                 ImageUrl::create(self::POST_IMAGE),
                 Order::create(self::VALID_ORDER),
                 Title::create(self::VALID_TITLE),
@@ -87,6 +101,7 @@ class GetHomepagePostsServiceTest extends TestCase
                 Content::create(self::VALID_CONTENT),
                 Description::create(self::VALID_DESCRIPTION),
                 self::POST_DISABLED,
+                self::POST_HOMEPAGE_ENABLED,
                 ImageUrl::create(self::POST_IMAGE),
                 Order::create(self::VALID_ORDER),
                 Title::create(self::VALID_TITLE),

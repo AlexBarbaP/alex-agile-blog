@@ -19,7 +19,7 @@ class GetPostsByCategoryTest extends IntegrationTestAbstract
         $getPostsByCategoryCommand = new GetPostsByCategoryCommand(DoctrineCategoryFixtureLoader::CATEGORY_URL_SLUG);
         $postArray = $this->commandBus->handle($getPostsByCategoryCommand);
 
-        $this->assertCount(2, $postArray);
+        $this->assertCount(3, $postArray);
 
         /** @var Post $firstPost */
         $firstPost = array_shift($postArray);
