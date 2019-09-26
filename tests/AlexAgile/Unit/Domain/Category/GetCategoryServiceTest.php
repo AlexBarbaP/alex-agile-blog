@@ -6,6 +6,7 @@ namespace AlexAgile\Tests\Unit\Domain\Category;
 use AlexAgile\Domain\Category\Category;
 use AlexAgile\Domain\Category\GetCategoryService;
 use AlexAgile\Domain\ValueObject\Color;
+use AlexAgile\Domain\ValueObject\Order;
 use AlexAgile\Domain\ValueObject\Title;
 use AlexAgile\Domain\ValueObject\UrlSlug;
 use AlexAgile\Infrastructure\Persistence\InMemory\Category\CategoryRepositoryInMemoryAdapter;
@@ -14,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 class GetCategoryServiceTest extends TestCase
 {
     private const VALID_CATEGORY_COLOR = 'yellow';
+    private const VALID_CATEGORY_ORDER = 1;
     private const VALID_CATEGORY_TITLE = 'category-title';
     private const VALID_CATEGORY_URL_SLUG = 'category';
 
@@ -24,6 +26,7 @@ class GetCategoryServiceTest extends TestCase
     {
         $category = new Category(
             Color::create(self::VALID_CATEGORY_COLOR),
+            Order::create(self::VALID_CATEGORY_ORDER),
             Title::create(self::VALID_CATEGORY_TITLE),
             UrlSlug::create(self::VALID_CATEGORY_URL_SLUG)
         );

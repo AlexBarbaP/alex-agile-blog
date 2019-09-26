@@ -10,11 +10,9 @@ use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineDescription
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineImageUrl;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineOrder;
-use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePassword;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePostId;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineTitle;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUrlSlug;
-use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUserId;
 use Doctrine\Common\Cache\ArrayCache;
 use Doctrine\DBAL\DBALException;
 use Doctrine\DBAL\Types\Type;

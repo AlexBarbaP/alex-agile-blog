@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace AlexAgile\Domain\Category;
 
 use AlexAgile\Domain\ValueObject\Color;
+use AlexAgile\Domain\ValueObject\Order;
 use AlexAgile\Domain\ValueObject\Title;
 use AlexAgile\Domain\ValueObject\UrlSlug;
 
@@ -21,6 +22,9 @@ class Category
     /** @var \DateTimeImmutable */
     private $modified;
 
+    /** @var Order */
+    private $order;
+
     /** @var Title */
     private $title;
 
@@ -29,6 +33,7 @@ class Category
 
     public function __construct(
         Color $color,
+        Order $order,
         Title $title,
         UrlSlug $urlSlug,
         CategoryId $categoryId = null,
@@ -37,6 +42,7 @@ class Category
     ) {
         $this->id= $categoryId ?: CategoryId::create();
         $this->color = $color;
+        $this->order = $order;
         $this->title = $title;
         $this->urlSlug = $urlSlug;
         $this->created = $created ?: new \DateTimeImmutable();
@@ -61,6 +67,11 @@ class Category
     public function getModified(): \DateTimeImmutable
     {
         return $this->modified;
+    }
+
+    public function getOrder(): Order
+    {
+        return $this->order;
     }
 
     public function getTitle(): Title

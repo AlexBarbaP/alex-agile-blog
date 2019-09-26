@@ -20,6 +20,7 @@ use PHPUnit\Framework\TestCase;
 class GetPostServiceTest extends TestCase
 {
     private const VALID_CATEGORY_COLOR = 'yellow';
+    private const VALID_CATEGORY_ORDER = 1;
     private const VALID_CATEGORY_TITLE = 'category-title';
     private const VALID_CATEGORY_URL_SLUG = 'category';
     private const VALID_CONTENT = 'Post Content';
@@ -38,6 +39,7 @@ class GetPostServiceTest extends TestCase
     {
         $category = new Category(
             Color::create(self::VALID_CATEGORY_COLOR),
+            Order::create(self::VALID_CATEGORY_ORDER),
             Title::create(self::VALID_CATEGORY_TITLE),
             UrlSlug::create(self::VALID_CATEGORY_URL_SLUG)
         );

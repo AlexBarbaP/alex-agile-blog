@@ -57,6 +57,7 @@ final class CategoryRepositoryDoctrineAdapter implements CategoryRepositoryInter
      */
     public function findAll(): array
     {
-        return $this->em->getRepository(Category::class)->findAll();
+        return $this->em->getRepository(Category::class)
+            ->findBy(array(), array('order' => 'ASC'));
     }
 }

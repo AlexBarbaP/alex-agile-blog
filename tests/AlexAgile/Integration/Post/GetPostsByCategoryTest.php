@@ -16,7 +16,7 @@ class GetPostsByCategoryTest extends IntegrationTestAbstract
      */
     public function getPostsByCategory_whenPostsExists_shouldReturnAPostArray(): void
     {
-        $getPostsByCategoryCommand = new GetPostsByCategoryCommand(DoctrineCategoryFixtureLoader::CATEGORY_URL_SLUG);
+        $getPostsByCategoryCommand = new GetPostsByCategoryCommand(DoctrineCategoryFixtureLoader::CATEGORY_1_URL_SLUG);
         $postArray = $this->commandBus->handle($getPostsByCategoryCommand);
 
         $this->assertCount(3, $postArray);

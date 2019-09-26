@@ -15,6 +15,11 @@
                 type="Color"
         />
         <field
+                column="`order`"
+                name="order"
+                type="Order"
+        />
+        <field
                 name="title"
                 type="Title"
         />

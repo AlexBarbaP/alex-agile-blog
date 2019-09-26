@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace AlexAgile\Tests\Functional\Homepage;
 
 use AlexAgile\Tests\DoctrineAwareTestTrait;
+use AlexAgile\Tests\Integration\Fixture\Category\DoctrineCategoryFixtureLoader;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class CategoryTest extends WebTestCase
@@ -28,7 +29,7 @@ class CategoryTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $client->request('GET', '/category');
+        $client->request('GET', '/' . DoctrineCategoryFixtureLoader::CATEGORY_1_URL_SLUG);
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertContains('Post one title', $client->getResponse()->getContent());

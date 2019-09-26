@@ -21,6 +21,7 @@ use PHPUnit\Framework\TestCase;
 class GetPostsByCategoryServiceTest extends TestCase
 {
     private const CATEGORY_COLOR = 'yellow';
+    private const CATEGORY_ORDER = 1;
     private const CATEGORY_TITLE = 'category-title';
     private const CATEGORY_URL_SLUG1 = 'category-one';
     private const CATEGORY_URL_SLUG2 = 'category-two';
@@ -61,11 +62,13 @@ class GetPostsByCategoryServiceTest extends TestCase
         return new ArrayCollection([
             new Category(
                 Color::create(self::CATEGORY_COLOR),
+                Order::create(self::CATEGORY_ORDER),
                 Title::create(self::CATEGORY_TITLE),
                 UrlSlug::create(self::CATEGORY_URL_SLUG1)
             ),
             new Category(
                 Color::create(self::CATEGORY_COLOR),
+                Order::create(self::CATEGORY_ORDER),
                 Title::create(self::CATEGORY_TITLE),
                 UrlSlug::create(self::CATEGORY_URL_SLUG2)
             )
