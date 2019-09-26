@@ -54,6 +54,10 @@ final class DoctrineEntityManagerFactory
             Type::addType('Description', DoctrineDescription::class);
         }
 
+        if (!Type::hasType('Email')) {
+            Type::addType('Email', DoctrineEmail::class);
+        }
+
         if (!Type::hasType('ImageUrl')) {
             Type::addType('ImageUrl', DoctrineImageUrl::class);
         }
@@ -72,18 +76,6 @@ final class DoctrineEntityManagerFactory
 
         if (!Type::hasType('UrlSlug')) {
             Type::addType('UrlSlug', DoctrineUrlSlug::class);
-        }
-
-        if (!Type::hasType('UserId')) {
-            Type::addType('UserId', DoctrineUserId::class);
-        }
-
-        if (!Type::hasType('Email')) {
-            Type::addType('Email', DoctrineEmail::class);
-        }
-
-        if (!Type::hasType('Password')) {
-            Type::addType('Password', DoctrinePassword::class);
         }
     }
 

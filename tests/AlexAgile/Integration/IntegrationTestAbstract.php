@@ -8,12 +8,10 @@ use AlexAgile\Domain\Category\GetCategoryService;
 use AlexAgile\Domain\Post\GetHomepagePostsService;
 use AlexAgile\Domain\Post\GetPostsByCategoryService;
 use AlexAgile\Domain\Post\GetPostService;
-use AlexAgile\Domain\User\Register\RegisterUserService;
 use AlexAgile\Infrastructure\Messaging\CommandBus\Tactician\TacticianCommandBusFactory;
 use AlexAgile\Infrastructure\Messaging\EventBus\League\LeagueEventBusFactory;
 use AlexAgile\Infrastructure\Persistence\Doctrine\Category\CategoryRepositoryDoctrineAdapter;
 use AlexAgile\Infrastructure\Persistence\Doctrine\Post\PostRepositoryDoctrineAdapter;
-use AlexAgile\Infrastructure\Persistence\Doctrine\User\UserRepositoryDoctrineAdapter;
 use AlexAgile\Tests\DoctrineAwareTestTrait;
 use League\Event\EmitterInterface;
 use League\Tactician\CommandBus;
@@ -23,17 +21,11 @@ class IntegrationTestAbstract extends TestCase
 {
     use DoctrineAwareTestTrait;
 
-    /** @var UserRepositoryDoctrineAdapter */
-    protected $userRepositoryDoctrineAdapter;
-
     /** @var PostRepositoryDoctrineAdapter */
     protected $postRepositoryDoctrineAdapter;
 
     /** @var CategoryRepositoryDoctrineAdapter  */
     protected $categoryRepositoryDoctrineAdapter;
-
-    /** @var RegisterUserService */
-    protected $registerUserService;
 
     /** @var GetPostService */
     protected $getPostService;
@@ -67,13 +59,11 @@ class IntegrationTestAbstract extends TestCase
 
         $this->fixturesLoader();
 
-        $this->userRepositoryDoctrineAdapter = new UserRepositoryDoctrineAdapter($this->entityManager);
         $this->postRepositoryDoctrineAdapter = new PostRepositoryDoctrineAdapter($this->entityManager);
         $this->categoryRepositoryDoctrineAdapter = new CategoryRepositoryDoctrineAdapter($this->entityManager);
 
         $this->setupEventBus();
 
-        $this->registerUserService = new RegisterUserService($this->userRepositoryDoctrineAdapter, $this->eventBus);
         $this->getPostService = new GetPostService($this->postRepositoryDoctrineAdapter);
         $this->getHomepagePostsService = new GetHomepagePostsService($this->postRepositoryDoctrineAdapter);
         $this->getPostsByCategoryService = new GetPostsByCategoryService($this->postRepositoryDoctrineAdapter);
@@ -85,7 +75,7 @@ class IntegrationTestAbstract extends TestCase
 
     private function setupEventBus(): void
     {
-        $eventBusFactory = new LeagueEventBusFactory($this->userRepositoryDoctrineAdapter);
+        $eventBusFactory = new LeagueEventBusFactory();
 
         $this->eventBus = $eventBusFactory->create();
     }
@@ -93,7 +83,6 @@ class IntegrationTestAbstract extends TestCase
     private function setupCommandBus(): void
     {
         $commandBusFactory = new TacticianCommandBusFactory(
-            $this->registerUserService,
             $this->getPostService,
             $this->getHomepagePostsService,
             $this->getPostsByCategoryService,

@@ -22,7 +22,6 @@ trait DoctrineAwareTestTrait
         $entityPaths = [
             __DIR__ . '/../../src/AlexAgile/Infrastructure/Persistence/Doctrine/Category/Mapping' => 'AlexAgile\Domain\Category',
             __DIR__ . '/../../src/AlexAgile/Infrastructure/Persistence/Doctrine/Post/Mapping' => 'AlexAgile\Domain\Post',
-            __DIR__ . '/../../src/AlexAgile/Infrastructure/Persistence/Doctrine/User/Mapping' => 'AlexAgile\Domain\User',
         ];
 
         $dbParams = [
@@ -38,7 +37,6 @@ trait DoctrineAwareTestTrait
     protected function fixturesLoader(): void
     {
         $loader = new Loader();
-        $loader->addFixture(new DoctrineUserFixtureLoader());
         $loader->addFixture(new DoctrineCategoryFixtureLoader());
         $loader->addFixture(new DoctrinePostFixtureLoader());
 

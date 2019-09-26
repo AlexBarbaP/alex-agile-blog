@@ -29,6 +29,9 @@ doctrine:
             Description:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineDescription
                 commented: false
+            Email:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail
+                commented: false
             ImageUrl:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineImageUrl
                 commented: false
@@ -43,14 +46,6 @@ doctrine:
             UrlSlug:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUrlSlug
                 commented: false
-            Email:
-                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail
-                commented: false
-            Password:
-                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePassword
-                commented: false
-            UserId:
-                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUserId
 
     orm:
         auto_generate_proxy_classes: true
@@ -69,9 +64,3 @@ doctrine:
                 dir: '%kernel.project_dir%/src/AlexAgile/Infrastructure/Persistence/Doctrine/Post/Mapping'
                 prefix: 'AlexAgile\Domain\Post'
                 alias: Post
-            User:
-                is_bundle: false
-                type: xml
-                dir: '%kernel.project_dir%/src/AlexAgile/Infrastructure/Persistence/Doctrine/User/Mapping'
-                prefix: 'AlexAgile\Domain\User'
-                alias: User
