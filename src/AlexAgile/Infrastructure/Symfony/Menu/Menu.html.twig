@@ -1,5 +1,11 @@
 <div class="navigation-container">
 
+    <div class="link-container">
+        <a href="{{ path('home') }}" class="link dark-link">Home</a>
+    </div>
+
+    <div class="link-separator"></div>
+    
     {%  for category in categories %}
         <div class="link-container">
             <div class="bullet {{ category.color }}-bullet"></div>
