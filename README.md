@@ -87,10 +87,13 @@
     
 ##### 8. Using webpack
     
-    # compile assets once
+    # Install encore
+    docker-compose exec php yarn
+    
+    # compile assets once (optional)
     docker-compose exec php yarn encore dev
     
-    # recompile assets automatically when files change
+    # recompile assets automatically when files change (optional)
     docker-compose exec php yarn encore dev --watch
     
     # create a production build

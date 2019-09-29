@@ -26,4 +26,6 @@ services:
   php:
     build:
       args:
-      - WORKDIR=/var/www
+        - WORKDIR=/var/www
+    environment:
+      - APP_ENV=dev #dev|ci|prod
