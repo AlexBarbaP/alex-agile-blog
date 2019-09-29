@@ -13,6 +13,10 @@ services:
       - PHP_PROXY_PORT=9000
       - APACHE_SERVERNAME=alexagile-server
       - APACHE_SERVER_ADMIN=info@example.com
+    ports:
+      - 80:80
+      - 443:443
+      - 9998:80
   mysql:
     environment:
       - MYSQL_ROOT_PASSWORD=root-passwd
