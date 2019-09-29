@@ -11,19 +11,20 @@ html, body {
           margin-left: 242px;
 
           .categories {
-            @include verticalCategories(80px, 75px, 24px, $blue-light-bullet-color);
+            @include verticalCategories(80px, 75px, 24px, $gray-menu-color);
           }
 
           #post-content {
             margin-top: 50px;
+            width: 100%;
 
             .title-container {
-              display: table-row;
+              display: table;
               margin-top: 52px;
+              width: 100%;
 
               .image-container {
                 display: table-cell;
-                height: 469px;
                 width: 723px;
 
                 .image {
@@ -41,13 +42,15 @@ html, body {
             }
 
             .title {
-              background-color: $white-color;
+              display: block;
               left: 115px;
-              top: -99px;
+              min-height: 100px;
+              top: -60px;
               position: relative;
               width: 650px;
 
-              .title-container {
+              .title-text {
+                background-color: $white-color;
                 display: table-cell;
                 font-family: 'Catamaran', sans-serif;
                 font-size: 35px;
@@ -56,6 +59,7 @@ html, body {
                 padding-left: 70px;
                 padding-right: 70px;
                 padding-top: 45px;
+                position: absolute;
                 text-align: left;
                 vertical-align: bottom;
                 width: 100%;
@@ -63,8 +67,9 @@ html, body {
             }
 
             .info-container {
-              margin-left: 181px;
-              margin-top: -40px;
+              display: table;
+              padding-left: 181px;
+              width: 100%;
 
               .item-container {
                 display: inline-block;
@@ -107,11 +112,8 @@ html, body {
             }
 
             .content-container {
-              display: table-row;
-              margin-left: 181px;
-              margin-top: 42px;
-              padding-left: 75px;
-              padding-top: 40px;
+              display: table;
+              width: 100%;
 
               .content-margin {
                 display: table-cell;
@@ -134,7 +136,8 @@ html, body {
             }
 
             .signature-container {
-              margin-left: 181px;
+              display: table;
+              width: 100%;
 
               .picture-container {
                 display: table-cell;
@@ -190,8 +193,8 @@ html, body {
             }
 
             .comments-container {
-              margin-left: 181px;
-              padding-top: 35px;
+              display: table;
+              width: 100%;
 
               .title {
                 color: $black-color;
@@ -298,7 +301,8 @@ html, body {
             }
 
             .related-container {
-              margin: 60px 0px 100px 181px;
+              display: table;
+              width: 100%;
 
               .title-container {
 
@@ -346,6 +350,19 @@ html, body {
                 }
               }
             }
+
+            .two-column-container {
+              display: table;
+              width: 100%;
+
+              .two-column-left {
+                display: table-cell;
+              }
+
+              .two-column-right {
+                display: table-cell;
+              }
+            }
           }
         }
       }
@@ -366,7 +383,7 @@ html, body {
             margin-left: 0px;
 
             .categories {
-              @include horizontalCategories(10px, 20px, $blue-light-bullet-color);
+              @include horizontalCategories(10px, 20px, $gray-menu-color);
             }
 
             #post-content {
@@ -392,11 +409,11 @@ html, body {
 
               .title {
                 left: 10%;
-                top: -100px;
+                top: -25px;
                 position: relative;
                 width: 86%;
 
-                .title-container {
+                .title-text {
                   display: block;
                   font-size: 30px;
                   padding: 20px;
@@ -547,7 +564,7 @@ html, body {
                   .title {
                     width: 93%;
 
-                    .title-container {
+                    .title-text {
                       font-size: 24px;
                       padding-left: 40px;
                       padding-right: 30px;
@@ -591,6 +608,18 @@ html, body {
                       }
                     }
                   }
+                }
+              }
+
+              .two-column-container {
+                .two-column-left {
+                  display: table;
+                  width: 100%;
+                }
+
+                .two-column-right {
+                  display: table;
+                  width: 100%;
                 }
               }
             }

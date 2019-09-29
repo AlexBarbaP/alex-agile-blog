@@ -14,7 +14,7 @@ html, body {
             display: table-row;
 
             .categories {
-              @include verticalCategories(110px, 95px, 55px, $blue-light-bullet-color);
+              @include verticalCategories(110px, 95px, 55px, $gray-menu-color);
             }
 
             .post {
@@ -113,7 +113,7 @@ html, body {
               display: block;
 
               .categories {
-                @include horizontalCategories(10px, 20px, $blue-light-bullet-color);
+                @include horizontalCategories(10px, 20px, $gray-menu-color);
               }
 
               .post {

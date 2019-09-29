@@ -31,7 +31,7 @@ html, body {
             font-weight: 900;
             line-height: 1.2em;
             margin-top: 20px;
-            margin-left: 74px;
+            text-align: center;
             text-decoration: none;
           }
 
@@ -53,20 +53,20 @@ html, body {
                 width: 7px;
               }
 
-              .blue-bullet {
-                background-color: $blue-bullet-color;
+              .red-bullet {
+                background-color: $red-bullet-color;
+              }
+
+              .yellow-bullet {
+                background-color: $yellow-bullet-color;
               }
 
               .green-bullet {
                 background-color: $green-bullet-color;
               }
 
-              .pink-bullet {
-                background-color: $pink-bullet-color;
-              }
-
-              .purple-bullet {
-                background-color: $purple-bullet-color;
+              .blue-bullet {
+                background-color: $blue-bullet-color;
               }
 
               .link {

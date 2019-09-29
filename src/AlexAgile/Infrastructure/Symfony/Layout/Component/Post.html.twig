@@ -1,59 +1,61 @@
 <div id="post-content">
 
     <div class="title-container">
-
         <div class="categories">
             <div class="vertical-text-container">
                 {% for category in post.categories %}
                     <span class="category {{ category.color }}">{{ category.title }}</span>
                 {% endfor %}
-                <div class="line"></div>
+                {% if post.categories|length %}
+                    <div class="line"></div>
+                {% endif %}
             </div>
         </div>
 
         <div class="image-container">
             <img class="image"
                  src="{{ asset( post.image.imageUrl) }}">
-            {#{{ include('AlexAgileFrontBundle:Component:Social.html.twig') }}#}
+            {#            {{ include('AlexAgileFrontBundle:Component:Social.html.twig') }}#}
         </div>
-
     </div>
 
     <div class="title">
-        <div class="title-container">
-            {{ post.title }}
+        <div class="title-text">
+            {{ post.title|raw }}
         </div>
     </div>
 
-    <div class="info-container">
-        <div class="item-container">
-            <div class="icon date"></div>
-            <div class="text">{{ post.created|localizeddate('long', 'none', app.request.locale) }}</div>
-        </div>
-        {#<div class="item-container">#}
-        {#<div class="icon comments"></div>#}
-        {#<div class="text">77 comments</div>#}
-        {#</div>#}
-        {#<div class="item-container">#}
-        {#<div class="icon views"></div>#}
-        {#<div class="text">2.056 views</div>#}
-        {#</div>#}
-        {#<div class="item-container">#}
-        {#<div class="icon shared"></div>#}
-        {#<div class="text">50 shares</div>#}
-        {#</div>#}
-    </div>
+{#    <div class="info-container">#}
+{#        <div class="item-container">#}
+{#            <div class="icon date"></div>#}
+{#            <div class="text">{{ post.created|localizeddate('long', 'none', app.request.locale) }}</div>#}
+{#        </div>#}
+{#        <div class="item-container">#}
+{#            <div class="icon comments"></div>#}
+{#            <div class="text">77 comments</div>#}
+{#        </div>#}
+{#        <div class="item-container">#}
+{#            <div class="icon views"></div>#}
+{#            <div class="text">2.056 views</div>#}
+{#        </div>#}
+{#        <div class="item-container">#}
+{#            <div class="icon shared"></div>#}
+{#            <div class="text">50 shares</div>#}
+{#        </div>#}
+{#    </div>#}
 
     <div class="content-container">
 
-        <div class="content-margin"></div>
+{#        <div class="content-margin"></div>#}
 
         <div class="categories">
             <div class="vertical-text-container">
                 {% for category in post.categories %}
                     <span class="category {{ category.color }}">{{ category.title }}</span>
                 {% endfor %}
-                <div class="line"></div>
+                {% if post.categories|length %}
+                    <div class="line"></div>
+                {% endif %}
             </div>
         </div>
 
@@ -63,135 +65,116 @@
 
     </div>
 
-    {#<div class="signature-container">#}
+{#    <div class="signature-container">#}
+{#        <div class="picture-container">#}
+{#            <div class="picture"#}
+{#                 style="background-image: url('../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg');"></div>#}
+{#            <div class="signature-text-container">#}
+{#                <div class="written-by">Written by</div>#}
+{#                <div class="author">Alejandro Barba</div>#}
+{#            </div>#}
+{#        </div#}
+{#        >#}
+{#        <div class="author-description-container">#}
+{#            <div class="author-description">#}
+{#                Lorem ipsum dolor sit amet.<br>#}
+{#                adipiscing elit dolor sit ametdolor sit amet.<br>#}
+{#                Lorem ipsum dolor sit amet amet.#}
+{#            </div>#}
+{#            <div class="author-links">#}
+{#                Follow Alejandro on#}
+{#                <span class="link">Facebook</span>,#}
+{#                <span class="link">Twitter</span>,#}
+{#                <span class="link">Instagram</span>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
-    {#<div class="picture-container">#}
-    {#<div class="picture" style="background-image: url('../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg');"></div>#}
-    {#<div class="signature-text-container">#}
-    {#<div class="written-by">Written by</div>#}
-    {#<div class="author">Alejandro Barba</div>#}
-    {#</div>#}
-    {#</div#}
+{#    <div class="comments-container">#}
+{#        <div class="title">Comments</div>#}
+{#        <div class="comment-container">#}
+{#            <div class="comment-block">#}
+{#                #}{#                    {% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with }#}
+{#                #}{#                        'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
+{#                #}{#                        'title': 'pineipol',#}
+{#                #}{#                        'date': '2 hours ago',#}
+{#                #}{#                        'content': 'Enhorabuena por tu blog, Alejandro!! Me ha encantado toda la serie sobre Scrum. ¿Cuando podremos empezar a ver estas cosas aplicadas en algún proyecto?',#}
+{#                #}{#                        'link': 'reply',#}
+{#                #}{#                        'onReplyTo': ''#}
+{#                #}{#                    } %}#}
+{#            </div>#}
+{#            <div class="comment-replay-block">#}
+{#                #}{#                    {% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with }#}
+{#                #}{#                        'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
+{#                #}{#                        'title': 'Alejandro Barba',#}
+{#                #}{#                        'date': '3 hours ago',#}
+{#                #}{#                        'content': 'Hola Pineipol, la próxima serie de posts, que será más corta que ésta, tratará sobre cómo montar un servidor completo en Amazon Web Services, paso previo a empezar con nuestro primer proyecto Agile. Paciencia, ya mismo empezamos!!',#}
+{#                #}{#                        'link': 'reply',#}
+{#                #}{#                        'onReplyTo': 'pineipol'#}
+{#                #}{#                    } %}#}
+{#            </div>#}
+{#            <div class="comment-replay-block">#}
+{#                #}{#                    {% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with }#}
+{#                #}{#                        'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
+{#                #}{#                        'title': 'Alejandro Barba',#}
+{#                #}{#                        'date': '3 hours ago',#}
+{#                #}{#                        'content': 'Hola Pineipol, la próxima serie de posts, que será más corta que ésta, tratará sobre cómo montar un servidor completo en Amazon Web Services, paso previo a empezar con nuestro primer proyecto Agile. Paciencia, ya mismo empezamos!!',#}
+{#                #}{#                        'link': 'reply',#}
+{#                #}{#                        'onReplyTo': 'pineipol'#}
+{#                #}{#                    } %}#}
+{#            </div>#}
+{#            <div class="comment-block">#}
+{#                #}{#                    {% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with }#}
+{#                #}{#                        'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
+{#                #}{#                        'title': 'pineipol',#}
+{#                #}{#                        'date': '2 hours ago',#}
+{#                #}{#                        'content': 'Enhorabuena por tu blog, Alejandro!! Me ha encantado toda la serie sobre Scrum. ¿Cuando podremos empezar a ver estas cosas aplicadas en algún proyecto?',#}
+{#                #}{#                        'link': 'reply',#}
+{#                #}{#                        'onReplyTo': ''#}
+{#                #}{#                    } %}#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="new-comment-container">#}
+{#            <form method="post" class="comment-form">#}
+{#                <div class="picture-container">#}
+{#                    <div class="picture-input" style="background-image: url('');"></div>#}
+{#                </div>#}
+{#                <div class="content-container">#}
+{#                    <div class="name-input-container">#}
+{#                        <input name="name-input" class="input-class input-text" placeholder="Your name">#}
+{#                    </div>#}
+{#                    <div class="email-input-container">#}
+{#                        <input name="email-input" class="input-class input-text" placeholder="Your email">#}
+{#                    </div>#}
+{#                    <div class="comment-input-container">#}
+{#                            <textarea name="comment-input" class="input-class input-textarea"#}
+{#                                      placeholder="Your comment"></textarea>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="send-button-container">#}
+{#                    <input type="submit" value="send" class="button">#}
+{#                </div>#}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
 
-    {#><div class="author-description-container">#}
-    {#<div class="author-description">#}
-    {#Lorem ipsum dolor sit amet.<br>#}
-    {#adipiscing elit dolor sit ametdolor sit amet.<br>#}
-    {#Lorem ipsum dolor sit amet amet.#}
-    {#</div>#}
-    {#<div class="author-links">#}
-    {#Follow Alejandro on#}
-    {#<span class="link">Facebook</span>,#}
-    {#<span class="link">Twitter</span>,#}
-    {#<span class="link">Instagram</span>#}
-    {#</div>#}
-    {#</div>#}
-
-    {#</div>#}
-
-    {#<div class="comments-container">#}
-
-    {#<div class="title">Comments</div>#}
-
-    {#<div class="comment-container">#}
-
-    {#<div class="comment-block">#}
-    {#{% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with {#}
-    {#'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
-    {#'title': 'pineipol',#}
-    {#'date': '2 hours ago',#}
-    {#'content': 'Enhorabuena por tu blog, Alejandro!! Me ha encantado toda la serie sobre Scrum. ¿Cuando podremos empezar a ver estas cosas aplicadas en algún proyecto?',#}
-    {#'link': 'reply',#}
-    {#'onReplyTo': ''#}
-    {#} %}#}
-    {#</div>#}
-
-    {#<div class="comment-replay-block">#}
-    {#{% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with {#}
-    {#'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
-    {#'title': 'Alejandro Barba',#}
-    {#'date': '3 hours ago',#}
-    {#'content': 'Hola Pineipol, la próxima serie de posts, que será más corta que ésta, tratará sobre cómo montar un servidor completo en Amazon Web Services, paso previo a empezar con nuestro primer proyecto Agile. Paciencia, ya mismo empezamos!!',#}
-    {#'link': 'reply',#}
-    {#'onReplyTo': 'pineipol'#}
-    {#} %}#}
-    {#</div>#}
-
-    {#<div class="comment-replay-block">#}
-    {#{% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with {#}
-    {#'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
-    {#'title': 'Alejandro Barba',#}
-    {#'date': '3 hours ago',#}
-    {#'content': 'Hola Pineipol, la próxima serie de posts, que será más corta que ésta, tratará sobre cómo montar un servidor completo en Amazon Web Services, paso previo a empezar con nuestro primer proyecto Agile. Paciencia, ya mismo empezamos!!',#}
-    {#'link': 'reply',#}
-    {#'onReplyTo': 'pineipol'#}
-    {#} %}#}
-    {#</div>#}
-
-    {#<div class="comment-block">#}
-    {#{% include 'AlexAgileFrontBundle:Component:PostCommentBlock.html.twig' with {#}
-    {#'picture': '../../bundles/alexagilefront/images/posts/authors/alex-agile.jpg',#}
-    {#'title': 'pineipol',#}
-    {#'date': '2 hours ago',#}
-    {#'content': 'Enhorabuena por tu blog, Alejandro!! Me ha encantado toda la serie sobre Scrum. ¿Cuando podremos empezar a ver estas cosas aplicadas en algún proyecto?',#}
-    {#'link': 'reply',#}
-    {#'onReplyTo': ''#}
-    {#} %}#}
-    {#</div>#}
-
-    {#</div>#}
-
-    {#<div class="new-comment-container">#}
-
-    {#<form method="post" class="comment-form">#}
-    {#<div class="picture-container">#}
-    {#<div class="picture-input" style="background-image: url('');"></div>#}
-    {#</div>#}
-
-    {#<div class="content-container">#}
-
-    {#<div class="name-input-container">#}
-    {#<input name="name-input" class="input-class input-text" placeholder="Your name">#}
-    {#</div>#}
-
-    {#<div class="email-input-container">#}
-    {#<input name="email-input" class="input-class input-text" placeholder="Your email">#}
-    {#</div>#}
-
-    {#<div class="comment-input-container">#}
-    {#<textarea name="comment-input" class="input-class input-textarea" placeholder="Your comment"></textarea>#}
-    {#</div>#}
-
-    {#</div>#}
-
-    {#<div class="send-button-container">#}
-    {#<input type="submit" value="send" class="button">#}
-    {#</div>#}
-    {#</form>#}
-    {#</div>#}
-
-    {#</div>#}
-
-    {#<div class="related-container">#}
-
-    {#<div class="title-container">#}
-    {#<div class="title">#}
-    {#Read more#}
-    {#</div>#}
-    {#<div class="line"></div>#}
-    {#</div>#}
-
-    {#<div class="related-posts-container">#}
-    {#<div class="linked-post-left">#}
-    {#Eventos de Scrum. Reuniones de Grooming o refinamiento del Backlog.#}
-    {#</div>#}
-    {#<div class="linked-post-center">#}
-    {#Eventos de Scrum. Reuniones de Grooming o refinamiento del Backlog.#}
-    {#</div>#}
-    {#<div class="linked-post-right">#}
-    {#Eventos de Scrum. Reuniones de Grooming o refinamiento del Backlog.#}
-    {#</div>#}
-    {#</div>#}
-
-    {#</div>#}
+{#    <div class="related-container">#}
+{#        <div class="title-container">#}
+{#            <div class="title">#}
+{#                Read more#}
+{#            </div>#}
+{#            <div class="line"></div>#}
+{#        </div>#}
+{#        <div class="related-posts-container">#}
+{#            <div class="linked-post-left">#}
+{#                Eventos de Scrum. Reuniones de Grooming o refinamiento del Backlog.#}
+{#            </div>#}
+{#            <div class="linked-post-center">#}
+{#                Eventos de Scrum. Reuniones de Grooming o refinamiento del Backlog.#}
+{#            </div>#}
+{#            <div class="linked-post-right">#}
+{#                Eventos de Scrum. Reuniones de Grooming o refinamiento del Backlog.#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 </div>
