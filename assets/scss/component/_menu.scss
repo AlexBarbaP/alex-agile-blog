@@ -68,26 +68,37 @@ html, body {
               .blue-bullet {
                 background-color: $blue-bullet-color;
               }
-
-              .link {
-                @include link ($gray-menu-text-color, $gray-menu-text-color, $gray-dark-menu-text-color, $gray-menu-text-color);
-                display: inline-block;
-                font-family: 'Catamaran', sans-serif;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 300;
-                margin-left: 46px;
-                vertical-align: top;
-              }
-
-              .dark-link {
-                @include link ($gray-dark-menu-text-color, $gray-dark-menu-text-color, $white-color, $gray-dark-menu-text-color);
-                margin-left: 57px;
-              }
             }
 
             .link-separator {
               height: 20px;
+            }
+
+            .bottom-link-container {
+              bottom: 10px;
+              font-size: 4px;
+              position: fixed;
+              text-align: center;
+            }
+
+            .link {
+              @include link ($gray-menu-text-color, $gray-menu-text-color, $gray-dark-menu-text-color, $gray-menu-text-color);
+              display: inline-block;
+              font-family: 'Catamaran', sans-serif;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 300;
+              margin-left: 46px;
+              vertical-align: top;
+            }
+
+            .dark-link {
+              @include link ($gray-dark-menu-text-color, $gray-dark-menu-text-color, $white-color, $gray-dark-menu-text-color);
+              margin-left: 57px;
+            }
+
+            .bottom-link {
+              font-size: 14px;
             }
           }
         }
