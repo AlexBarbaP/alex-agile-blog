@@ -6,6 +6,7 @@ namespace AlexAgile\Tests\Unit\Domain\Post;
 use AlexAgile\Domain\Category\Category;
 use AlexAgile\Domain\Post\GetPostService;
 use AlexAgile\Domain\Post\Post;
+use AlexAgile\Domain\Post\PostNotFoundException;
 use AlexAgile\Domain\ValueObject\Color;
 use AlexAgile\Domain\ValueObject\Content;
 use AlexAgile\Domain\ValueObject\Description;
@@ -68,10 +69,11 @@ class GetPostServiceTest extends TestCase
 
     /**
      * @test
-     * @expectedException \AlexAgile\Domain\Post\PostNotFoundException
      */
     public function findPostByUrlSlug_whenPostNotExist_shouldThrowAnException(): void
     {
+        $this->expectException(PostNotFoundException::class);
+
         $postRepository = new PostRepositoryInMemoryAdapter([]);
         $getPostService = new GetPostService($postRepository);
 

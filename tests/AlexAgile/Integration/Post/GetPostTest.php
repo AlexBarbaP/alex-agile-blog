@@ -6,6 +6,7 @@ namespace AlexAgile\Tests\Integration\Post;
 use AlexAgile\Domain\Category\Category;
 use AlexAgile\Domain\Post\GetPostCommand;
 use AlexAgile\Domain\Post\Post;
+use AlexAgile\Domain\Post\PostNotFoundException;
 use AlexAgile\Tests\Integration\Fixture\Post\DoctrinePostFixtureLoader;
 use AlexAgile\Tests\Integration\IntegrationTestAbstract;
 
@@ -40,10 +41,10 @@ class GetPostTest extends IntegrationTestAbstract
 
     /**
      * @test
-     * @expectedException \AlexAgile\Domain\Post\PostNotFoundException
      */
     public function getPost_whenPostNotExists_shouldThrowAnException(): void
     {
+        $this->expectException(PostNotFoundException::class);
         $getPostCommand = new GetPostCommand(self::NON_EXISTING_POST_URL_SLUG);
         $this->commandBus->handle($getPostCommand);
     }

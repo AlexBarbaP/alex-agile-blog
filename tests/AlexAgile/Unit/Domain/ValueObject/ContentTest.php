@@ -21,10 +21,11 @@ class ContentTest extends TestCase
 
     /**
      * @test
-     * @expectedException \InvalidArgumentException
      */
     public function createContent_whenDataIsInvalid_shouldThrowAnException(): void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Content::create(self::INVALID_CONTENT);
     }
 }

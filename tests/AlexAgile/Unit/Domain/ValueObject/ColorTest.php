@@ -21,10 +21,11 @@ class ColorTest extends TestCase
 
     /**
      * @test
-     * @expectedException \InvalidArgumentException
      */
     public function createColor_whenDataIsInvalid_shouldThrowAnException(): void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Color::create(self::INVALID_COLOR);
     }
 }

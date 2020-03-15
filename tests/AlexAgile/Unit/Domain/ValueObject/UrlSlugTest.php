@@ -29,10 +29,11 @@ class UrlSlugTest extends TestCase
     /**
      * @test
      * @dataProvider invalidDataProvider
-     * @expectedException \InvalidArgumentException
      */
     public function createTitle_whenDataIsInvalid_shouldThrowAnException($value): void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         UrlSlug::create($value);
     }
 

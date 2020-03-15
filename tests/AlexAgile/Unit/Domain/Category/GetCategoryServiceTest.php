@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace AlexAgile\Tests\Unit\Domain\Category;
 
 use AlexAgile\Domain\Category\Category;
+use AlexAgile\Domain\Category\CategoryNotFoundException;
 use AlexAgile\Domain\Category\GetCategoryService;
 use AlexAgile\Domain\ValueObject\Color;
 use AlexAgile\Domain\ValueObject\Order;
@@ -43,10 +44,11 @@ class GetCategoryServiceTest extends TestCase
 
     /**
      * @test
-     * @expectedException \AlexAgile\Domain\Category\CategoryNotFoundException
      */
     public function findCategoryByUrlSlug_whenCategoryNotExist_shouldThrowAnException(): void
     {
+        $this->expectException(CategoryNotFoundException::class);
+
         $categoryRepository = new CategoryRepositoryInMemoryAdapter([]);
         $getCategoryService = new GetCategoryService($categoryRepository);
 

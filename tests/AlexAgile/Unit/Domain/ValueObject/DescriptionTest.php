@@ -21,10 +21,11 @@ class DescriptionTest extends TestCase
 
     /**
      * @test
-     * @expectedException \InvalidArgumentException
      */
     public function createDescription_whenDataIsInvalid_shouldThrowAnException(): void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Description::create(self::INVALID_DESCRIPTION);
     }
 }

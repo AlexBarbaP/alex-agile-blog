@@ -21,10 +21,11 @@ class NameTest extends TestCase
 
     /**
      * @test
-     * @expectedException \InvalidArgumentException
      */
     public function createName_whenDataIsInvalid_shouldThrowAnException(): void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Name::create(self::INVALID_NAME);
     }
 }

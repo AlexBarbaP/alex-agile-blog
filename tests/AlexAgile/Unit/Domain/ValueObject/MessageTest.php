@@ -22,10 +22,11 @@ class MessageTest extends TestCase
 
     /**
      * @test
-     * @expectedException \InvalidArgumentException
      */
     public function createMessage_whenDataIsInvalid_shouldThrowAnException(): void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Message::create(self::INVALID_MESSAGE);
     }
 

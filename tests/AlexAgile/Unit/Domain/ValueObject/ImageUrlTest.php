@@ -37,10 +37,11 @@ class ImageUrlTest extends TestCase
     /**
      * @test
      * @dataProvider invalidDataProvider
-     * @expectedException \InvalidArgumentException
      */
     public function createTitle_whenDataIsInvalid_shouldThrowAnException(string $value): void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         ImageUrl::create($value);
     }
 

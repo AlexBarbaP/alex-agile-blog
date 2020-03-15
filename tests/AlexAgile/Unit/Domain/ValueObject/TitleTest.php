@@ -21,10 +21,11 @@ class TitleTest extends TestCase
 
     /**
      * @test
-     * @expectedException \InvalidArgumentException
      */
     public function createTitle_whenDataIsInvalid_shouldThrowAnException(): void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Title::create(self::INVALID_TITLE);
     }
 }
