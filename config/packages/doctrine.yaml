@@ -22,45 +22,34 @@ doctrine:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineCategoryId
             Color:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineColor
-                commented: false
             ContactRequestId:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineContactRequestId
             Content:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineContent
-                commented: false
             Description:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineDescription
-                commented: false
             Email:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail
-                commented: false
             ImageUrl:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineImageUrl
-                commented: false
             Message:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineMessage
-                commented: false
             Name:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineName
-                commented: false
             Order:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineOrder
-                commented: false
             Phone:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePhone
-                commented: false
             PostId:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePostId
             Title:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineTitle
-                commented: false
             UrlSlug:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUrlSlug
-                commented: false
 
     orm:
         auto_generate_proxy_classes: true
-        naming_strategy: doctrine.orm.naming_strategy.underscore
+        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
         mappings:
             Category:

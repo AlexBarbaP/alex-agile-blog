@@ -31,11 +31,11 @@ class PostTest extends WebTestCase
         $client->request('GET', '/post/post-one-url-slug');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertContains('Post one title', $client->getResponse()->getContent());
-        $this->assertContains('Post One Content', $client->getResponse()->getContent());
+        $this->assertStringContainsString('Post one title', $client->getResponse()->getContent());
+        $this->assertStringContainsString('Post One Content', $client->getResponse()->getContent());
 
-        $this->assertContains('category-title', $client->getResponse()->getContent());
+        $this->assertStringContainsString('category-title', $client->getResponse()->getContent());
 
-        $this->assertNotContains('Post One Description', $client->getResponse()->getContent());
+        $this->assertStringNotContainsString('Post One Description', $client->getResponse()->getContent());
     }
 }

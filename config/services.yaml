@@ -34,7 +34,7 @@ services:
 
     # service factories
     League\Tactician\CommandBus:
-        factory: 'AlexAgile\Infrastructure\Messaging\CommandBus\Tactician\TacticianCommandBusFactory:create'
+        factory: ['@AlexAgile\Infrastructure\Messaging\CommandBus\Tactician\TacticianCommandBusFactory', 'create']
 
     League\Event\EmitterInterface:
-        factory: 'AlexAgile\Infrastructure\Messaging\EventBus\League\LeagueEventBusFactory:create'
+        factory: ['@AlexAgile\Infrastructure\Messaging\EventBus\League\LeagueEventBusFactory', 'create']
