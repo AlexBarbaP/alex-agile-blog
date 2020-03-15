@@ -5,8 +5,8 @@ namespace AlexAgile\Tests;
 
 use AlexAgile\Infrastructure\Persistence\Doctrine\DoctrineEntityManagerFactory;
 use AlexAgile\Tests\Integration\Fixture\Category\DoctrineCategoryFixtureLoader;
+use AlexAgile\Tests\Integration\Fixture\ContactRequest\DoctrineContactRequestFixtureLoader;
 use AlexAgile\Tests\Integration\Fixture\Post\DoctrinePostFixtureLoader;
-use AlexAgile\Tests\Integration\Fixture\User\DoctrineUserFixtureLoader;
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Loader;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
@@ -20,6 +20,7 @@ trait DoctrineAwareTestTrait
     protected function setUpEntityManager(): void
     {
         $entityPaths = [
+            __DIR__ . '/../../src/AlexAgile/Infrastructure/Persistence/Doctrine/ContactRequest/Mapping' => 'AlexAgile\Domain\ContactRequest',
             __DIR__ . '/../../src/AlexAgile/Infrastructure/Persistence/Doctrine/Category/Mapping' => 'AlexAgile\Domain\Category',
             __DIR__ . '/../../src/AlexAgile/Infrastructure/Persistence/Doctrine/Post/Mapping' => 'AlexAgile\Domain\Post',
         ];
@@ -38,6 +39,7 @@ trait DoctrineAwareTestTrait
     {
         $loader = new Loader();
         $loader->addFixture(new DoctrineCategoryFixtureLoader());
+        $loader->addFixture(new DoctrineContactRequestFixtureLoader());
         $loader->addFixture(new DoctrinePostFixtureLoader());
 
         $purger   = new ORMPurger();

@@ -5,11 +5,15 @@ namespace AlexAgile\Infrastructure\Persistence\Doctrine;
 
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineCategoryId;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineColor;
+use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineContactRequestId;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineContent;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineDescription;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineEmail;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineImageUrl;
+use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineMessage;
+use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineName;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineOrder;
+use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePhone;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePostId;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineTitle;
 use AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineUrlSlug;
@@ -33,7 +37,7 @@ final class DoctrineEntityManagerFactory
      */
     public function __construct(array $entityPaths, array $connectionParams)
     {
-        $this->entityPaths      = $entityPaths;
+        $this->entityPaths = $entityPaths;
         $this->connectionParams = $connectionParams;
 
         if (!Type::hasType('CategoryId')) {
@@ -42,6 +46,10 @@ final class DoctrineEntityManagerFactory
 
         if (!Type::hasType('Color')) {
             Type::addType('Color', DoctrineColor::class);
+        }
+
+        if (!Type::hasType('ContactRequestId')) {
+            Type::addType('ContactRequestId', DoctrineContactRequestId::class);
         }
 
         if (!Type::hasType('Content')) {
@@ -60,8 +68,20 @@ final class DoctrineEntityManagerFactory
             Type::addType('ImageUrl', DoctrineImageUrl::class);
         }
 
+        if (!Type::hasType('Message')) {
+            Type::addType('Message', DoctrineMessage::class);
+        }
+
+        if (!Type::hasType('Name')) {
+            Type::addType('Name', DoctrineName::class);
+        }
+
         if (!Type::hasType('Order')) {
             Type::addType('Order', DoctrineOrder::class);
+        }
+
+        if (!Type::hasType('Phone')) {
+            Type::addType('Phone', DoctrinePhone::class);
         }
 
         if (!Type::hasType('PostId')) {
@@ -83,8 +103,8 @@ final class DoctrineEntityManagerFactory
     public function getEntityManager(): EntityManager
     {
         $isDevMode = true;
-        $proxyDir  = null;
-        $cache     = new ArrayCache();
+        $proxyDir = null;
+        $cache = new ArrayCache();
 
         $config = Setup::createXMLMetadataConfiguration(
             $this->entityPaths,

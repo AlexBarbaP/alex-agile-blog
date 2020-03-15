@@ -28,6 +28,7 @@ services:
     # please note that last definitions always *replace* previous ones
 
     # service aliases
+    AlexAgile\Domain\ContactRequest\ContactRequestRepositoryInterface: '@AlexAgile\Infrastructure\Persistence\Doctrine\ContactRequest\ContactRequestRepositoryDoctrineAdapter'
     AlexAgile\Domain\Post\PostRepositoryInterface: '@AlexAgile\Infrastructure\Persistence\Doctrine\Post\PostRepositoryDoctrineAdapter'
     AlexAgile\Domain\Category\CategoryRepositoryInterface: '@AlexAgile\Infrastructure\Persistence\Doctrine\Category\CategoryRepositoryDoctrineAdapter'
 

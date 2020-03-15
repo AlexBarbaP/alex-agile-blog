@@ -23,6 +23,8 @@ doctrine:
             Color:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineColor
                 commented: false
+            ContactRequestId:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineContactRequestId
             Content:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineContent
                 commented: false
@@ -35,8 +37,17 @@ doctrine:
             ImageUrl:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineImageUrl
                 commented: false
+            Message:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineMessage
+                commented: false
+            Name:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineName
+                commented: false
             Order:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrineOrder
+                commented: false
+            Phone:
+                class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePhone
                 commented: false
             PostId:
                 class: AlexAgile\Infrastructure\Persistence\Doctrine\CustomType\DoctrinePostId
@@ -58,6 +69,12 @@ doctrine:
                 dir: '%kernel.project_dir%/src/AlexAgile/Infrastructure/Persistence/Doctrine/Category/Mapping'
                 prefix: 'AlexAgile\Domain\Category'
                 alias: Category
+            ContactRequest:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/src/AlexAgile/Infrastructure/Persistence/Doctrine/ContactRequest/Mapping'
+                prefix: 'AlexAgile\Domain\ContactRequest'
+                alias: ContactRequest
             Post:
                 is_bundle: false
                 type: xml

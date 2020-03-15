@@ -4,12 +4,15 @@ declare(strict_types=1);
 namespace AlexAgile\Infrastructure\Messaging\CommandBus\Tactician;
 
 use AlexAgile\Application\Category\GetCategoriesCommandHandler;
+use AlexAgile\Application\ContactRequest\CreateContactRequestCommandHandler;
 use AlexAgile\Application\Post\GetHomepagePostsCommandHandler;
 use AlexAgile\Application\Post\GetPostCommandHandler;
 use AlexAgile\Application\Post\GetPostsByCategoryCommandHandler;
 use AlexAgile\Domain\Category\GetCategoriesCommand;
 use AlexAgile\Domain\Category\GetCategoriesService;
 use AlexAgile\Domain\Category\GetCategoryService;
+use AlexAgile\Domain\ContactRequest\CreateContactRequestCommand;
+use AlexAgile\Domain\ContactRequest\CreateContactRequestService;
 use AlexAgile\Domain\Post\GetHomepagePostsCommand;
 use AlexAgile\Domain\Post\GetHomepagePostsService;
 use AlexAgile\Domain\Post\GetPostCommand;
@@ -32,6 +35,7 @@ final class TacticianCommandBusFactory
     private $eventBus;
 
     public function __construct(
+        CreateContactRequestService $createContactRequestService,
         GetPostService $getPostService,
         GetHomepagePostsService $getHomepagePostsService,
         GetPostsByCategoryService $getPostsByCategoryService,
@@ -46,12 +50,14 @@ final class TacticianCommandBusFactory
         $inflector = new HandleInflector();
 
         // register commands
+        $createContactRequestCommandHandler = new CreateContactRequestCommandHandler($createContactRequestService);
         $getPostCommandHandler = new GetPostCommandHandler($getPostService);
         $getHomepagePostsCommandHandler = new GetHomepagePostsCommandHandler($getHomepagePostsService);
         $getPostsByCategoryCommandHandler = new GetPostsByCategoryCommandHandler($getPostsByCategoryService, $getCategoryService);
         $getCategoriesCommandHandler = new GetCategoriesCommandHandler($getCategoriesService);
 
         $locator = new InMemoryLocator();
+        $locator->addHandler($createContactRequestCommandHandler, CreateContactRequestCommand::class);
         $locator->addHandler($getPostCommandHandler, GetPostCommand::class);
         $locator->addHandler($getHomepagePostsCommandHandler, GetHomepagePostsCommand::class);
         $locator->addHandler($getPostsByCategoryCommandHandler, GetPostsByCategoryCommand::class);
