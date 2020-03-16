@@ -13,7 +13,7 @@ final class Email
     private function __construct(string $email)
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new InvalidArgumentException('Invalid email argument');
+            throw new InvalidArgumentException('The format of your email is not correct!');
         }
 
         $this->value = $email;

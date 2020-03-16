@@ -27,7 +27,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/{categoryName}", methods={"GET", "POST"}, name="category")
+     * @Route("/page/{categoryName}", methods={"GET", "POST"}, name="category")
      * @Template("Category/Category.html.twig")
      */
     public function __invoke(Request $request, string $categoryName): array

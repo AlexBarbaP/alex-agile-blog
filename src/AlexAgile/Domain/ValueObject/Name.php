@@ -13,7 +13,7 @@ final class Name
     private function __construct(string $value)
     {
         if (empty($value)) {
-            throw new InvalidArgumentException('Invalid name argument');
+            throw new InvalidArgumentException('Your name shouldn\'t be empty!');
         }
 
         $this->value = $value;

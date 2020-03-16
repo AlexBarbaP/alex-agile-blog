@@ -13,7 +13,7 @@ final class Message
     private function __construct(string $value)
     {
         if (empty($value)) {
-            throw new InvalidArgumentException('Invalid message argument');
+            throw new InvalidArgumentException('Please, provide a message!');
         }
 
         $this->value = htmlentities($value, ENT_QUOTES, 'UTF-8');

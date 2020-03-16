@@ -25,7 +25,7 @@ final class Phone
                 ],
             ])
         ) {
-            throw new InvalidArgumentException('Invalid phone argument');
+            throw new InvalidArgumentException('Your phone number should be something like +xxxxxxxxxxx!');
         }
 
         $this->value = $value;

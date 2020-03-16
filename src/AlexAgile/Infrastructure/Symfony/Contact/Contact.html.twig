@@ -1,0 +1,95 @@
+{% extends 'Layout/BaseLayout.html.twig' %}
+
+{% block body %}
+
+    <div id="contact-content">
+
+        <div class="title">
+            <div class="title-text">
+                Contact
+            </div>
+        </div>
+
+        <div class="content-container">
+
+            <div class="categories">
+                <div class="vertical-text-container">
+                    <span class="category blue">Contact</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <div class="text">
+
+                <div class="two-column-container">
+                    <div class="two-column-left">
+                        Do you want you or your employees to take full and conscious control of your lives right now?
+                        <br><br>
+                        Boost your career and your team, find balance in life and handle conflict successfully, overcome stress and enjoy the journey.
+                        <br><br>
+                        Discover how you, your team and employees can start making the very tiny changes that will have the biggest impact.
+                        <br><br>
+                        <a class="link" href="mailto:alex@alexbarbacoaching.com">alex@alexbarbacoaching.com</a>
+                        <br>
+                        <a class="link" href="https://www.linkedin.com/in/alex-barba-coaching" target="_blank">LinkedIn Alex Barba Coaching</a>
+                        <br><br><br>
+                        <span class="text-light-color">
+                            KVK 77395123
+                            <br>
+                            VAT NL003190327B03
+                        </span>
+                    </div>
+                    <div class="two-column-right">
+                        Are you curious about how I can serve you?
+                        <br>
+                        Let's have a chat. What can you lose?
+                        <br><br>
+                        <span style="font-size: 1.2em;font-weight: bolder;">Contact me</span>
+                        <br><br>
+
+                        <div class="new-comment-container">
+
+
+                            {{ form_start(form, {'attr': {'novalidate': 'novalidate', 'margin': 0, 'padding': 0, 'class': 'comment-form'} } ) }}
+
+                                {% if error is not empty %}
+                                    <div class="form-warning-panel font-color-alert">
+                                        {{ error }}
+                                    </div>
+                                {% endif %}
+                                {% if action == 'contact-request-successful' %}
+                                    <div class="form-warning-panel">
+                                        <span class="font-weight-bold">Congratulations! </span>
+                                        <br>
+                                        Your contact request has been successfully received!
+                                        <br>
+                                        I'll be back to you within 48 hours.
+                                    </div>
+                                {% endif %}
+
+                                <div class="content-container">
+                                    {{ form_widget(form.name, { 'attr': {'class' : 'input-class input-text', 'placeholder' : 'Your name *' } }) }}
+                                    {{ form_errors(form.name, { 'attr': {'class' : 'error'} }) }}
+
+                                    {{ form_widget(form.email, { 'attr': {'class' : 'input-class input-text', 'placeholder' : 'Your email *' } }) }}
+                                    {{ form_errors(form.email, { 'attr': {'class' : 'error'} }) }}
+
+                                    {{ form_widget(form.phone, { 'attr': {'class' : 'input-class input-text', 'placeholder' : 'Your phone *' } }) }}
+                                    {{ form_errors(form.phone, { 'attr': {'class' : 'error'} }) }}
+
+                                    {{ form_widget(form.message, { 'attr': {'class' : 'input-class input-textarea', 'placeholder' : 'Your message *' } }) }}
+                                    {{ form_errors(form.message, { 'attr': {'class' : 'error'} }) }}
+                                </div>
+                                <div class="send-button-container">
+                                    {{ form_widget(form.submit, { 'attr': {'class' : 'button', 'value' : 'Send' } }) }}
+                                </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+{% endblock %}

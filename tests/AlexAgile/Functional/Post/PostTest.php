@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AlexAgile\Tests\Functional\Homepage;
+namespace AlexAgile\Tests\Functional\Post;
 
 use AlexAgile\Tests\DoctrineAwareTestTrait;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
@@ -24,7 +24,7 @@ class PostTest extends WebTestCase
     /**
      * @test
      */
-    public function homepage_shouldShowHomepage()
+    public function postPage_shouldShowPostDetailPage()
     {
         $client = static::createClient();
 

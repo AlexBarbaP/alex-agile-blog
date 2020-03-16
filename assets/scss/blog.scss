@@ -1,4 +1,5 @@
 /* TODO embed fonts */
+@import 'mixing/_border-radius';
 @import 'mixing/_flex-vendors';
 @import 'mixing/_horizontal-categories';
 @import 'mixing/_vertical-categories';
@@ -8,6 +9,7 @@
 @import 'mixing/_post-placeholders';
 @import '_colors';
 @import '_globals';
+@import '_content-contact';
 @import '_content-homepage';
 @import '_content-post';
 @import '_content-about';

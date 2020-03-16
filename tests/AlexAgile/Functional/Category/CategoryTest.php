@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AlexAgile\Tests\Functional\Homepage;
+namespace AlexAgile\Tests\Functional\Category;
 
 use AlexAgile\Tests\DoctrineAwareTestTrait;
 use AlexAgile\Tests\Integration\Fixture\Category\DoctrineCategoryFixtureLoader;
@@ -25,11 +25,11 @@ class CategoryTest extends WebTestCase
     /**
      * @test
      */
-    public function homepage_shouldShowHomepage()
+    public function categoryPage_shouldShowCategoryPage()
     {
         $client = static::createClient();
 
-        $client->request('GET', '/' . DoctrineCategoryFixtureLoader::CATEGORY_1_URL_SLUG);
+        $client->request('GET', '/page/' . DoctrineCategoryFixtureLoader::CATEGORY_1_URL_SLUG);
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertStringContainsString('Post one title', $client->getResponse()->getContent());

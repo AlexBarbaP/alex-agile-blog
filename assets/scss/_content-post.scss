@@ -237,10 +237,9 @@ html, body {
                     width: 100px;
 
                     .picture-input {
+                      @include borderRadius(25px);
+
                       background-color: $gray-picture-placeholder-color;
-                      -moz-border-radius: 25px;
-                      -webkit-border-radius: 25px;
-                      border-radius: 25px;
                       height: 50px;
                       width: 50px;
                     }
@@ -282,11 +281,10 @@ html, body {
                     text-align: right;
 
                     .button {
-                      -moz-border-radius: 4px;
-                      -webkit-border-radius: 4px;
+                      @include borderRadius(4px);
+
                       background-color: $gray-input-button-color;
                       border: 0px;
-                      border-radius: 4px;
                       color: $white-color;
                       font-family: 'Catamaran', sans-serif;
                       font-size: 0.6em;
