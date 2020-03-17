@@ -28,15 +28,7 @@ final class PostRepositoryDoctrineAdapter implements PostRepositoryInterface
     public function find(PostId $postId): ?Post
     {
         try {
-            $query = $this->em->createQueryBuilder()
-                ->select('p, c')
-                ->from('AlexAgile\Domain\Post\Post', 'p')
-                ->join('p.categories', 'c')
-                ->where('p.postId = :postId')
-                ->setParameter('postId', $postId)
-                ->getQuery();
-
-            return $query->execute();
+            return $this->em->getRepository(Post::class)->find($postId);
         } catch (NoResultException $e) {
             throw new PostNotFoundException('Post not found');
         }

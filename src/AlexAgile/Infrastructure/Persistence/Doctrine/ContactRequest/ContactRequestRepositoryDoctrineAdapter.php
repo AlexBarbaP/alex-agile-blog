@@ -26,16 +26,9 @@ final class ContactRequestRepositoryDoctrineAdapter implements ContactRequestRep
     public function find(ContactRequestId $contactRequestId): ?ContactRequest
     {
         try {
-            $query = $this->em->createQueryBuilder()
-                ->select('cr')
-                ->from('AlexAgile\Domain\ContactRequest\ContactRequest', 'cr')
-                ->where('cr.contactRequestId = :contactRequestId')
-                ->setParameter('contactRequestId', $contactRequestId)
-                ->getQuery();
-
-            return $query->execute();
+            return $this->em->getRepository(ContactRequest::class)->find($contactRequestId);
         } catch (NoResultException $e) {
-            throw new ContactRequestNotFoundException('ContactRequest not found');
+            throw new ContactRequestNotFoundException('Contact Request not found');
         }
     }
 

@@ -8,7 +8,7 @@
         <id
                 column="id"
                 name="id"
-                type="PostId"
+                type="ContactRequestId"
         />
         <field
                 name="email"

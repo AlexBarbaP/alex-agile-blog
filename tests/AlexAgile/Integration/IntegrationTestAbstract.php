@@ -6,11 +6,13 @@ namespace AlexAgile\Tests\Integration;
 use AlexAgile\Domain\Category\GetCategoriesService;
 use AlexAgile\Domain\Category\GetCategoryService;
 use AlexAgile\Domain\ContactRequest\CreateContactRequestService;
+use AlexAgile\Domain\Notification\NotificationServiceInterface;
 use AlexAgile\Domain\Post\GetHomepagePostsService;
 use AlexAgile\Domain\Post\GetPostsByCategoryService;
 use AlexAgile\Domain\Post\GetPostService;
 use AlexAgile\Infrastructure\Messaging\CommandBus\Tactician\TacticianCommandBusFactory;
 use AlexAgile\Infrastructure\Messaging\EventBus\League\LeagueEventBusFactory;
+use AlexAgile\Infrastructure\Notification\Swiftmailer\NotificationServiceSwiftmailerAdapter;
 use AlexAgile\Infrastructure\Persistence\Doctrine\Category\CategoryRepositoryDoctrineAdapter;
 use AlexAgile\Infrastructure\Persistence\Doctrine\ContactRequest\ContactRequestRepositoryDoctrineAdapter;
 use AlexAgile\Infrastructure\Persistence\Doctrine\Post\PostRepositoryDoctrineAdapter;
@@ -56,6 +58,9 @@ class IntegrationTestAbstract extends TestCase
     /** @var EmitterInterface */
     protected $eventBus;
 
+    /** @var NotificationServiceInterface */
+    protected $notificationService;
+
     /**
      * @inheritdoc
      */
@@ -64,6 +69,7 @@ class IntegrationTestAbstract extends TestCase
         parent::setUp();
 
         $this->setUpEntityManager();
+        $this->setupNotificationService();
 
         $this->fixturesLoader();
 
@@ -85,7 +91,7 @@ class IntegrationTestAbstract extends TestCase
 
     private function setupEventBus(): void
     {
-        $eventBusFactory = new LeagueEventBusFactory();
+        $eventBusFactory = new LeagueEventBusFactory($this->contactRequestRepositoryDoctrineAdapter, $this->notificationService);
 
         $this->eventBus = $eventBusFactory->create();
     }
@@ -103,5 +109,17 @@ class IntegrationTestAbstract extends TestCase
         );
 
         $this->commandBus = $commandBusFactory->create();
+    }
+
+    private function setupNotificationService(): void
+    {
+        $spool = new \Swift_MemorySpool();
+        $transport = new \Swift_Transport_SpoolTransport(
+            new \Swift_Events_SimpleEventDispatcher(),
+            $spool
+        );
+        $mailer = new \Swift_Mailer($transport);
+
+        $this->notificationService = new NotificationServiceSwiftmailerAdapter($mailer);
     }
 }
