@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/backend-core.iml" filepath="$PROJECT_DIR$/.idea/backend-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/alex-barba-coaching.iml" filepath="$PROJECT_DIR$/.idea/alex-barba-coaching.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dockerized-nginx-php-mysql-app/.idea/dockerized-nginx-php-mysql-app.iml" filepath="$PROJECT_DIR$/../dockerized-nginx-php-mysql-app/.idea/dockerized-nginx-php-mysql-app.iml" />
     </modules>
   </component>
