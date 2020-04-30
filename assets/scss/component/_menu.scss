@@ -88,13 +88,13 @@ html, body {
               font-size: 24px;
               font-style: normal;
               font-weight: 300;
-              margin-left: 46px;
+              margin-left: 25px;
               vertical-align: top;
             }
 
             .dark-link {
               @include link ($gray-dark-menu-text-color, $gray-dark-menu-text-color, $white-color, $gray-dark-menu-text-color);
-              margin-left: 57px;
+              margin-left: 36px;
             }
 
             .bottom-link {
