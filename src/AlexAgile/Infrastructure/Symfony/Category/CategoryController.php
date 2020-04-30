@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace AlexAgile\Infrastructure\Symfony\Category;
 
+use AlexAgile\Domain\Category\CategoryNotFoundException;
 use AlexAgile\Domain\Post\GetPostsByCategoryCommand;
 use AlexAgile\Domain\Post\Post;
 use League\Tactician\CommandBus;
@@ -32,13 +33,17 @@ class CategoryController extends AbstractController
      */
     public function __invoke(Request $request, string $categoryName): array
     {
-        $getPostsByCategoryCommand = new GetPostsByCategoryCommand($categoryName);
+        try {
+            $getPostsByCategoryCommand = new GetPostsByCategoryCommand($categoryName);
 
-        /** @var Post[] $post */
-        $postsArray = $this->commandBus->handle($getPostsByCategoryCommand);
+            /** @var Post[] $post */
+            $postsArray = $this->commandBus->handle($getPostsByCategoryCommand);
 
-        return [
-            'posts' => $postsArray,
-        ];
+            return [
+                'posts' => $postsArray,
+            ];
+        } catch (CategoryNotFoundException $e) {
+            throw $this->createNotFoundException('The page does not exist');
+        }
     }
 }
