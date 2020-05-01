@@ -2,34 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://www.alexbarbacoaching.com/</loc>
-        <lastmod>2020-03-19</lastmod>
+        <lastmod>2020-05-01</lastmod>
     </url>
     <url>
-        <loc>http://www.alexbarbacoaching.com/page/you</loc>
-        <lastmod>2020-03-19</lastmod>
+        <loc>http://www.alexbarbacoaching.com/page/one-on-one-coaching</loc>
+        <lastmod>2020-05-01</lastmod>
     </url>
     <url>
-        <loc>http://www.alexbarbacoaching.com/page/me</loc>
-        <lastmod>2020-03-19</lastmod>
+        <loc>http://www.alexbarbacoaching.com/post/you</loc>
+        <lastmod>2020-05-01</lastmod>
     </url>
     <url>
-        <loc>http://www.alexbarbacoaching.com/page/us</loc>
-        <lastmod>2020-03-19</lastmod>
+        <loc>http://www.alexbarbacoaching.com/post/me</loc>
+        <lastmod>2020-05-01</lastmod>
+    </url>
+    <url>
+        <loc>http://www.alexbarbacoaching.com/post/us</loc>
+        <lastmod>2020-05-01</lastmod>
+    </url>
+    <url>
+        <loc>http://www.alexbarbacoaching.com/page/business-coaching</loc>
+        <lastmod>2020-05-01</lastmod>
+    </url>
+    <url>
+        <loc>http://www.alexbarbacoaching.com/post/executive-coaching</loc>
+        <lastmod>2020-05-01</lastmod>
+    </url>
+    <url>
+        <loc>http://www.alexbarbacoaching.com/post/exponential-team-building</loc>
+        <lastmod>2020-05-01</lastmod>
     </url>
     <url>
         <loc>http://www.alexbarbacoaching.com/page/group-coaching</loc>
-        <lastmod>2020-03-30</lastmod>
+        <lastmod>2020-05-01</lastmod>
+    </url>
+    <url>
+        <loc>http://www.alexbarbacoaching.com/page/testimonials</loc>
+        <lastmod>2020-05-01</lastmod>
     </url>
     <url>
         <loc>http://www.alexbarbacoaching.com/contact</loc>
-        <lastmod>2020-03-19</lastmod>
-    </url>
-    <url>
-        <loc>http://www.alexbarbacoaching.com/documents/Terms%20and%20Conditions%20-%20Alex%20Barba%20Coaching.pdf</loc>
-        <lastmod>2020-03-19</lastmod>
-    </url>
-    <url>
-        <loc>http://www.alexbarbacoaching.com/documents/Privacy%20Policy%20-%20Alex%20Barba%20Coaching.pdf</loc>
-        <lastmod>2020-03-19</lastmod>
+        <lastmod>2020-05-01</lastmod>
     </url>
 </urlset>
