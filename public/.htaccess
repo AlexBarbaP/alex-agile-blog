@@ -1,0 +1,4 @@
+Redirect 301 "/page/you" "/post/you"
+Redirect 301 "/page/me" "/post/me"
+Redirect 301 "/page/us" "/post/us"
+Redirect 301 "/page/team-building" "/post/exponential-team-building"
