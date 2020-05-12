@@ -1,0 +1,1565 @@
+/*
+    9. Header section
+    10. Header top section
+    11. Header middle section
+    12. Header menu section
+        12.1 Menu wrapper (Navbar)
+        12.2 Logo
+        12.3 Toggler button
+        12.4 Main menu
+        12.5 Submenu
+        12.6 Buttons
+        12.7 Mobile
+        12.8 Desktop
+    13. Header expand
+        13.1 Expand small (sm)
+        13.2 Expand medium (md)
+        13.3 Expand large (lg)
+        13.4 Expand extra large (xl)
+        13.5 Expand
+    14. Header variations
+        14.1 Layout 1
+        14.2 Layout 2
+        14.3 Layout 3
+        14.4 Layout 4
+        14.5 Layout 5 (off canvas menu)
+*/
+
+
+
+
+/* =============================================================================
+   9. Header section
+============================================================================= */
+/* Wrapper
+============================================================================= */
+.gfort-section-header {
+    padding: 0;
+    width: 100%;
+    z-index: 100;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+
+    -ms-word-wrap: normal;
+        word-wrap: normal;
+       word-break: normal;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+
+/* Container
+============================================================================= */
+.gfort-section-header-container {
+    padding: 0;
+    width: 100%;
+    z-index: 100;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+
+/* =============================================================================
+   10. Header top section
+============================================================================= */
+/* Wrapper
+============================================================================= */
+.gfort-section-header-top {
+    padding: 0;
+    z-index: 6;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.6;
+    position: relative;
+}
+
+
+/* Container
+============================================================================= */
+.gfort-section-header-top-container {
+    z-index: 4;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 24px 0 0;
+    line-height: 24px;
+    position: relative;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+@media (min-width: 992px) {
+    .gfort-section-header-top-container { padding-top: 12px; }
+}
+
+
+/* Content
+============================================================================= */
+.gfort-section-top-header-content {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0 0 24px;
+    position: relative;
+    direction: initial;
+}
+@media (min-width: 992px) {
+    .gfort-section-top-header-content { padding-bottom: 12px; }
+}
+.gfort-section-top-header-content > *:last-child { margin-bottom: 0; }
+.gfort-section-top-header-content a { display: inline-block; }
+
+
+
+
+/* =============================================================================
+   11. Header middle section
+============================================================================= */
+/* Wrapper
+============================================================================= */
+.gfort-section-header-middle {
+    z-index: 5;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+
+/* Container
+============================================================================= */
+.gfort-section-header-middle-container {
+    z-index: 4;
+    padding: 0;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+
+/* Content
+============================================================================= */
+.gfort-section-header-middle-content {
+    padding: 0;
+    width: auto;
+    font-size: 0;
+    line-height: 0;
+    margin: 0 -12px;
+    position: relative;
+    text-align: center;
+
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+    -webkit-flex-align: center;
+        -ms-flex-align: center;
+           align-items: center;
+
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+
+      -ms-flex-pack: justify;
+    justify-content: space-between;
+
+      -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.gfort-section-header-middle-content::after {
+    content: '';
+    display: table;
+}
+
+
+/* Widget
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-section-header-middle-widget {
+    width: 100%;
+    display: block;
+    padding: 0 12px;
+    margin: 30px auto;
+}
+.gfort-section-header-middle-widget::after {
+    bottom: 0;
+    height: 1px;
+    content: '';
+    width: 2000%;
+    position: absolute;
+    margin-left: -450%;
+    margin-right: -450%;
+}
+
+.gfort-section-header-middle-widget > *:last-child { margin-bottom: 0; }
+.gfort-section-header-middle-widget > *:not(.gfort-btn) { line-height: 1.7; }
+.gfort-section-header-middle-widget a { display: inline-block; }
+
+
+
+
+/* =============================================================================
+   12. Header menu section
+============================================================================= */
+/* Main wrapper
+============================================================================= */
+.gfort-section-header-menu {
+    z-index: 4;
+    padding: 0;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* Main container
+============================================================================= */
+.gfort-section-header-menu-container {
+    z-index: 4;
+    padding: 0;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+
+    -webkit-overflow-scrolling: touch;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.10);
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.10);
+}
+
+
+/* 12.1 Menu wrapper (Navbar)
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-navbar {
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-flex-align: center;
+        -ms-flex-align: center;
+           align-items: center;
+
+      -ms-flex-pack: start;
+    justify-content: flex-start;
+
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+}
+
+/* Container
+----------------------------------------------------------------------------- */
+.gfort-navbar > .container {
+    position: relative;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+    -webkit-flex-align: center;
+        -ms-flex-align: center;
+           align-items: center;
+
+      -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+
+/* 12.2 Logo
+============================================================================= */
+/* Link
+----------------------------------------------------------------------------- */
+.gfort-navbar-brand {
+    margin: 0 12px;
+    font-size: 33px;
+    padding: 24px 0;
+    font-weight: 600;
+    line-height: 24px;
+    white-space: nowrap;
+    letter-spacing: -1px;
+    display: inline-block;
+}
+
+/* Image
+----------------------------------------------------------------------------- */
+.gfort-navbar-brand img {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Normal / Transparent
+----------------------------------------------------------------------------- */
+.gfort-navbar-brand .gfort-navbar-brand-normal { display: block; }
+.gfort-navbar-brand .gfort-navbar-brand-transparent { display: none; }
+
+
+/* 12.3 Toggler button
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-navbar-toggler {
+    border: 0;
+    font-size: 0;
+    margin: 0 9px;
+    line-height: 0;
+    padding: 27px 0;
+    font-weight: 500;
+    overflow: hidden;
+    border-radius: 0;
+    outline: none !important;
+    background-color: transparent;
+}
+
+/* Word
+----------------------------------------------------------------------------- */
+.gfort-navbar-toggler span {
+    font-size: 13px;
+    overflow: hidden;
+    margin-left: 3px;
+    margin-right: 3px;
+    line-height: 18px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: 0.50px;
+}
+
+/* Lines
+----------------------------------------------------------------------------- */
+/* Wrapper */
+.gfort-navbar-toggler .gfort-navbar-toggler-lines-wrapper {
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    border-color: inherit;
+}
+
+/* Line */
+.gfort-navbar-toggler .gfort-navbar-toggler-line {
+    left: 0;
+    top: 50%;
+    height: 0;
+    width: 100%;
+    content: '';
+    margin-top: -1px;
+    position: absolute;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: inherit;
+
+    transition-delay: 0.2s, 0.0s;
+    transition-duration: 0.0s;
+
+    transition-property: margin, -webkit-transform, border-color;
+    transition-property: margin, transform, border-color;
+}
+.gfort-navbar-toggler .gfort-navbar-toggler-line-top {
+    margin-top: -6px;
+    transition-duration: 0.2s;
+}
+.gfort-navbar-toggler .gfort-navbar-toggler-line-bottom {
+    margin-top: 4px;
+    transition-duration: 0.2s;
+}
+
+/* Toggle */
+.gfort-navbar-toggler.toggle .gfort-navbar-toggler-line {
+    transition-delay: 0.2s;
+    border-color: transparent;
+}
+.gfort-navbar-toggler.toggle .gfort-navbar-toggler-line-top {
+    margin-top: -1px;
+    border-color: inherit;
+
+    transition-delay: 0.0s, 0.2s;
+
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.gfort-navbar-toggler.toggle .gfort-navbar-toggler-line-bottom {
+    margin-top: -1px;
+    border-color: inherit;
+
+    transition-delay: 0.0s, 0.2s;
+
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+
+/* 12.4 Main menu
+============================================================================= */
+/* List (ul)
+----------------------------------------------------------------------------- */
+/* Main */
+.gfort-navbar-collapse ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gfort-navbar-collapse .gfort-navbar-nav ul { display: none; }
+
+/* Items (li)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse .gfort-nav-item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+}
+
+/* Link (a)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse .gfort-nav-link {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+.gfort-navbar-collapse .gfort-nav-link:not(.gfort-btn) {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.50px;
+}
+
+.gfort-navbar-collapse .gfort-nav-link span {
+    display: block;
+    position: relative;
+}
+
+.gfort-navbar-collapse .gfort-nav-link i {
+    padding: 0 1px;
+    min-width: 24px;
+}
+
+
+/* 12.5 Submenu
+============================================================================= */
+/* Arrow
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse .menu-item-has-children > .gfort-nav-link:not(.gfort-btn) span::after,
+.gfort-navbar-collapse .menu-item-has-children > .gfort-nav-link:not(.gfort-btn) span::before {
+    right: 0;
+    top: 50%;
+    width: 6px;
+    height: 2px;
+    content: '';
+    margin-top: -1px;
+    position: absolute;
+    border-color: inherit;
+    border-top-width: 2px;
+    border-top-style: solid;
+
+    -webkit-transition: transform 0.30s ease-in-out;
+            transition: transform 0.30s ease-in-out;
+}
+.gfort-navbar-collapse .menu-item-has-children > .gfort-nav-link:not(.gfort-btn) span::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.gfort-navbar-collapse .menu-item-has-children > .gfort-nav-link:not(.gfort-btn) span::before {
+    margin-right: 3px;
+
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+.gfort-navbar-collapse .menu-item-has-children > .menu-opened:not(.gfort-btn) span::after {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+.gfort-navbar-collapse .menu-item-has-children > .menu-opened:not(.gfort-btn) span::before {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+
+/* 12.6 Buttons
+============================================================================= */
+/* List (ul)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse .gfort-navbar-buttons {
+    font-size: 0;
+    line-height: 0;
+}
+
+/* Items (li)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse .gfort-navbar-buttons > li { position: static; }
+
+/* Divider
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse .gfort-navbar-buttons .gfort-navbar-buttons-divider {
+    width: 2px;
+    height: 24px;
+
+    -webkit-transition: background-color 0.30s ease-in-out;
+            transition: background-color 0.30s ease-in-out;
+}
+
+/* Link (a)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse .gfort-navbar-buttons .gfort-nav-link { overflow: hidden; }
+
+/* Search
+----------------------------------------------------------------------------- */
+/* Form */
+.gfort-navbar-collapse .gfort-navbar-buttons .gfort-form-block,
+.gfort-navbar-collapse .gfort-navbar-buttons .gfort-form-block-container,
+.gfort-navbar-collapse .gfort-navbar-buttons .gfort-form-block-container form {
+    margin: 0 auto;
+}
+
+/* close button */
+.gfort-navbar-collapse .gfort-navbar-buttons .gfort-nav-link-search-btn-close {
+    top: 50%;
+    right: 2px;
+    padding: 0;
+    z-index: 10;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: -10px;
+    line-height: 20px;
+    position: absolute;
+    font-family: sans-serif;
+
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+/* open search form (on desktop) */
+.gfort-form-block-header-search-open .gfort-navbar-collapse .gfort-navbar-buttons .gfort-form-block-header-search {
+    opacity: 1;
+    z-index: 10;
+    visibility: visible;
+}
+.gfort-form-block-header-search-open .gfort-navbar .gfort-navbar-brand,
+.gfort-form-block-header-search-open .gfort-navbar .gfort-navbar-nav,
+.gfort-form-block-header-search-open .gfort-navbar .gfort-navbar-buttons > li > a,
+.gfort-form-block-header-search-open .gfort-navbar .gfort-navbar-buttons .gfort-navbar-buttons-divider {
+    opacity: 0;
+    z-index: -10;
+    visibility: hidden;
+}
+.gfort-form-block-header-search-open .gfort-navbar .gfort-navbar-buttons .gfort-nav-link-search-btn-close {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+}
+
+
+/* 12.7 Mobile
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-mobile-menu {
+    padding: 0;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* List (ul)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-nav {
+    overflow: hidden;
+    margin-bottom: -1px;
+}
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-nav ul { padding: 0 0 0 24px; }
+
+/* Items (li)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-nav > .headerbtn {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+/* Link (a)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-mobile-menu .gfort-nav-link:not(.gfort-btn) {
+    padding: 12px 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons-cart:last-child a { border-bottom-width: 0; }
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-nav > .headerbtn > .gfort-nav-link { margin: 12px 0; }
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-nav ul .gfort-nav-link:not(.gfort-btn) {
+    font-weight: 500;
+}
+
+/* Buttons
+----------------------------------------------------------------------------- */
+/* Divider */
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-navbar-buttons-divider { display: none; }
+
+/* Search */
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-nav-link-search-btn-open,
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-header-search-desktop {
+    display: none;
+}
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block,
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-container {
+    margin: 0 auto;
+}
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block form { padding: 24px 0; }
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block form input { margin-bottom: 0; }
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-header-search-mobile button {
+    top: 50%;
+    right: 0;
+    padding: 0;
+    z-index: 10;
+    width: 42px;
+    height: 42px;
+    border-width: 0;
+    font-size: 13px;
+    margin: -21px 0 0;
+    position: absolute;
+    background: transparent;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-desktop-menu {
+    display: none;
+
+    -ms-flex-positive: 1;
+            flex-grow: 1;
+
+    -webkit-flex-align: center;
+        -ms-flex-align: center;
+           align-items: center;
+
+    -ms-flex-preferred-size: auto;
+                 flex-basis: auto;
+}
+
+/* List (ul)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-desktop-menu > ul {
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-direction: row;
+        flex-direction: row;
+}
+
+/* Items (li)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item {
+    width: auto;
+    margin: auto;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .headerbtn {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* Link (a)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item > .gfort-nav-link:not(.gfort-btn) {
+    line-height: 24px;
+    padding: 24px 12px;
+}
+.gfort-navbar-collapse-desktop-menu > .gfort-navbar-nav > .headerbtn > .gfort-nav-link {
+    width: auto;
+    margin: auto;
+}
+
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav ul .gfort-nav-link:not(.gfort-btn) {
+    font-weight: 400;
+    padding: 6px 24px;
+}
+
+/* Sub menu
+----------------------------------------------------------------------------- */
+/* Arrow */
+.gfort-navbar-collapse-desktop-menu .menu-item-has-children > .gfort-nav-link:not(.gfort-btn) span::after {
+    width: auto;
+    height: auto;
+    font-size: 10px;
+    border-width: 0;
+    font-weight: 600;
+    content: '\f054';
+    margin-top: -9px;
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+.gfort-navbar-collapse-desktop-menu .menu-item-has-children > .gfort-nav-link:not(.gfort-btn) span::before { display: none; }
+.gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item > .gfort-nav-link:not(.gfort-btn) span::after,
+.gfort-navbar-collapse-desktop-menu .megamenu .gfort-nav-item > .gfort-nav-link:not(.gfort-btn) span::after,
+.gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item > .gfort-nav-link:not(.gfort-btn) span::before,
+.gfort-navbar-collapse-desktop-menu .megamenu .gfort-nav-item > .gfort-nav-link:not(.gfort-btn) span::before {
+    display: none;
+}
+
+/* List (ul) */
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav .gfort-nav-item ul {
+    left: 0;
+    top: 100%;
+    margin: 0;
+    padding: 0;
+    width: 216px;
+    position: absolute;
+    display: block !important;
+
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.10);
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.10);
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .gfort-nav-item:not(.megamenu) ul li:first-child { padding-top: 18px; }
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .gfort-nav-item:not(.megamenu) ul li:last-child { padding-bottom: 18px; }
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav .gfort-nav-item:not(.megamenu) ul {
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transform: translate(0, 12px);
+            transform: translate(0, 12px);
+
+    -webkit-transition: transform 0.30s ease-in-out;
+            transition: transform 0.30s ease-in-out;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav .gfort-nav-item:not(.megamenu) ul ul {
+    top: -18px;
+    left: 100%;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav .gfort-nav-item:not(.megamenu) ul li:first-child > ul { top: 0; }
+
+/* Lang Menu */
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav .gfort-nav-item-lang:not(.megamenu) ul {
+    left: 50%;
+    width: 90px;
+
+    -webkit-transform: translate(-50%, 12px);
+            transform: translate(-50%, 12px);
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav .gfort-nav-item-lang ul img {
+    margin-top: 3px;
+    vertical-align: top;
+    display: inline-block;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav .gfort-nav-item-lang ul .gfort-nav-link:not(.gfort-btn) { font-weight: 500; }
+
+/* correct position */
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .submenu-correct-position > ul {
+    right: 0;
+    left: auto;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .submenu-correct-position:not(.megamenu) > ul ul {
+    left: auto;
+    right: 100%;
+}
+
+/* Mega menu */
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu { position: static; }
+
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu > ul {
+    left: 0;
+    right: 0;
+    padding: 0;
+    width: auto;
+    margin: 0 36px;
+    overflow: hidden;
+    display: none !important;
+
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.10);
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.10);
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+    -webkit-transition: transform 0.30s ease-in-out;
+            transition: transform 0.30s ease-in-out;
+
+    -webkit-animation: gfortMegaMenuWrapperAnimation 0.30s forwards;
+            animation: gfortMegaMenuWrapperAnimation 0.30s forwards;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu > ul ul {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+}
+@-webkit-keyframes gfortMegaMenuWrapperAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translate(0, 12px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate(0, 0);
+    }
+}
+@keyframes gfortMegaMenuWrapperAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 12px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+    }
+}
+
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu:hover > ul {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .gfort-nav-item.megamenu > ul ul {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    -webkit-transform: translate(0, 0) !important;
+            transform: translate(0, 0) !important;
+}
+
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu > ul > .gfort-nav-item {
+    margin: 0;
+    padding: 30px 0;
+
+    -ms-flex: 1 0 25%;
+        flex: 1 0 25%;
+
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu > ul > .gfort-nav-item:last-child {
+    border-right-width: 0;
+}
+
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu > ul .menu-item-has-children .gfort-nav-link:not(.gfort-btn) {
+    padding: 6px 36px;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu > ul .menu-item-has-children > .gfort-nav-link:not(.gfort-btn) {
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu > ul ul .menu-item-has-children:not(:first-child) > .gfort-nav-link:not(.gfort-btn) {
+    margin-top: 24px;
+}
+
+/* 2 columns */
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu-col-2 { position: relative; }
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu-col-2 > ul {
+    left: 0;
+    right: auto;
+    width: 540px;
+    margin-left: 24px;
+    margin-right: auto;
+
+    -webkit-animation: none;
+            animation: none;
+
+    display: -ms-flexbox !important;
+    display: flex !important;
+
+    -webkit-transform: translate(-50%, 12px);
+            transform: translate(-50%, 12px);
+
+    -webkit-transition: transform 0.30s ease-in-out;
+            transition: transform 0.30s ease-in-out;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu-col-2:hover > ul {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+}
+
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu-col-2.megamenu-correct-position > ul {
+    right: 0;
+    left: auto;
+    margin-left: auto;
+
+    -webkit-transform: translate(0%, 12px);
+            transform: translate(0%, 12px);
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu-col-2.megamenu-correct-position:hover > ul {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+}
+
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu-col-2 > ul > .gfort-nav-item {
+    -ms-flex: 1 0 50%;
+        flex: 1 0 50%;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu-col-2 > ul > .gfort-nav-item:nth-child(3),
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu-col-2 > ul > .gfort-nav-item:nth-child(3) ~ li {
+    padding-top: 0;
+    margin-top: -12px;
+    border-top-width: 0;
+}
+
+/* Items (li) */
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav .gfort-nav-item:not(.megamenu):hover > ul {
+    opacity: 1;
+    visibility: visible;
+
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav .gfort-nav-item-lang:not(.megamenu):hover > ul {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+}
+
+/* Buttons
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons > .gfort-navbar-buttons-divider { margin: auto 12px; }
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons > .gfort-navbar-buttons-divider + li + li a {
+    padding-left: 0 !important;
+}
+
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons .gfort-nav-link i {
+    width: auto;
+    min-width: 14px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Search */
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons .gfort-form-block-header-search-mobile { display: none; }
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons .gfort-form-block-header-search {
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -10;
+    margin: 0 auto;
+    padding: 0 36px;
+    position: absolute;
+    visibility: hidden;
+
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons .gfort-form-block-header-search,
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons .gfort-form-block-header-search .gfort-form-block-container,
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons .gfort-form-block-header-search form,
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons .gfort-form-block-header-search input {
+    width: 100%;
+    height: 100%;
+}
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons .gfort-form-block-header-search input {
+    padding: 0;
+    margin: 0 auto;
+    border-width: 0;
+    font-size: 19px;
+    background-color: transparent;
+}
+
+
+
+
+/* =============================================================================
+   13. Header expand
+============================================================================= */
+/* 13.1 Expand small (sm)
+============================================================================= */
+@media (min-width: 576px) {
+
+    .gfort-navbar-expand-sm > .container {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+
+    .gfort-navbar-expand-sm .gfort-navbar-toggler,
+    .gfort-navbar-expand-sm .gfort-navbar-collapse-mobile-menu {
+        display: none;
+    }
+
+    .gfort-navbar-expand-sm .gfort-navbar-collapse-desktop-menu  {
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+}
+
+
+/* 13.2 Expand medium (md)
+============================================================================= */
+@media (min-width: 768px) {
+
+    .gfort-navbar-expand-md > .container {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+
+    .gfort-navbar-expand-md .gfort-navbar-toggler,
+    .gfort-navbar-expand-md .gfort-navbar-collapse-mobile-menu {
+        display: none;
+    }
+
+    .gfort-navbar-expand-md .gfort-navbar-collapse-desktop-menu  {
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+}
+
+
+/* 13.3 Expand large (lg)
+============================================================================= */
+@media (min-width: 992px) {
+
+    .gfort-navbar-expand-lg > .container {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+
+    .gfort-navbar-expand-lg .gfort-navbar-toggler,
+    .gfort-navbar-expand-lg .gfort-navbar-collapse-mobile-menu {
+        display: none;
+    }
+
+    .gfort-navbar-expand-lg .gfort-navbar-collapse-desktop-menu  {
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+}
+
+
+/* 13.4 Expand extra large (xl)
+============================================================================= */
+@media (min-width: 1200px) {
+
+    .gfort-navbar-expand-xl > .container {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+
+    .gfort-navbar-expand-xl .gfort-navbar-toggler,
+    .gfort-navbar-expand-xl .gfort-navbar-collapse-mobile-menu {
+        display: none;
+    }
+
+    .gfort-navbar-expand-xl .gfort-navbar-collapse-desktop-menu  {
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+}
+
+
+/* 13.5 Expand
+============================================================================= */
+.gfort-navbar-expand > .container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+}
+
+.gfort-navbar-expand .gfort-navbar-toggler,
+.gfort-navbar-expand .gfort-navbar-collapse-mobile-menu {
+    display: none;
+}
+
+.gfort-navbar-expand .gfort-navbar-collapse-desktop-menu  {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+
+
+/* =============================================================================
+   14. Header variations
+============================================================================= */
+/* 14.1 Layout 1
+============================================================================= */
+/* Fixed
+----------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+
+    .gfort-section-header-fixed .gfort-section-header-menu-stuck {
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+    }
+
+}
+
+/* Transparent
+----------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+
+    /* Wrapper */
+    .gfort-section-header-transparent { position: absolute; }
+
+    /* Logo */
+    .gfort-section-header-transparent .gfort-navbar-brand .gfort-navbar-brand-normal,
+    .gfort-section-header-transparent .gfort-section-header-menu-stuck.scroll .gfort-navbar-brand .gfort-navbar-brand-transparent {
+        display: none;
+    }
+    .gfort-section-header-transparent .gfort-navbar-brand .gfort-navbar-brand-transparent,
+    .gfort-section-header-transparent .gfort-section-header-menu-stuck.scroll .gfort-navbar-brand .gfort-navbar-brand-normal {
+        display: block;
+    }
+
+    /* Top section */
+    .gfort-section-header-transparent .gfort-section-header-top-container { background-color: transparent; }
+    .gfort-section-header-top-transparent .gfort-section-header-top-container {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    /* Menu main container */
+    .gfort-section-header-transparent .gfort-section-header-menu-container:not(.scroll) {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        background-color: transparent;
+
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
+
+    /* Light */
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll),
+    .gfort-section-header-transparent-light .gfort-section-header-top-container {
+        border-bottom-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .gfort-section-header-transparent-light .gfort-section-header-top-container,
+    .gfort-section-header-transparent-light .gfort-section-header-top-container a,
+    .gfort-section-header-transparent-light .gfort-section-header-top-container .gfort-social-icons.gfort-social-icons-transparent ul li a i,
+    .gfort-section-header-top-transparent-light .gfort-section-header-top-container,
+    .gfort-section-header-top-transparent-light .gfort-section-header-top-container a,
+    .gfort-section-header-top-transparent-light .gfort-section-header-top-container .gfort-social-icons.gfort-social-icons-transparent ul li a i,
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-brand,
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-brand:hover,
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-collapse .gfort-navbar-buttons .gfort-nav-link-search-btn-close,
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item > .gfort-nav-link:not(.gfort-btn),
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-form-block-header-search-desktop input,
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-toggler,
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-toggler:hover {
+        color: #ffffff;
+    }
+    .gfort-section-header-transparent .gfort-section-header-top-container a:hover,
+    .gfort-section-header-top-transparent .gfort-section-header-top-container a:hover {
+        text-decoration: underline;
+    }
+
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-collapse .gfort-navbar-buttons .gfort-nav-link-search-btn-close:hover,
+    .gfort-navbar-collapse-desktop-menu ul .gfort-nav-item > .gfort-nav-link.active:not(.gfort-btn),
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item > .gfort-nav-link:not(.gfort-btn):hover,
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item.active > .gfort-nav-link:not(.gfort-btn),
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item:hover > .gfort-nav-link:not(.gfort-btn) {
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-navbar-collapse .gfort-navbar-buttons .gfort-navbar-buttons-divider {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-form-block-header-search-desktop input:-moz-placeholder {
+        color: rgba(255, 255, 255, 0.70);
+    }
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-form-block-header-search-desktop input::-moz-placeholder {
+        color: rgba(255, 255, 255, 0.70);
+    }
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-form-block-header-search-desktop input:-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.70);
+    }
+    .gfort-section-header-transparent-light .gfort-section-header-menu-container:not(.scroll) .gfort-form-block-header-search-desktop input::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.70);
+    }
+
+}
+
+
+/* 14.2 Layout 2
+============================================================================= */
+@media (min-width: 1200px) {
+
+    .gfort-section-header-layout-2 {
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-top: 24px;
+        max-width: 1188px;
+        position: absolute;
+    }
+
+    .gfort-section-header-layout-2 .gfort-section-header-menu-container:not(.gfort-section-header-menu-stuck) {
+        border-radius: 4px;
+    }
+
+}
+
+
+/* 14.3 Layout 3
+============================================================================= */
+/* Logo
+----------------------------------------------------------------------------- */
+.gfort-section-header-layout-3 .gfort-section-header-middle .gfort-navbar-brand {
+    z-index: 10;
+    opacity: 1;
+    display: none;
+    padding-top: 36px;
+    visibility: visible;
+    padding-bottom: 36px;
+}
+.gfort-section-header-layout-3 .gfort-section-header-middle .gfort-navbar-brand:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+.gfort-section-header-layout-3 .gfort-section-header-middle .gfort-navbar-brand:last-child::after {
+    bottom: 0;
+    height: 1px;
+    content: '';
+    width: 2000%;
+    position: absolute;
+    margin-left: -450%;
+    margin-right: -450%;
+}
+
+/* Google ads
+----------------------------------------------------------------------------- */
+.gfort-section-header-layout-3 .gfort-section-header-middle-widget .google-ads {
+    width: 100%;
+    display: block;
+    max-width: 728px;
+    overflow: hidden;
+    margin: -6px auto;
+}
+
+/* Menu
+----------------------------------------------------------------------------- */
+/* Wrapper */
+.gfort-section-header-layout-3 .gfort-navbar-collapse-desktop-menu .gfort-navbar-nav { margin-right: auto; }
+.gfort-section-header-layout-3 .gfort-navbar-collapse-desktop-menu .gfort-navbar-nav:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Links */
+.gfort-section-header-layout-3 .gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item > .gfort-nav-link:not(.gfort-btn) {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+/* Buttons
+----------------------------------------------------------------------------- */
+/* Divider */
+.gfort-section-header-layout-3 .gfort-navbar-collapse-desktop-menu .gfort-navbar-buttons .gfort-navbar-buttons-divider {
+    display: none;
+}
+
+/* Expand
+----------------------------------------------------------------------------- */
+@media (min-width: 576px) {
+
+    .gfort-section-header-layout-3 .gfort-navbar-expand-sm .gfort-navbar-brand { display: none; }
+    .gfort-section-header-layout-3 .gfort-section-header-middle .gfort-navbar-expand-sm .gfort-navbar-brand { display: inline-block; }
+
+    .gfort-navbar-expand-sm .gfort-section-header-middle-widget {
+        width: auto;
+        margin-right: 0;
+        margin-left: auto;
+
+        display: -ms-flexbox;
+        display: flex;
+
+        -ms-flex-direction: column;
+            flex-direction: column;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .gfort-section-header-layout-3 .gfort-navbar-expand-md .gfort-navbar-brand { display: none; }
+    .gfort-section-header-layout-3 .gfort-section-header-middle .gfort-navbar-expand-md .gfort-navbar-brand { display: inline-block; }
+
+    .gfort-navbar-expand-md .gfort-section-header-middle-widget {
+        width: auto;
+        margin-right: 0;
+        margin-left: auto;
+
+        display: -ms-flexbox;
+        display: flex;
+
+        -ms-flex-direction: column;
+            flex-direction: column;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .gfort-section-header-layout-3 .gfort-navbar-expand-lg .gfort-navbar-brand { display: none; }
+    .gfort-section-header-layout-3 .gfort-section-header-middle .gfort-navbar-expand-lg .gfort-navbar-brand { display: inline-block; }
+
+    .gfort-navbar-expand-lg .gfort-section-header-middle-widget {
+        width: auto;
+        margin-right: 0;
+        margin-left: auto;
+
+        display: -ms-flexbox;
+        display: flex;
+
+        -ms-flex-direction: column;
+            flex-direction: column;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .gfort-section-header-layout-3 .gfort-navbar-expand-xl .gfort-navbar-brand { display: none; }
+    .gfort-section-header-layout-3 .gfort-section-header-middle .gfort-navbar-expand-xl .gfort-navbar-brand { display: inline-block; }
+
+    .gfort-navbar-expand-xl .gfort-section-header-middle-widget {
+        width: auto;
+        margin-right: 0;
+        margin-left: auto;
+
+        display: -ms-flexbox;
+        display: flex;
+
+        -ms-flex-direction: column;
+            flex-direction: column;
+    }
+
+}
+
+.gfort-section-header-layout-3 .gfort-navbar-expand .gfort-navbar-brand { display: none; }
+.gfort-section-header-layout-3 .gfort-section-header-middle .gfort-navbar-expand .gfort-navbar-brand { display: inline-block; }
+
+.gfort-navbar-expand .gfort-section-header-middle-widget {
+    width: auto;
+    margin-right: 0;
+    margin-left: auto;
+
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+
+
+/* 14.4 Layout 4
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-section-header-layout-4 { text-align: center; }
+
+/* Logo
+----------------------------------------------------------------------------- */
+.gfort-section-header-layout-4 .gfort-navbar-brand {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* 14.5 Layout 5 (off canvas menu)
+============================================================================= */
+/* Main wrapper
+----------------------------------------------------------------------------- */
+.gfort-section-header-layout-5 { text-align: center; }
+.gfort-section-header-off-canvas-menu {
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 252px;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.off-canvas-menu-right-hand-side .gfort-section-header-off-canvas-menu {
+    right: 0;
+    left: auto;
+}
+
+/* Main container
+----------------------------------------------------------------------------- */
+.gfort-section-header-off-canvas-menu-container {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden !important;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -ms-overflow-style: none;
+
+    -ms-touch-action: auto;
+        touch-action: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+@supports (-ms-overflow-style: none) {
+    .gfort-section-header-off-canvas-menu-container { overflow: auto !important; }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .gfort-section-header-off-canvas-menu-container { overflow: auto !important; }
+}
+
+/* Menu wrappers
+----------------------------------------------------------------------------- */
+.gfort-section-header-off-canvas-menu .gfort-navbar {
+    margin: 0;
+    padding: 24px 0;
+}
+
+.gfort-section-header-off-canvas-menu .gfort-navbar-collapse {
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+/* Search
+----------------------------------------------------------------------------- */
+.gfort-section-header-off-canvas-menu .gfort-navbar-collapse .gfort-navbar-buttons .gfort-navbar-buttons-search {
+    padding: 0 24px 18px;
+}
+.gfort-section-header-off-canvas-menu .gfort-navbar-collapse .gfort-navbar-buttons .gfort-form-block-header-search-mobile {
+    padding: 0;
+}
+
+/* Items (li)
+----------------------------------------------------------------------------- */
+.gfort-section-header-off-canvas-menu .gfort-navbar-collapse > .gfort-navbar-nav > .headerbtn {
+    padding: 0 24px;
+    border-bottom-width: 0;
+}
+.gfort-section-header-off-canvas-menu .gfort-navbar-collapse > .gfort-navbar-nav > .headerbtn > .gfort-nav-link {
+    margin: 9px 0;
+}
+
+/* Menu links
+----------------------------------------------------------------------------- */
+.gfort-section-header-off-canvas-menu .gfort-navbar-collapse .gfort-nav-link:not(.gfort-btn) {
+    padding: 9px 24px;
+    border-bottom-width: 0;
+}
+
+/* Overlay
+----------------------------------------------------------------------------- */
+.gfort-section-header-off-canvas-menu .gfort-section-header-off-canvas-menu-overlay {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    content: '';
+    height: 100%;
+    width: 100000%;
+    position: absolute;
+    background-color: transparent;
+}
+.off-canvas-menu-right-hand-side .gfort-section-header-off-canvas-menu .gfort-section-header-off-canvas-menu-overlay {
+    right: 0;
+    left: auto;
+}
+
+/* Logo
+----------------------------------------------------------------------------- */
+.gfort-section-header-layout-5 .gfort-navbar-brand {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Toggler button
+----------------------------------------------------------------------------- */
+.gfort-section-header-layout-5 .gfort-navbar-toggler {
+    top: 50%;
+    left: 24px;
+    position: absolute;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.off-canvas-menu-right-hand-side .gfort-section-header-layout-5 .gfort-navbar-toggler {
+    left: auto;
+    right: 24px;
+}
+
+/* open menu
+----------------------------------------------------------------------------- */
+.gfort-navbar-toggler-off-canvas-menu-open .gfort-section-header-off-canvas-menu {
+    z-index: 3;
+    overflow: visible;
+}
+.gfort-navbar-toggler-off-canvas-menu-open #gfort-main-wrapper {
+    -webkit-transform: translateX(252px);
+        -ms-transform: translateX(252px);
+            transform: translateX(252px);
+}
+.off-canvas-menu-right-hand-side.gfort-navbar-toggler-off-canvas-menu-open #gfort-main-wrapper {
+    -webkit-transform: translateX(-252px);
+        -ms-transform: translateX(-252px);
+            transform: translateX(-252px);
+}

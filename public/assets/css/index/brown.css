@@ -1,0 +1,597 @@
+/*
+    25. Colors
+        ff0000 (Red)
+        737373 (Body)
+        ffffff (White)
+        613b16 (Accent)
+        41280f (Accent alt)
+        292929 (Heading)
+        f9f9f9 (Grey 1)
+        ededed (Grey 2)
+        b2b2b2 (Grey 3)
+        151515 (Dark 1 - Main)
+        090001 (Dark 2 - Accent)
+        1a1a1a (Dark 3 - Footer)
+        1f1f1f (Dark 4 - Menu bg)
+        333333 (Dark 5 - Menu border)
+        2e2e2e (Dark 6 - copyright border)
+        Main classes
+*/
+
+
+
+
+/* =============================================================================
+   25. Colors
+============================================================================= */
+/* ff0000 (Red)
+============================================================================= */
+/* color
+----------------------------------------------------------------------------- */
+.error,
+.red-color {
+    color: #ff0000;
+}
+
+/* border color
+----------------------------------------------------------------------------- */
+.gfort-form-control.error,
+.gfort-form-control.error:focus {
+    border-color: #ff0000;
+}
+
+
+/* 737373 (Body)
+============================================================================= */
+/* color
+----------------------------------------------------------------------------- */
+body,
+.gfort-navbar-collapse-desktop-menu ul .gfort-nav-item > .gfort-nav-link.active:not(.gfort-btn),
+.gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item > .gfort-nav-link:not(.gfort-btn):hover,
+.gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item.active > .gfort-nav-link:not(.gfort-btn),
+.gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item:hover > .gfort-nav-link:not(.gfort-btn),
+.gfort-navbar-collapse .gfort-navbar-buttons .gfort-nav-link-search-btn-close:hover,
+.gfort-breadcrumb a,
+.gfort-breadcrumb a:hover {
+    color: #737373;
+}
+
+
+/* ffffff (White)
+============================================================================= */
+/* color
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-mobile-menu .gfort-nav-link:not(.gfort-btn):hover,
+.gfort-navbar-collapse-mobile-menu .active > .gfort-nav-link:not(.gfort-btn),
+.gfort-navbar-collapse-mobile-menu .gfort-nav-item:hover > .gfort-nav-link:not(.gfort-btn),
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav ul .gfort-nav-link:not(.gfort-btn):hover,
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav ul .active > .gfort-nav-link:not(.gfort-btn),
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav ul .gfort-nav-item:hover > .gfort-nav-link:not(.gfort-btn),
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu > ul .menu-item-has-children > .gfort-nav-link:not(.gfort-btn),
+.widget_calendar table tbody a:not(.gfort-btn),
+.widget_calendar table tbody a:not(.gfort-btn):hover,
+.gfort-block-pagination ul .active a,
+.gfort-block-pagination ul .active a:hover,
+.light-color.gfort-breadcrumb,
+.light-color .gfort-breadcrumb,
+.light-color.gfort-block-meta,
+.light-color .gfort-block-meta,
+.gfort-block-nav-menu-layout-2 ul li a:hover,
+.gfort-block-nav-menu-layout-2 ul li.active a {
+    color: #ffffff;
+}
+
+/* background color
+----------------------------------------------------------------------------- */
+body,
+#gfort-main-wrapper,
+#gfort-main-container,
+.gfort-form-control,
+.gfort-section-header-top-container,
+.gfort-section-header-middle-container,
+.gfort-section-header-menu-container,
+.gfort-twitter-feed-layout-3 .gfort-twitter-feed-item-container,
+.gfort-block-timeline .gfort-block-timeline-body::before {
+    background-color: #ffffff;
+}
+
+
+/* 613b16 (Accent)
+============================================================================= */
+/* selection
+----------------------------------------------------------------------------- */
+::selection {
+    color: #ffffff;
+    text-shadow: none;
+    background-color: #613b16;
+}
+::-webkit-selection {
+    color: #ffffff;
+    text-shadow: none;
+    background-color: #613b16;
+}
+::-moz-selection {
+    color: #ffffff;
+    text-shadow: none;
+    background-color: #613b16;
+}
+
+/* color
+----------------------------------------------------------------------------- */
+a,
+.gfort-btn-primary.gfort-btn-outline,
+.gfort-btn-primary.gfort-btn-outline-reverse:hover,
+.gfort-block-accordion .gfort-block-panel .gfort-block-panel-heading button:hover,
+.gfort-block-accordion .gfort-block-panel .gfort-block-panel-heading button[aria-expanded=true],
+.gfort-nav-tabs .gfort-nav-link.active,
+.gfort-block-nav-menu ul .active a {
+    color: #613b16;
+}
+
+/* background color
+----------------------------------------------------------------------------- */
+.gfort-badge-primary,
+.gfort-form-control[type=checkbox]:checked,
+.gfort-block-panel-primary .gfort-block-panel-heading,
+.gfort-btn-primary,
+.gfort-btn-primary.gfort-btn-outline:hover,
+.gfort-social-icons ul li:hover a i,
+.gfort-social-icons.gfort-social-icons-transparent ul li:hover a i,
+.gfort-owl-slider.owl-carousel .owl-nav button:hover,
+.mejs__audio .mejs__controls,
+.widget_calendar table tbody a,
+.gfort-block-pagination ul .active a,
+.gfort-block-pagination ul .active a:hover,
+.gfort-block-nav-menu-layout-2 ul li a:hover,
+.gfort-block-nav-menu-layout-2 ul li.active a {
+    background-color: #613b16;
+}
+
+.gfort-form-control[type=range]::-webkit-slider-thumb { background-color: #613b16; }
+.gfort-form-control[type=range]::-moz-range-thumb { background-color: #613b16; }
+
+/* border color
+----------------------------------------------------------------------------- */
+.gfort-form-control:focus,
+.gfort-form-control[type=radio]:checked,
+.gfort-form-control[type=checkbox]:checked,
+.gfort-form-control[type=radio]:checked:focus,
+.gfort-form-control[type=checkbox]:checked:focus,
+.gfort-btn-primary,
+.gfort-btn-primary.gfort-btn-outline:hover,
+.gfort-block-panel-primary,
+.gfort-nav-tabs .gfort-nav-link.active {
+    border-color: #613b16;
+}
+
+
+/* 41280f (Accent alt)
+============================================================================= */
+.accent-alt-color,
+.gfort-btn-link:hover {
+    color: #41280f;
+}
+.accent-alt-bg-color,
+.gfort-btn-primary:not(.gfort-btn-outline):not(.gfort-btn-outline-reverse):hover {
+    background-color: #41280f;
+}
+.accent-alt-border-color,
+.gfort-btn-primary:not(.gfort-btn-outline):not(.gfort-btn-outline-reverse):hover {
+    border-color: #41280f;
+}
+
+
+/* 292929 (Heading)
+============================================================================= */
+/* color
+----------------------------------------------------------------------------- */
+a:hover,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.gfort-navbar-brand,
+.gfort-navbar-brand:hover,
+.gfort-navbar-toggler,
+.gfort-navbar-toggler:hover,
+.gfort-label,
+.gfort-form-control,
+.gfort-navbar-collapse-desktop-menu > ul > .gfort-nav-item > .gfort-nav-link:not(.gfort-btn),
+.gfort-navbar-collapse .gfort-navbar-buttons .gfort-nav-link-search-btn-close,
+.widget a:not(.gfort-btn),
+.widget a:not(.gfort-btn):hover {
+    color: #292929;
+}
+
+
+/* ededed (Grey 2)
+============================================================================= */
+/* background color
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse .gfort-navbar-buttons .gfort-navbar-buttons-divider,
+.gfort-form-control[readonly],
+.gfort-form-control:disabled,
+.gfort-form-control[type=range],
+.gfort-block-pagination ul li a:hover,
+.gfort-section-header-middle .gfort-navbar-brand:last-child::after,
+.gfort-section-header-middle-widget::after {
+    background-color: #ededed;
+}
+
+/* border color
+----------------------------------------------------------------------------- */
+hr,
+.gfort-form-control,
+.gfort-form-control[readonly],
+.gfort-form-control:disabled,
+select.gfort-form-control:focus,
+.gfort-form-control[type=radio]:focus,
+.gfort-form-control[type=checkbox]:focus,
+.gfort-section-header-transparent:not(.gfort-section-header-transparent-light) .gfort-section-header-menu-container:not(.scroll),
+.gfort-twitter-feed-layout-1 .gfort-twitter-feed-item,
+.gfort-twitter-feed-layout-3 .gfort-twitter-feed-item-container,
+.gfort-section-header-top-container {
+    border-color: #ededed;
+}
+
+
+/* b2b2b2 (Grey 3)
+============================================================================= */
+/* color
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-mobile-menu .gfort-nav-link:not(.gfort-btn),
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-header-search-mobile input,
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-header-search-mobile button,
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav ul .gfort-nav-link:not(.gfort-btn) {
+    color: #b2b2b2;
+}
+
+/* rgba(178, 178, 178, 0.64)
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-header-search-mobile input:-moz-placeholder {
+    color: rgba(178, 178, 178, 0.64);
+}
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-header-search-mobile input::-moz-placeholder {
+    color: rgba(178, 178, 178, 0.64);
+}
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-header-search-mobile input:-ms-input-placeholder {
+    color: rgba(178, 178, 178, 0.64);
+}
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-header-search-mobile input::-webkit-input-placeholder {
+    color: rgba(178, 178, 178, 0.64);
+}
+
+/* background color
+----------------------------------------------------------------------------- */
+.ps > .ps__scrollbar-y-rail > .ps__scrollbar-y {
+    background-color: #b2b2b2;
+}
+
+
+/* 1f1f1f (Dark 4 - Menu bg)
+============================================================================= */
+/* background color
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-mobile-menu,
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu > ul,
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .gfort-nav-item:not(.megamenu) ul li,
+.gfort-section-header-off-canvas-menu {
+    background-color: #1f1f1f;
+}
+
+
+/* 333333 (Dark 5 - Menu border)
+============================================================================= */
+/* background color
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-header-search-mobile input {
+    background-color: #333333;
+}
+
+/* border color
+----------------------------------------------------------------------------- */
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-nav > .headerbtn,
+.gfort-navbar-collapse-mobile-menu .gfort-nav-link:not(.gfort-btn),
+.gfort-navbar-collapse-mobile-menu .gfort-navbar-buttons .gfort-form-block-header-search-mobile input,
+.gfort-navbar-collapse-desktop-menu .gfort-navbar-nav > .megamenu > ul > .gfort-nav-item {
+    border-color: #333333;
+}
+
+
+/* Main classes
+============================================================================= */
+/* Light color
+============================================================================= */
+.light-color a:not(.gfort-btn) { color: inherit; }
+.light-color a:not(.gfort-btn):hover { text-decoration: underline; }
+
+.light-color.widget_archive ul li a span,
+.light-color .widget_archive ul li a span,
+.light-color.widget_categories ul li a span,
+.light-color .widget_categories ul li a span,
+.light-color.gfort-block-meta li::after,
+.light-color .gfort-block-meta li::after,
+.light-color.gfort-block-meta li a,
+.light-color .gfort-block-meta li a,
+.light-color.gfort-block-meta .meta-views,
+.light-color .gfort-block-meta .meta-views {
+    opacity: 1;
+}
+
+.light-color.widget .widget-title a,
+.light-color .widget .widget-title a {
+    color: inherit;
+}
+
+.light-color .widget-title,
+.light-color.widget_tag_cloud a:hover,
+.light-color .widget_tag_cloud a:hover,
+.light-color.gfort-twitter-feed-layout-3 .gfort-twitter-feed-item-container,
+.light-color .gfort-twitter-feed-layout-3 .gfort-twitter-feed-item-container,
+.light-color.gfort-owl-slider.owl-carousel .owl-dots .owl-dot span:hover,
+.light-color .gfort-owl-slider.owl-carousel .owl-dots .owl-dot span:hover,
+.light-color.gfort-owl-slider.owl-carousel .owl-dots .owl-dot.active span,
+.light-color .gfort-owl-slider.owl-carousel .owl-dots .owl-dot.active span {
+    border-color: transparent;
+}
+
+.light-color .gfort-form-control:-moz-placeholder { color: rgba(255, 255, 255, 0.40); }
+.light-color.gfort-form-control:-moz-placeholder { color: rgba(255, 255, 255, 0.40); }
+.light-color .gfort-form-control::-moz-placeholder { color: rgba(255, 255, 255, 0.40); }
+.light-color.gfort-form-control::-moz-placeholder { color: rgba(255, 255, 255, 0.40); }
+.light-color .gfort-form-control:-ms-input-placeholder { color: rgba(255, 255, 255, 0.40); }
+.light-color.gfort-form-control:-ms-input-placeholder { color: rgba(255, 255, 255, 0.40); }
+.light-color .gfort-form-control::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.40); }
+.light-color.gfort-form-control::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.40); }
+
+.white-color .gfort-form-control:-moz-placeholder { color: #ffffff; }
+.white-color.gfort-form-control:-moz-placeholder { color: #ffffff; }
+.white-color .gfort-form-control::-moz-placeholder { color: #ffffff; }
+.white-color.gfort-form-control::-moz-placeholder { color: #ffffff; }
+.white-color .gfort-form-control:-ms-input-placeholder { color: #ffffff; }
+.white-color.gfort-form-control:-ms-input-placeholder { color: #ffffff; }
+.white-color .gfort-form-control::-webkit-input-placeholder { color: #ffffff; }
+.white-color.gfort-form-control::-webkit-input-placeholder { color: #ffffff; }
+
+.light-color h1, .light-color .h1,
+.light-color h2, .light-color .h2,
+.light-color h3, .light-color .h3,
+.light-color h4, .light-color .h4,
+.light-color h5, .light-color .h5,
+.light-color h6, .light-color .h6:not(.gfort-ribbon-text),
+.light-color a:not(.gfort-btn):hover,
+.light-color.accent-bg-color,
+.light-color .accent-bg-color,
+.accent-bg-color .light-color,
+.light-color.accent-bg-color p,
+.light-color .accent-bg-color p,
+.accent-bg-color .light-color p,
+.tetradic-1-bg-color .light-color,
+.tetradic-1-bg-color .light-color p,
+.light-color .tetradic-1-bg-color,
+.light-color .tetradic-1-bg-color p,
+.light-color.tetradic-1-bg-color,
+.light-color.tetradic-1-bg-color p,
+.tetradic-2-bg-color .light-color,
+.tetradic-2-bg-color .light-color p,
+.light-color .tetradic-2-bg-color,
+.light-color .tetradic-2-bg-color p,
+.light-color.tetradic-2-bg-color,
+.light-color.tetradic-2-bg-color p,
+.gfort-section-footer .light-color a:hover,
+.light-color.gfort-block-nav-menu ul .active a,
+.light-color .gfort-block-nav-menu ul .active a,
+.gfort-section-footer .light-color.gfort-block-nav-menu ul .active a,
+.gfort-section-footer .light-color .gfort-block-nav-menu ul .active a,
+.light-color.gfort-block-panel .gfort-block-panel-heading button:hover,
+.light-color.gfort-block-panel .gfort-block-panel-heading button[aria-expanded=true],
+.light-color.widget_calendar table tbody a,
+.light-color .widget_calendar table tbody a,
+.light-color .gfort-twitter-feed-item .gfort-twitter-feed-user-name,
+.light-color .gfort-twitter-feed-item .gfort-twitter-feed-user-name a,
+.light-color.gfort-social-icons-layout-2 ul li a:first-child *,
+.light-color .gfort-social-icons-layout-2 ul li a:first-child *,
+.light-color.gfort-block-nav-menu ul .active a,
+.light-color .gfort-block-nav-menu ul .active a,
+.white-color.gfort-form-control,
+.white-color .gfort-form-control,
+.light-color .gfort-label {
+    color: #ffffff;
+}
+
+.light-color,
+.light-color p {
+    color: rgba(255, 255, 255, 0.90);
+}
+
+.gfort-section-footer .light-color,
+.gfort-section-footer .light-color p,
+.light-color.gfort-form-control,
+.light-color .gfort-form-control,
+.light-color.widget,
+.light-color .widget,
+.light-color.widget p,
+.light-color .widget p,
+.light-color.widget_calendar table caption,
+.light-color .widget_calendar table caption,
+.light-color.gfort-social-icons ul li a i,
+.light-color .gfort-social-icons ul li a i,
+.light-color.gfort-block-nav-menu ul a,
+.light-color .gfort-block-nav-menu ul a,
+.light-color .gfort-section-copyright-container,
+.light-color .gfort-section-copyright-container p,
+.light-color.gfort-owl-slider.owl-carousel[data-gfort-owl-slider-arrows-layout=layout-3] .owl-nav button,
+.light-color .gfort-owl-slider.owl-carousel[data-gfort-owl-slider-arrows-layout=layout-3] .owl-nav button {
+    color: rgba(255, 255, 255, 0.55);
+}
+.light-color.gfort-owl-slider.owl-carousel .owl-dots .owl-dot span:hover,
+.light-color .gfort-owl-slider.owl-carousel .owl-dots .owl-dot span:hover,
+.light-color.gfort-owl-slider.owl-carousel .owl-dots .owl-dot.active span,
+.light-color .gfort-owl-slider.owl-carousel .owl-dots .owl-dot.active span {
+    background-color: rgba(255, 255, 255, 0.55);
+}
+.light-color.gfort-owl-slider.owl-carousel .owl-dots .owl-dot span,
+.light-color .gfort-owl-slider.owl-carousel .owl-dots .owl-dot span {
+    border-color: rgba(255, 255, 255, 0.55);
+}
+.light-color.widget a,
+.light-color .widget a {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.light-color.gfort-form-control,
+.light-color .gfort-form-control,
+.white-color.gfort-form-control,
+.white-color .gfort-form-control,
+.light-color.widget_tag_cloud a:hover,
+.light-color .widget_tag_cloud a:hover,
+.light-color.gfort-twitter-feed-layout-3 .gfort-twitter-feed-item-container,
+.light-color .gfort-twitter-feed-layout-3 .gfort-twitter-feed-item-container {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.light-color.gfort-form-control,
+.light-color .gfort-form-control,
+.light-color.gfort-form-control:focus,
+.light-color .gfort-form-control:focus,
+.white-color.gfort-form-control,
+.white-color .gfort-form-control,
+.white-color.gfort-form-control:focus,
+.white-color .gfort-form-control:focus,
+.light-color.widget_calendar table,
+.light-color .widget_calendar table {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.light-color.widget_tag_cloud a,
+.light-color .widget_tag_cloud a,
+.light-color .gfort-section-copyright-container {
+    border-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Body
+----------------------------------------------------------------------------- */
+.body-color,
+.body-hover-color:hover {
+    color: #737373;
+}
+.body-bg-color { background-color: #737373; }
+.body-border-color { border-color: #737373; }
+
+/* White
+----------------------------------------------------------------------------- */
+.white-color,
+.white-color p,
+.white-hover-color:hover,
+.white-color h1, .white-color .h1,
+.white-color h2, .white-color .h2,
+.white-color h3, .white-color .h3,
+.white-color h4, .white-color .h4,
+.white-color h5, .white-color .h5,
+.white-color h6, .white-color .h6,
+.white-color.gfort-social-icons ul li a i,
+.white-color .gfort-social-icons ul li a i {
+    color: #ffffff;
+}
+.white-bg-color { background-color: #ffffff; }
+.white-border-color { border-color: #ffffff; }
+
+/* Accent
+----------------------------------------------------------------------------- */
+.accent-color,
+.accent-hover-color:hover {
+    color: #613b16;
+}
+.accent-bg-color { background-color: #613b16; }
+.accent-border-color { border-color: #613b16; }
+
+/* Secondary
+----------------------------------------------------------------------------- */
+.secondary-color,
+.secondary-hover-color:hover {
+    color: #636363;
+}
+.secondary-bg-color { background-color: #636363; }
+.secondary-border-color { border-color: #636363; }
+
+/* Heading
+----------------------------------------------------------------------------- */
+.heading-color,
+.heading-hover-color:hover {
+    color: #292929;
+}
+.heading-bg-color { background-color: #292929; }
+.heading-border-color { border-color: #292929; }
+
+/* Grey 1
+----------------------------------------------------------------------------- */
+.grey-1-color,
+.grey-1-hover-color:hover {
+    color: #f9f9f9;
+}
+.grey-1-bg-color { background-color: #f9f9f9; }
+.grey-1-border-color { border-color: #f9f9f9; }
+
+/* Grey 2
+----------------------------------------------------------------------------- */
+.grey-2-color,
+.grey-2-hover-color:hover {
+    color: #ededed;
+}
+.grey-2-bg-color { background-color: #ededed; }
+.grey-2-border-color { border-color: #ededed; }
+
+/* Grey 3
+----------------------------------------------------------------------------- */
+.grey-3-color,
+.grey-3-hover-color:hover {
+    color: #b2b2b2;
+}
+.grey-3-bg-color { background-color: #b2b2b2; }
+.grey-3-border-color { border-color: #b2b2b2; }
+
+/* Dark 1 - Main
+----------------------------------------------------------------------------- */
+.dark-1-color,
+.dark-1-hover-color:hover {
+    color: #151515;
+}
+.dark-1-bg-color { background-color: #151515; }
+.dark-1-border-color { border-color: #151515; }
+
+/* Dark 2 - Accent
+----------------------------------------------------------------------------- */
+.dark-2-color,
+.dark-2-hover-color:hover {
+    color: #090001;
+}
+.dark-2-bg-color { background-color: #090001; }
+.dark-2-border-color { border-color: #090001; }
+
+/* Dark 3 - Footer
+----------------------------------------------------------------------------- */
+.dark-3-color,
+.dark-3-hover-color:hover {
+    color: #1a1a1a;
+}
+.dark-3-bg-color { background-color: #1a1a1a; }
+.dark-3-border-color { border-color: #1a1a1a; }
+
+/* Dark 5 - Menu border
+----------------------------------------------------------------------------- */
+.dark-5-color,
+.dark-5-hover-color:hover {
+    color: #333333;
+}
+.dark-5-bg-color { background-color: #333333; }
+.dark-5-border-color { border-color: #333333; }
+
+/* Dark 6 - copyright border
+----------------------------------------------------------------------------- */
+.dark-6-color,
+.dark-6-hover-color:hover {
+    color: #2e2e2e;
+}
+.dark-6-bg-color { background-color: #2e2e2e; }
+.dark-6-border-color { border-color: #2e2e2e; }

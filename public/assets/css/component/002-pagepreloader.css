@@ -1,0 +1,354 @@
+/*
+    8. Page PreLoader
+*/
+
+
+
+
+/* =============================================================================
+   8. Page PreLoader
+============================================================================= */
+/* Wrapper
+============================================================================= */
+.gfort-pace {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: block;
+    position: fixed;
+
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.no-js .gfort-pace,
+.gfort-pace-done .gfort-pace {
+    opacity: 0;
+    display: none;
+    z-index: -9999;
+    visibility: hidden;
+}
+
+#gfort-page-preloader {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+}
+#gfort-page-preloader ~ #gfort-main-wrapper #gfort-main-container { opacity: 0; }
+.no-js #gfort-page-preloader ~ #gfort-main-wrapper #gfort-main-container,
+.gfort-pace-done #gfort-page-preloader ~ #gfort-main-wrapper #gfort-main-container {
+    opacity: 1;
+}
+
+
+/* Progress Bar
+============================================================================= */
+.gfort-pace .gfort-pace-progress {
+    top: 0;
+    height: 2px;
+    width: 100%;
+    right: 100%;
+    z-index: 9999;
+    position: fixed;
+}
+
+
+/* Text / Percent
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-pace .gfort-pace-preloader-text-percent {
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+/* Container
+----------------------------------------------------------------------------- */
+.gfort-pace .gfort-page-preloader-container {
+    font-size: 0;
+    line-height: 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Divs Container
+----------------------------------------------------------------------------- */
+.gfort-pace .gfort-page-preloader-divs-container {
+    margin: 0 auto 6px;
+    position: relative;
+    display: inline-block;
+}
+.gfort-pace .gfort-page-preloader-divs-container div { float: left; }
+
+/* Text
+----------------------------------------------------------------------------- */
+.gfort-pace .gfort-page-preloader-text {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.gfort-pace .gfort-page-preloader-text::after {
+    width: 100%;
+    display: block;
+    line-height: 1;
+    font-size: 19px;
+    position: relative;
+    margin: 12px auto 6px;
+    content: attr(data-progress-text);
+}
+
+/* Percentage
+----------------------------------------------------------------------------- */
+.gfort-pace .gfort-pace-preloader-text-percent::after {
+    width: 100%;
+    line-height: 1;
+    display: block;
+    font-size: 19px;
+    margin: 6px auto 0;
+    content: attr(data-progress-text);
+}
+
+/* Layout
+============================================================================= */
+/* Layout 1
+----------------------------------------------------------------------------- */
+.page-preloader-layout-1 .gfort-page-preloader-divs-container {
+    height: 36px;
+    padding-right: 3px;
+}
+.page-preloader-layout-1 .gfort-page-preloader-divs-container div {
+    width: 6px;
+    height: 36px;
+    margin-left: 3px;
+
+    -webkit-animation: gfortPaceLayoutOne 1.2s infinite ease-in-out;
+            animation: gfortPaceLayoutOne 1.2s infinite ease-in-out;
+}
+.page-preloader-layout-1 .gfort-page-preloader-divs-container div.gfort-page-preloader-2 {
+    -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s;
+}
+.page-preloader-layout-1 .gfort-page-preloader-divs-container div.gfort-page-preloader-3 {
+    -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+}
+.page-preloader-layout-1 .gfort-page-preloader-divs-container div.gfort-page-preloader-4 {
+    -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s;
+}
+.page-preloader-layout-1 .gfort-page-preloader-divs-container div.gfort-page-preloader-5 {
+    -webkit-animation-delay: -0.8s;
+            animation-delay: -0.8s;
+}
+
+@-webkit-keyframes gfortPaceLayoutOne {
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4);
+    }
+    20% {
+        -webkit-transform: scaleY(1);
+    }
+}
+@keyframes gfortPaceLayoutOne {
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1);
+    }
+}
+
+/* Layout 2, 3
+----------------------------------------------------------------------------- */
+.page-preloader-layout-2 .gfort-page-preloader-divs-container,
+.page-preloader-layout-3 .gfort-page-preloader-divs-container {
+    width: 60px;
+    height: 60px;
+    border-width: 6px;
+    border-radius: 50%;
+    border-style: solid;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+
+    -webkit-animation: gfortPaceLayoutTwoThree 1s infinite ease-in-out alternate;
+            animation: gfortPaceLayoutTwoThree 1s infinite ease-in-out alternate;
+}
+.page-preloader-layout-2 .gfort-page-preloader-divs-container::after,
+.page-preloader-layout-3 .gfort-page-preloader-divs-container::after {
+    top: -6px;
+    left: -6px;
+    content: '';
+    width: inherit;
+    height: inherit;
+    border: inherit;
+    position: absolute;
+    border-radius: inherit;
+
+    -webkit-animation: gfortPaceLayoutTwoThree 1.5s infinite ease-in-out alternate;
+            animation: gfortPaceLayoutTwoThree 1.5s infinite ease-in-out alternate;
+}
+.page-preloader-layout-3 .gfort-page-preloader-divs-container::after {
+    -webkit-animation: gfortPaceLayoutTwoThree 1.5s infinite ease;
+            animation: gfortPaceLayoutTwoThree 1.5s infinite ease;
+}
+.page-preloader-layout-2 .gfort-page-preloader-divs-container div,
+.page-preloader-layout-3 .gfort-page-preloader-divs-container div {
+    display: none;
+}
+
+@-webkit-keyframes gfortPaceLayoutTwoThree {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes gfortPaceLayoutTwoThree {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Layout 4
+----------------------------------------------------------------------------- */
+.page-preloader-layout-4 .gfort-page-preloader-divs-container div {
+    width: 18px;
+    height: 18px;
+    margin: 0 6px;
+    border-radius: 50%;
+
+    -webkit-transform: scale(0);
+            transform: scale(0);
+
+    -webkit-animation: gfortPaceLayoutFour 1.4s infinite ease-in-out;
+            animation: gfortPaceLayoutFour 1.4s infinite ease-in-out;
+}
+.page-preloader-layout-4 .gfort-page-preloader-divs-container div.gfort-page-preloader-2 {
+    -webkit-animation-delay: 0.15s;
+            animation-delay: 0.15s;
+}
+.page-preloader-layout-4 .gfort-page-preloader-divs-container div.gfort-page-preloader-3 {
+    -webkit-animation-delay: 0.30s;
+            animation-delay: 0.30s;
+}
+.page-preloader-layout-4 .gfort-page-preloader-divs-container div.gfort-page-preloader-4,
+.page-preloader-layout-4 .gfort-page-preloader-divs-container div.gfort-page-preloader-5 {
+    display: none;
+}
+
+@-webkit-keyframes gfortPaceLayoutFour {
+    0%,
+    100%,
+    80% {
+        -webkit-transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+    }
+}
+@keyframes gfortPaceLayoutFour {
+    0%,
+    100%,
+    80% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* Layout 5, 6
+----------------------------------------------------------------------------- */
+.page-preloader-layout-5 .gfort-page-preloader-divs-container div,
+.page-preloader-layout-6 .gfort-page-preloader-divs-container div {
+    margin: 0 6px;
+    border-radius: 50%;
+
+    -webkit-animation: gfortPaceLayoutFiveSix 0.75s infinite linear;
+            animation: gfortPaceLayoutFiveSix 0.75s infinite linear;
+}
+.page-preloader-layout-5 .gfort-page-preloader-divs-container div {
+    width: 36px;
+    height: 36px;
+}
+.page-preloader-layout-6 .gfort-page-preloader-divs-container div {
+    width: 18px;
+    height: 18px;
+}
+.page-preloader-layout-5 .gfort-page-preloader-divs-container div.gfort-page-preloader-2,
+.page-preloader-layout-5 .gfort-page-preloader-divs-container div.gfort-page-preloader-3,
+.page-preloader-layout-5 .gfort-page-preloader-divs-container div.gfort-page-preloader-4,
+.page-preloader-layout-5 .gfort-page-preloader-divs-container div.gfort-page-preloader-5,
+.page-preloader-layout-6 .gfort-page-preloader-divs-container div.gfort-page-preloader-4,
+.page-preloader-layout-6 .gfort-page-preloader-divs-container div.gfort-page-preloader-5 {
+    display: none;
+}
+.page-preloader-layout-6 .gfort-page-preloader-divs-container div.gfort-page-preloader-1 {
+    -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s;
+}
+.page-preloader-layout-6 .gfort-page-preloader-divs-container div.gfort-page-preloader-2 {
+    -webkit-animation-delay: -1.2s;
+            animation-delay: -1.2s;
+}
+.page-preloader-layout-6 .gfort-page-preloader-divs-container div.gfort-page-preloader-3 {
+    -webkit-animation-delay: -1.3s;
+            animation-delay: -1.3s;
+}
+
+@-webkit-keyframes gfortPaceLayoutFiveSix {
+    0% { -webkit-transform: translate(0, 0%) scale(1, 0.8); }
+    30% { -webkit-transform: translate(0, -50%) scale(0.8, 0.8); }
+    60% { -webkit-transform: translate(0, -100%) scale(0.8, 1); }
+    85% { -webkit-transform: translate(0, -50%) scale(0.8, 1); }
+    90% { -webkit-transform: translate(0, -50%) scale(0.8, 1); }
+    100% { -webkit-transform: translate(0, 0%) scale(1, 0.8); }
+}
+@keyframes gfortPaceLayoutFiveSix {
+    0% { transform: translate(0, 0%) scale(1, 0.8); }
+    30% { transform: translate(0, -50%) scale(0.8, 0.8); }
+    60% { transform: translate(0, -100%) scale(0.8, 1); }
+    85% { transform: translate(0, -50%) scale(0.8, 1); }
+    90% { transform: translate(0, -50%) scale(0.8, 1); }
+    100% { transform: translate(0, 0%) scale(1, 0.8); }
+}
+
+/* Layout 7
+----------------------------------------------------------------------------- */
+.page-preloader-layout-7 .gfort-page-preloader-divs-container div.gfort-page-preloader-1 {
+    width: 80px;
+    height: 24px;
+
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: transparent;
+    background-position: center center;
+    background-image: url(../images/logo.png);
+
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+.page-preloader-layout-7 .gfort-page-preloader-divs-container div.gfort-page-preloader-2,
+.page-preloader-layout-7 .gfort-page-preloader-divs-container div.gfort-page-preloader-3,
+.page-preloader-layout-7 .gfort-page-preloader-divs-container div.gfort-page-preloader-4,
+.page-preloader-layout-7 .gfort-page-preloader-divs-container div.gfort-page-preloader-5 {
+    display: none;
+}

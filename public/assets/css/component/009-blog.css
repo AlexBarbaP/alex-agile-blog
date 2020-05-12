@@ -1,0 +1,247 @@
+/*
+    21. Blog
+        21.1 Post
+        21.2 Columns
+        21.3 Single
+        21.4 Search
+*/
+
+
+
+
+/* =============================================================================
+   21. Blog
+============================================================================= */
+/* 21.1 Post
+============================================================================= */
+/* Head
+----------------------------------------------------------------------------- */
+.gfort-block-blog-post .gfort-block-blog-post-head { margin-bottom: 36px; }
+.gfort-block-blog-post .gfort-block-blog-post-head:last-child { margin-bottom: 0; }
+
+.gfort-block-blog-post .gfort-block-blog-post-head a,
+.gfort-block-blog-post .gfort-block-blog-post-head a img {
+    width: 100%;
+    display: block;
+}
+
+/* Body
+----------------------------------------------------------------------------- */
+/* Heading */
+.gfort-block-blog-post .gfort-block-blog-post-heading { margin-bottom: 24px; }
+.gfort-block-blog-inner .gfort-block-blog-post-heading { margin-bottom: 36px; }
+.gfort-block-blog-post .gfort-block-blog-post-heading:last-child { margin-bottom: 0; }
+
+.gfort-block-blog-post .gfort-block-blog-post-heading a {
+    color: inherit;
+
+    -ms-word-wrap: break-word;
+        word-wrap: break-word;
+       word-break: break-word;
+}
+.gfort-block-blog-post .gfort-block-blog-post-heading a:hover { text-decoration: underline; }
+
+.gfort-block-blog-post .gfort-block-blog-post-heading .post-format-content-link {
+    margin-bottom: 24px;
+    display: inline-block;
+}
+.gfort-block-blog-post .gfort-block-blog-post-heading h4,
+.gfort-block-blog-post .gfort-block-blog-post-heading .h4 {
+    margin-top: 0;
+}
+
+/* Footer */
+.gfort-block-blog-post .gfort-block-footer { margin-top: 30px; }
+
+
+/* 21.2 Columns
+============================================================================= */
+/* 1 column
+----------------------------------------------------------------------------- */
+.gfort-block-blog-col-1 .gfort-block-blog-post .gfort-block-blog-post-container,
+.gfort-block-blog-col-1 .gfort-block-pagination {
+    margin-top: 36px;
+    padding-top: 36px;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+@media (min-width: 992px) {
+    .gfort-block-blog-col-1 .gfort-block-blog-post .gfort-block-blog-post-container,
+    .gfort-block-blog-col-1 .gfort-block-pagination {
+        margin-top: 72px;
+        padding-top: 72px;
+    }
+}
+.gfort-block-blog-col-1 .gfort-block-blog-post:first-of-type .gfort-block-blog-post-container {
+    margin-top: 0;
+    padding-top: 0;
+    border-top-width: 0;
+}
+
+.gfort-block-blog-col-1 .gfort-block-blog-post .gfort-block-heading h4,
+.gfort-block-blog-col-1 .gfort-block-blog-post .gfort-block-heading .h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* 21.3 Single
+============================================================================= */
+/* Elements
+----------------------------------------------------------------------------- */
+.gfort-block-blog-inner .gfort-block-blog-post-single-footer { line-height: 1.5; }
+.gfort-block-blog-inner .gfort-block-blog-post-single-footer > * { margin-top: 54px; }
+@media (min-width: 1200px) {
+    .gfort-block-blog-inner .gfort-block-blog-post-single-footer > * { margin-top: 72px; }
+    .gfort-block-blog-inner .gfort-block-pager { padding-top: 72px; }
+}
+
+/* Author
+----------------------------------------------------------------------------- */
+.gfort-block-author .gfort-block-author-heading { margin-bottom: 36px; }
+.gfort-block-author .avatar {
+    width: 60px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+    .gfort-block-author .avatar {
+        float: left;
+        margin-bottom: 0;
+        margin-right: 36px;
+    }
+}
+.gfort-block-author-title-bio-social {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.gfort-block-author-title-bio-social a { color: inherit; }
+.gfort-block-author-title-bio-social a:hover { text-decoration: underline; }
+.gfort-block-author-title-bio-social h4 { margin-bottom: 12px; }
+.gfort-block-author-title-bio-social > *:last-child { margin-bottom: 0; }
+
+/* Related posts
+----------------------------------------------------------------------------- */
+.gfort-block-related .gfort-block-related-heading { margin-bottom: 36px; }
+.gfort-block-related .gfort-block-blog-post .gfort-block-blog-post-head { margin-bottom: 30px; }
+
+/* Comments
+----------------------------------------------------------------------------- */
+.gfort-block-comments .gfort-block-comments-heading { margin-bottom: 36px; }
+
+.gfort-block-comments-list {
+    padding: 0;
+    margin: 0 0 54px;
+    list-style: none;
+}
+@media (min-width: 1200px) {
+    .gfort-block-comments-list { margin-bottom: 72px; }
+}
+.gfort-block-comments-list:last-child { margin-bottom: 0; }
+.gfort-block-comments-list .gfort-block-comments-list { padding-left: 36px; }
+@media (min-width: 768px) {
+    .gfort-block-comments-list .gfort-block-comments-list { padding-left: 84px; }
+}
+.gfort-block-comments-list .gfort-block-comments-item {
+    padding: 0;
+    width: 100%;
+    display: block;
+    margin: 54px 0 0;
+}
+@media (min-width: 1200px) {
+    .gfort-block-comments-list .gfort-block-comments-item { margin-top: 72px; }
+}
+.gfort-block-comments-list:first-child > .gfort-block-comments-item:first-child { margin-top: 0; }
+
+.gfort-block-comment {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.gfort-block-comment .gfort-block-comment-avatar {
+    width: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+    .gfort-block-comment .gfort-block-comment-avatar {
+        float: left;
+        margin-bottom: 0;
+        margin-right: 36px;
+    }
+}
+
+.gfort-block-comment .gfort-block-comment-avatar a,
+.gfort-block-comment .gfort-block-comment-avatar a img {
+    width: 100%;
+    display: block;
+}
+.gfort-block-comment .gfort-block-comment-body {
+    display: block;
+    overflow: hidden;
+}
+.gfort-block-comment .gfort-block-comment-head {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    line-height: 0;
+}
+.gfort-block-comment .gfort-block-comment-head a { color: inherit; }
+.gfort-block-comment .gfort-block-comment-head a:hover { text-decoration: underline; }
+.gfort-block-comment .gfort-block-comment-head > * {
+    line-height: 1.2;
+    margin: 0 0 12px;
+    display: inline-block;
+}
+
+.gfort-block-comment .gfort-block-comment-description {
+    width: 100%;
+    display: block;
+    margin: 0 0 18px;
+}
+.gfort-block-comment .gfort-block-comment-description:last-child { margin-bottom: 0; }
+
+.gfort-form-block-respond [type=submit] { margin-top: 5px; }
+
+
+/* 21.4 Search
+============================================================================= */
+/* Row
+----------------------------------------------------------------------------- */
+.gfort-block-search > .row:last-child { margin-bottom: -36px; }
+
+.gfort-block-search .gfort-block-pagination {
+    padding-top: 18px;
+    padding-bottom: 36px;
+}
+
+/* Container
+----------------------------------------------------------------------------- */
+.gfort-block-search .gfort-block-blog-post .gfort-block-blog-post-container {
+    padding: 36px;
+    overflow: hidden;
+    border-width: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    margin: 0 auto 36px;
+}
+
+/* Meta
+----------------------------------------------------------------------------- */
+.gfort-block-search .gfort-block-blog-post .gfort-block-meta {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.gfort-block-search .gfort-block-blog-post .gfort-block-meta span i { padding: 0 1px; }
+
+/* Footer
+----------------------------------------------------------------------------- */
+.gfort-block-search .gfort-block-blog-post .gfort-block-blog-post-footer { margin-top: 36px; }

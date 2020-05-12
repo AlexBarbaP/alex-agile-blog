@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace AlexAgile\Infrastructure\Symfony\Contact;
 
 use AlexAgile\Domain\ContactRequest\CreateContactRequestCommand;
+use AlexAgile\Infrastructure\Symfony\Type\CreateContactRequestType;
 use League\Tactician\CommandBus;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

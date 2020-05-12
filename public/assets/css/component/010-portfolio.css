@@ -1,0 +1,239 @@
+/*
+    22. Portfolio
+        22.1 Filter
+        22.2 Post
+        22.3 Columns
+        22.4 Front layouts
+*/
+
+
+
+
+/* =============================================================================
+   22. Portfolio
+============================================================================= */
+.gfort-isotope {
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+
+/* 22.1 Filter
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-isotope-filter {
+    padding: 0;
+    width: 100%;
+    font-size: 0;
+    display: block;
+    line-height: 0;
+    margin: 0 0 18px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+/* Container
+----------------------------------------------------------------------------- */
+.gfort-isotope-filter-container {
+    padding: 0;
+    width: auto;
+    display: none;
+    margin: 0 -9px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Link
+----------------------------------------------------------------------------- */
+.gfort-isotope-filter a {
+    color: inherit;
+    margin: 0 9px 18px;
+    display: inline-block;
+}
+.gfort-isotope-filter a:hover,
+.gfort-isotope-filter a.active {
+    opacity: 0.65;
+}
+
+/* Select
+----------------------------------------------------------------------------- */
+.gfort-isotope-filter .gfort-form-control {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 18px;
+    letter-spacing: 0.50px;
+}
+.gfort-isotope-filter-select-center .gfort-form-control {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+
+    .gfort-isotope-filter .gfort-isotope-filter-container { display: block; }
+    .gfort-isotope-filter .gfort-form-control { display: none; }
+
+}
+.gfort-isotope-filter-select-always .gfort-form-control { display: block; }
+.gfort-isotope-filter-select-always .gfort-isotope-filter-container { display: none; }
+
+
+/* 22.2 Post
+============================================================================= */
+/* Front
+----------------------------------------------------------------------------- */
+/* Heading */
+.gfort-block-portfolio-post .gfort-block-portfolio-post-heading .gfort-block-project-name { margin-bottom: 12px; }
+.gfort-block-portfolio-post .gfort-block-portfolio-post-heading .gfort-block-project-name:last-child { margin-bottom: 0; }
+.gfort-block-portfolio-post .gfort-block-portfolio-post-heading .gfort-block-project-cat { margin-top: 0; }
+
+.gfort-block-portfolio-post .gfort-block-portfolio-post-heading a {
+    color: inherit;
+
+    -ms-word-wrap: break-word;
+        word-wrap: break-word;
+       word-break: break-word;
+}
+
+
+/* 22.3 Columns
+============================================================================= */
+.gfort-block-portfolio-front .gfort-block-portfolio-post .gfort-block-portfolio-post-head > a,
+.gfort-block-portfolio-front .gfort-block-portfolio-post .gfort-block-portfolio-post-head > a img {
+    width: 100%;
+    display: block;
+}
+
+/* columns
+----------------------------------------------------------------------------- */
+.gfort-block-portfolio .gfort-block-pagination,
+.gfort-block-portfolio .gfort-block-portfolio-post .gfort-block-portfolio-post-container {
+    margin-bottom: 36px;
+}
+.gfort-block-portfolio-front .gfort-block-pagination { margin-top: 18px; }
+
+
+/* 22.4 Front layouts
+============================================================================= */
+/* Zoom
+----------------------------------------------------------------------------- */
+.gfort-block-portfolio-front-layout-zoom .gfort-block-portfolio-post .gfort-block-portfolio-post-container {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.10);
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.10);
+}
+.gfort-block-portfolio-front-layout-zoom .gfort-block-portfolio-post .gfort-block-portfolio-post-head { margin-bottom: 0; }
+.gfort-block-portfolio-front-layout-zoom .gfort-block-portfolio-post .gfort-block-portfolio-post-body {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    border-radius: 2px;
+    background-color: #ffffff;
+
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.gfort-block-portfolio-front-layout-zoom .gfort-block-portfolio-post .gfort-block-portfolio-post-heading {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.gfort-block-portfolio-front-layout-zoom .gfort-block-portfolio-post .gfort-block-portfolio-post-heading a {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 36px;
+
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+    -webkit-flex-align: center;
+        -ms-flex-align: center;
+           align-items: center;
+}
+.gfort-block-portfolio-front-layout-zoom .gfort-block-portfolio-post .gfort-block-portfolio-post-heading a span {
+    width: 100%;
+    display: block;
+}
+
+.gfort-block-portfolio-front-layout-zoom .gfort-block-portfolio-post:hover { z-index: 3; }
+.gfort-block-portfolio-front-layout-zoom .gfort-block-portfolio-post .gfort-block-portfolio-post-container:hover {
+    -webkit-transform: scale(1.23);
+            transform: scale(1.23);
+}
+.gfort-block-portfolio-front-layout-zoom .gfort-block-portfolio-post .gfort-block-portfolio-post-heading a:hover { text-decoration: none; }
+.gfort-block-portfolio-front-layout-zoom .gfort-block-portfolio-post .gfort-block-portfolio-post-container:hover .gfort-block-portfolio-post-body {
+    opacity: 1;
+}
+
+/* Ribbon
+----------------------------------------------------------------------------- */
+.gfort-block-portfolio-front-layout-ribbon .gfort-block-portfolio-post-head .gfort-ribbon {
+    opacity: 0;
+
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.gfort-block-portfolio-front-layout-ribbon .gfort-block-portfolio-post-head:hover .gfort-ribbon { opacity: 1; }
+.gfort-block-portfolio-front-layout-ribbon .gfort-block-portfolio-post-head .gfort-overlay-effect::after { display: none; }
+
+/* Overlay
+----------------------------------------------------------------------------- */
+.gfort-block-portfolio-front-layout-overlay .gfort-block-portfolio-post .gfort-block-portfolio-post-container { margin-bottom: 0; }
+
+.gfort-block-portfolio-front-layout-overlay .gfort-block-portfolio-post .gfort-block-portfolio-post-head { margin-bottom: 0; }
+.gfort-block-portfolio-front-layout-overlay .gfort-block-portfolio-post .gfort-overlay-effect::after { display: none; }
+
+.gfort-block-portfolio-front-layout-overlay .gfort-block-portfolio-post-body {
+    left: 0;
+    top: 50%;
+    margin: 0;
+    z-index: 3;
+    opacity: 0;
+    width: 100%;
+    user-select: none;
+    position: absolute;
+    text-align: center;
+    padding: 24px 30px;
+    pointer-events: none;
+
+    transform: translateY(-50%);
+
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.gfort-block-portfolio-front-layout-overlay .gfort-block-portfolio-post-container:hover .gfort-block-portfolio-post-body { opacity: 1; }
+.gfort-block-portfolio-front-layout-overlay .gfort-block-portfolio-post .gfort-block-portfolio-post-heading span {
+    width: 100%;
+    display: block;
+}
+.gfort-block-portfolio-front-layout-overlay .gfort-block-portfolio-post .gfort-block-portfolio-post-heading .gfort-block-project-cat {
+    opacity: 0.80;
+}
+
+/* Default
+----------------------------------------------------------------------------- */
+.gfort-block-portfolio-front-layout-default { margin-bottom: 0; }
+.gfort-block-portfolio-front-layout-default .gfort-block-portfolio-post .gfort-block-portfolio-post-head { margin-bottom: 36px; }
+.gfort-block-portfolio-front-layout-default .gfort-block-portfolio-post .gfort-block-portfolio-post-head:last-child { margin-bottom: 0; }
+.gfort-block-portfolio-front-layout-default .gfort-block-portfolio-post .gfort-block-portfolio-post-heading a:hover { text-decoration: underline; }

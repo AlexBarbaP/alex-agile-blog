@@ -50,3 +50,7 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 !/.env.test
+
+###> serre template original files ###
+/assets/serre/
+###< serre template original files ###

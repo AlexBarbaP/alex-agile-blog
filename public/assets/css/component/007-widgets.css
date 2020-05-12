@@ -1,0 +1,391 @@
+/*
+    19. Widgets
+        19.1 Archives / Categories / Pages / Navigation menu / Meta / Recent comments / Recent posts / RSS
+        19.2 Calendar
+        19.3 Tags cloud
+        19.4 Advertisement
+        19.5 Forms
+        19.6 Portfolio
+*/
+
+
+
+
+/* =============================================================================
+   19. Widgets
+============================================================================= */
+/* Wrapper
+============================================================================= */
+.widget {
+    z-index: 3;
+    padding: 0;
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    margin: 0 0 54px;
+    line-height: 1.6;
+    position: relative;
+}
+.widget > *:last-child,
+.widget .textwidget > *:last-child  {
+    margin-bottom: 0;
+}
+
+
+/* Title
+============================================================================= */
+.widget-title {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 36px;
+}
+.gfort-section-footer .widget .widget-title { border-color: transparent; }
+
+.widget-title span {
+    position: relative;
+    border-color: inherit;
+    display: inline-block;
+}
+.widget-title span::after,
+.widget-title span::before {
+    top: 50%;
+    content: '';
+    display: block;
+    width: 1000000%;
+    margin-top: -1px;
+    position: absolute;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: inherit;
+}
+.widget-title span::after {
+    left: 100%;
+    margin-left: 18px;
+}
+.widget-title span::before {
+    right: 100%;
+    margin-right: 18px;
+}
+
+
+/* Content
+============================================================================= */
+.widget a:hover { text-decoration: underline; }
+
+
+/* 19.1 Archives / Categories / Pages / Navigation menu / Meta / Recent comments / Recent posts / RSS
+============================================================================= */
+/* List (ul)
+----------------------------------------------------------------------------- */
+.widget_archive ul,
+.widget_categories ul,
+.widget_pages ul,
+.widget_nav_menu ul,
+.widget_meta ul,
+.widget_recent_comments ul,
+.widget_recent_entries ul,
+.widget_rss ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.widget_categories ul ul,
+.widget_pages ul ul,
+.widget_nav_menu ul ul {
+    padding-top: 6px;
+    padding-left: 24px;
+}
+
+/* Items (li)
+----------------------------------------------------------------------------- */
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_pages ul li,
+.widget_nav_menu ul li,
+.widget_meta ul li,
+.widget_recent_comments ul li,
+.widget_recent_entries ul li,
+.widget_rss ul li {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 6px;
+}
+.widget_rss ul li { margin-bottom: 12px; }
+
+.widget_archive ul li:last-child,
+.widget_categories ul li:last-child,
+.widget_pages ul li:last-child,
+.widget_nav_menu ul li:last-child,
+.widget_meta ul li:last-child,
+.widget_recent_comments ul li:last-child,
+.widget_recent_entries ul li:last-child,
+.widget_rss ul li:last-child {
+    margin-bottom: 0;
+}
+
+.widget_recent_comments ul li {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.widget_recent_comments ul li::before {
+    width: 4px;
+    height: 4px;
+    content: '';
+    opacity: 0.50;
+    border-width: 2px;
+    margin-right: 12px;
+    border-radius: 50%;
+    border-style: solid;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Links (a)
+----------------------------------------------------------------------------- */
+.widget_archive ul li a,
+.widget_categories ul li a,
+.widget_pages ul li a,
+.widget_nav_menu ul li a,
+.widget_meta ul li a,
+.widget_recent_entries ul li a,
+.widget_rss ul li a {
+    display: block;
+    position: relative;
+}
+
+.widget_recent_entries ul li a,
+.widget_rss ul li a {
+    width: 100%;
+    overflow: hidden;
+    font-weight: 500;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.widget_recent_entries ul li a:last-child,
+.widget_rss ul li a:last-child {
+    margin-bottom: 0;
+}
+
+.widget_archive ul li a::before,
+.widget_categories ul li a::before,
+.widget_pages ul li a::before,
+.widget_nav_menu ul li a::before,
+.widget_meta ul li a::before,
+.widget_recent_entries ul li a::before,
+.widget_rss ul li a::before {
+    width: 4px;
+    height: 4px;
+    content: '';
+    opacity: 0.50;
+    border-width: 2px;
+    margin-right: 12px;
+    border-radius: 50%;
+    border-style: solid;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.widget_archive ul li a span,
+.widget_categories ul li a span {
+    float: right;
+    opacity: 0.70;
+}
+.widget_archive ul li a:hover span,
+.widget_categories ul li a:hover span {
+    text-decoration: underline;
+}
+
+.widget_recent_entries .date,
+.widget_rss .date {
+    display: block;
+    margin: 0 0 6px;
+    padding: 0 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.50px;
+}
+.widget_recent_entries .widget-title span,
+.widget_rss .widget-title span {
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    display: inline-block;
+}
+.widget_recent_entries li:last-child span:last-child,
+.widget_rss li:last-child span:last-child {
+    margin-bottom: 0;
+}
+
+.widget_rss .widget-title i {
+    padding: 0 1px;
+    color: rgb(242, 101, 34);
+}
+
+.widget_rss .rssSummary {
+    display: block;
+    font-size: 13px;
+    margin: 0 0 6px;
+    padding-left: 16px;
+}
+.widget_rss li:last-child .rssSummary:last-child { margin-bottom: 0; }
+
+.widget_rss cite {
+    display: block;
+    margin: 0 0 6px;
+    padding: 0 16px;
+    font-weight: 500;
+}
+.widget_rss li:last-child cite:last-child { margin-bottom: 0; }
+
+.widget_gfort_recent_posts a,
+.widget_gfort_recent_posts a img {
+    width: 100%;
+    display: block;
+}
+
+/* Navigation menu (Horizontal)
+----------------------------------------------------------------------------- */
+.widget_nav_menu_horizontal ul {
+    width: auto;
+    margin: 0 -6px;
+    display: inline-block;
+}
+.widget_nav_menu_horizontal ul li {
+    padding: 0;
+    margin: 0 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.widget_nav_menu_horizontal ul li a {
+    line-height: 2;
+    display: inline-block;
+}
+.widget_nav_menu_horizontal ul li:first-child a::before { display: none; }
+.widget_nav_menu_horizontal ul li a span {
+    width: 100%;
+    display: block;
+}
+
+
+/* 19.2 Calendar
+============================================================================= */
+.widget_calendar table {
+    margin: 0;
+    width: 100%;
+    border-spacing: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+.widget_calendar table th,
+.widget_calendar table td {
+    padding: 0;
+    line-height: 41px;
+    border-width: 1px;
+    text-align: center;
+    border-style: solid;
+    border-color: inherit;
+}
+.widget_calendar table th { font-weight: 500; }
+
+.widget_calendar table caption {
+    padding: 0;
+    margin: 0 0 12px;
+    font-weight: 500;
+    caption-side: top;
+}
+
+.widget_calendar table a {
+    width: 100%;
+    display: inline-block;
+}
+
+.widget_calendar table .pad { user-select: none; }
+
+
+/* 19.3 Tags cloud
+============================================================================= */
+.widget_tag_cloud {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.tagcloud ul {
+    padding: 0;
+    width: auto;
+    font-size: 0;
+    margin: -3px;
+    line-height: 0;
+    list-style: none;
+}
+
+.tagcloud ul li {
+    margin: 3px;
+    display: inline-block;
+}
+
+
+/* 19.4 Advertisement
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.widget_gfort_advertisement { text-align: center; }
+
+/* Title
+----------------------------------------------------------------------------- */
+.widget_gfort_advertisement .widget-title {
+    font-size: 13px;
+    padding-bottom: 0;
+    margin-bottom: 6px;
+    border-bottom-width: 0;
+    font-weight: 400 !important;
+}
+.widget_gfort_advertisement .widget-title span::after,
+.widget_gfort_advertisement .widget-title span::before {
+    display: none;
+}
+
+
+/* 19.5 Forms
+============================================================================= */
+.widget .gfort-form-block-container form { margin-bottom: -12px; }
+
+.widget .gfort-form-block small { margin-top: 0; }
+
+.widget .gfort-form-block .gfort-form-control,
+.widget .gfort-form-block small,
+.widget .gfort-form-block .gfort-alert,
+.widget .gfort-form-block .gfort-label,
+.widget .gfort-form-block [type=button],
+.widget .gfort-form-block [type=submit],
+.widget .gfort-form-block [type=reset] {
+    margin-bottom: 12px;
+}
+
+.widget .gfort-form-block .gfort-label:not(.gfort-label-input-margin-0) input,
+.widget .gfort-form-block .gfort-label:not(.gfort-label-input-margin-0) select,
+.widget .gfort-form-block .gfort-label:not(.gfort-label-input-margin-0) textarea {
+    margin-top: 6px;
+}
+.widget .gfort-form-block .gfort-label input[type=range] { margin-top: 12px; }
+.widget .gfort-form-block .gfort-input-type-radio + .gfort-input-type-radio,
+.widget .gfort-form-block .gfort-input-type-checkbox + .gfort-input-type-checkbox {
+    margin-top: -12px;
+}
+
+
+/* 19.6 Portfolio
+============================================================================= */
+.widget_gfort_recent_projects a,
+.widget_gfort_recent_projects img {
+    width: 100%;
+    display: block;
+}

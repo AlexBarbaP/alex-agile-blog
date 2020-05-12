@@ -1,0 +1,132 @@
+/*
+    17. Social icons
+*/
+
+
+
+
+/* =============================================================================
+   17. Social icons
+============================================================================= */
+/* Main
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-social-icons {
+    padding: 0;
+    z-index: 10;
+    width: 100%;
+    font-size: 0;
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+    margin: 0 0 36px;
+    position: relative;
+}
+
+/* List (ul)
+----------------------------------------------------------------------------- */
+.gfort-social-icons ul {
+    padding: 0;
+    width: auto;
+    margin: -6px;
+    list-style: none;
+    display: inline-block;
+}
+
+/* items (li)
+----------------------------------------------------------------------------- */
+.gfort-social-icons ul li {
+    padding: 0;
+    margin: 6px;
+    border-radius: 50%;
+    line-height: inherit;
+    display: inline-block;
+}
+
+/* Link
+----------------------------------------------------------------------------- */
+.gfort-social-icons ul li a {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    overflow: hidden;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none !important;
+}
+
+/* icon
+----------------------------------------------------------------------------- */
+.gfort-social-icons ul li a i {
+    width: 100%;
+    display: block;
+    color: #636363;
+    line-height: 30px;
+    background-color: #f6f6f6;
+
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+/* Transparent icons
+----------------------------------------------------------------------------- */
+.gfort-social-icons.gfort-social-icons-transparent ul li a i { background-color: transparent; }
+
+/* Square icons
+----------------------------------------------------------------------------- */
+.gfort-social-icons.gfort-social-icons-square ul li,
+.gfort-social-icons.gfort-social-icons-square ul li a {
+    border-radius: 2px;
+}
+
+/* Size
+----------------------------------------------------------------------------- */
+/* Small */
+.gfort-social-icons.gfort-social-icons-sm ul li a {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    line-height: 24px;
+}
+.gfort-social-icons.gfort-social-icons-sm ul li a i { line-height: 24px; }
+
+/* Large */
+.gfort-social-icons.gfort-social-icons-lg ul li a {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+}
+.gfort-social-icons.gfort-social-icons-lg ul li a i { line-height: 36px; }
+
+/* xLarge */
+.gfort-social-icons.gfort-social-icons-xl ul li a {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    line-height: 48px;
+}
+.gfort-social-icons.gfort-social-icons-xl ul li a i { line-height: 48px; }
+
+/* Hover
+----------------------------------------------------------------------------- */
+.gfort-social-icons ul li:hover a i,
+.gfort-social-icons.gfort-social-icons-transparent ul li:hover a i {
+    color: #ffffff;
+}
+.gfort-social-icons ul li:hover a i:nth-last-child(2) { margin-top: -30px; }
+.gfort-social-icons.gfort-social-icons-sm ul li:hover a i:nth-last-child(2) { margin-top: -24px; }
+.gfort-social-icons.gfort-social-icons-lg ul li:hover a i:nth-last-child(2) { margin-top: -36px; }
+.gfort-social-icons.gfort-social-icons-xl ul li:hover a i:nth-last-child(2) { margin-top: -48px; }
+
+ /* Layout
+----------------------------------------------------------------------------- */
+.gfort-social-icons-layout-1 ul li:hover a * { color: #ffffff; }
+.gfort-social-icons-layout-2 ul li a:first-child * {
+    color: #ffffff;
+    background-color: #000000;
+}

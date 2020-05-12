@@ -1,0 +1,204 @@
+/*
+    20. Pagination
+        20.1 Default
+        20.2 Pager
+*/
+
+
+
+
+/* =============================================================================
+   20. Pagination
+============================================================================= */
+/* 20.1 Default
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-block-pagination { overflow: hidden; }
+.gfort-block-pagination:last-child { margin-bottom: 0; }
+
+/* List (ul)
+----------------------------------------------------------------------------- */
+.gfort-block-pagination ul {
+    padding: 0;
+    margin: -3px;
+    width: auto;
+    list-style: none;
+
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* Items (li)
+----------------------------------------------------------------------------- */
+.gfort-block-pagination ul li {
+    padding: 0;
+    margin: 3px;
+}
+.gfort-block-pagination ul .disabled {
+    opacity: 0.50;
+    cursor: not-allowed;
+}
+
+/* Link (a)
+----------------------------------------------------------------------------- */
+.gfort-block-pagination ul li a,
+.gfort-block-pagination ul li span {
+    padding: 6px;
+    display: block;
+    color: inherit;
+    min-width: 36px;
+    font-weight: 500;
+    line-height: 24px;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.gfort-block-pagination ul li a:hover { color: inherit; }
+.gfort-block-pagination ul li:first-child a,
+.gfort-block-pagination ul li:first-child a:hover,
+.gfort-block-pagination ul li:last-child a,
+.gfort-block-pagination ul li:last-child a:hover {
+    color: inherit;
+    background-color: transparent;
+}
+
+.gfort-block-pagination ul li:first-child a,
+.gfort-block-pagination ul li:last-child a {
+    min-height: 36px;
+}
+
+.gfort-block-pagination ul li span {
+    font-size: 20px;
+    line-height: 20px;
+}
+.gfort-block-pagination ul li a span {
+    padding: 0;
+    min-width: auto;
+}
+
+
+/* 20.2 Pager
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-block-pager {
+    margin-top: 54px;
+    overflow: hidden;
+    padding-top: 54px;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+/* List (ul)
+----------------------------------------------------------------------------- */
+.gfort-block-pager ul {
+    padding: 0;
+    width: auto;
+    margin: -18px;
+    display: block;
+    list-style: none;
+}
+@media (min-width: 768px) {
+    .gfort-block-pager ul {
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+/* Items (li)
+----------------------------------------------------------------------------- */
+.gfort-block-pager ul li {
+    margin: 0;
+    width: 100%;
+    padding: 18px;
+    display: block;
+}
+@media (min-width: 768px) {
+    .gfort-block-pager ul li {
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    }
+}
+
+.gfort-block-pager ul .previous {
+    direction: ltr;
+    text-align: left;
+}
+.gfort-block-pager ul .next {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Link (a)
+----------------------------------------------------------------------------- */
+.gfort-block-pager ul li a {
+    padding: 0;
+    width: 100%;
+    display: block;
+    color: inherit;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 600;
+    overflow: hidden;
+    position: relative;
+}
+.gfort-block-pager ul .previous a { padding-left: 36px; }
+.gfort-block-pager ul .next a { padding-right: 36px; }
+
+/* Arrow */
+.gfort-block-pager ul li a i {
+    top: 50%;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    line-height: 36px;
+    margin-top: -18px;
+    position: absolute;
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+.gfort-block-pager ul .previous a i { left: 0; }
+.gfort-block-pager ul .next a i { right: 0; }
+
+/* Image */
+.gfort-block-pager ul li a img {
+    width: 60px;
+    border-radius: 50%;
+}
+.gfort-block-pager ul .previous a img {
+    float: left;
+    margin-right: 24px;
+}
+.gfort-block-pager ul .next a img {
+    float: right;
+    margin-left: 24px;
+}
+
+/* Title */
+.gfort-block-pager ul a .gfort-pager-title {
+    z-index: 2;
+    width: auto;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.gfort-block-pager ul a .gfort-pager-title * {
+    margin-top: 0;
+    font-weight: 500;
+    line-height: 24px;
+}
+.gfort-block-pager ul a .gfort-pager-title span {
+    z-index: 2;
+    width: 100%;
+    display: block;
+    line-height: 1;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 12px;
+    letter-spacing: 0.30px;
+}
+.gfort-block-pager ul li a:hover h6 { text-decoration: underline; }

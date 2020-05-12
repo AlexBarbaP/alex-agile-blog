@@ -1,0 +1,107 @@
+/*
+    23. Footer
+*/
+
+
+
+
+/* =============================================================================
+   23. Footer
+============================================================================= */
+/* Wrapper
+============================================================================= */
+.gfort-section-footer {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+
+/* Top
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-section-footer-top {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+.gfort-section-footer-top .gfort-text-left,
+.gfort-section-footer-top .gfort-text-right,
+.gfort-section-footer-top [class*='gfort-text-left'],
+.gfort-section-footer-top [class*='gfort-text-right'] {
+    direction: initial;
+}
+
+/* Main section
+----------------------------------------------------------------------------- */
+.gfort-section-footer-top .gfort-section { padding-bottom: 18px; }
+@media (min-width: 1200px) {
+    .gfort-section-footer-top .gfort-section-3x-padding { padding-bottom: 54px; }
+}
+
+.gfort-section-footer-top h1, .gfort-section-footer-top .h1,
+.gfort-section-footer-top h2, .gfort-section-footer-top .h2,
+.gfort-section-footer-top h3, .gfort-section-footer-top .h3,
+.gfort-section-footer-top h4, .gfort-section-footer-top .h4,
+.gfort-section-footer-top h5, .gfort-section-footer-top .h5,
+.gfort-section-footer-top h6, .gfort-section-footer-top .h6 {
+    margin-top: 0;
+}
+
+
+/* copyright
+============================================================================= */
+/* Wrapper
+----------------------------------------------------------------------------- */
+.gfort-section-footer-copyright {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    line-height: 1.6;
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+.gfort-section-footer-copyright .gfort-block-nav-menu ul li a {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Main section
+----------------------------------------------------------------------------- */
+.gfort-section-footer-copyright .gfort-section {
+    padding-top: 36px;
+    padding-bottom: 24px;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+.gfort-section-footer-copyright .gfort-section .row > * { margin-bottom: 12px; }
+.gfort-section-footer-copyright .gfort-section .row > * > *:last-child { margin-bottom: 0; }
+.gfort-section-footer-copyright .gfort-block-nav-menu a { font-weight: normal; }
+.gfort-section-footer-copyright .gfort-section .row * { direction: initial; }

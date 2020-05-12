@@ -1,0 +1,126 @@
+/*
+    18. Breadcrumb
+*/
+
+
+
+
+/* =============================================================================
+   18. Breadcrumb
+============================================================================= */
+/* Wrapper
+============================================================================= */
+.gfort-section-breadcrumb {
+    z-index: 3;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
+
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+
+/* Overlay
+============================================================================= */
+.gfort-section-breadcrumb-overlay {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+/* Container
+============================================================================= */
+.gfort-section-breadcrumb-container {
+    z-index: 3;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    margin: 0 auto;
+    padding: 21px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Title / Breadcrumb
+============================================================================= */
+.gfort-breadcrumb-title,
+.gfort-breadcrumb {
+    margin: 0;
+    width: 100%;
+    display: block;
+    padding: 3px 18px;
+}
+
+/* Breadcrumb
+============================================================================= */
+/* List (ol)
+----------------------------------------------------------------------------- */
+.gfort-breadcrumb ol {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    list-style: none;
+}
+
+/* Items (li)
+----------------------------------------------------------------------------- */
+.gfort-breadcrumb ol li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.gfort-breadcrumb ol li * {
+    font-size: 13px;
+    line-height: 24px;
+}
+.gfort-breadcrumb ol li + li::before {
+    content: '/';
+    padding: 0 6px;
+    font-size: 13px;
+    line-height: 24px;
+    display: inline-block;
+}
+
+/* Link
+----------------------------------------------------------------------------- */
+.gfort-breadcrumb a { display: inline-block; }
+.gfort-breadcrumb a:hover { text-decoration: underline; }
+
+/* Icon
+----------------------------------------------------------------------------- */
+.gfort-breadcrumb ol li i { font-size: 11px; }
+
+
+/* Layout 1
+============================================================================= */
+.gfort-section-breadcrumb-layout-1 .gfort-breadcrumb-heading { line-height: 24px; }
+
+@media (min-width: 992px) {
+
+    .gfort-breadcrumb-title,
+    .gfort-breadcrumb {
+        width: auto;
+        display: inline-block;
+    }
+
+}

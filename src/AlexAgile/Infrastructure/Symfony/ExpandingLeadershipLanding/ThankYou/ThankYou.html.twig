@@ -1,0 +1,17 @@
+{% extends 'ExpandingLeadershipLanding/Layout/Layout.html.twig' %}
+
+{% block header %}
+    {{ include('ExpandingLeadershipLanding/ThankYou/Header.html.twig') }}
+{% endblock %}
+
+{% block body %}
+    {{ include('ExpandingLeadershipLanding/ThankYou/Top.html.twig') }}
+
+    {{ include('ExpandingLeadershipLanding/ThankYou/Footer.html.twig') }}
+    
+    <!-- Event snippet for Expanding Leadership Contact Submitted conversion page -->
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-639405002/_AO8CKK-5NABEMqX8rAC'});
+    </script>
+{% endblock %}
+
