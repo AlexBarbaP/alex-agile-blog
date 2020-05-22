@@ -413,7 +413,9 @@
         },
         // Fixed header
         fixedHeader: function (pageCurrentPosition) {
-            if (!isMobile.any()) {
+            /* Fix mobile menu Alex Barba - START */
+            // if (!isMobile.any()) {
+            /* Fix mobile menu Alex Barba - END */
 
                 var el = $('.gfort-section-header-fixed .gfort-section-header-menu-container'),
                     height = el.height(),
@@ -427,8 +429,9 @@
                     el.removeClass('gfort-section-header-menu-stuck');
                     parent.css({height: 'auto'});
                 }
-
-            }
+            /* Fix mobile menu Alex Barba - START */
+            // }
+            /* Fix mobile menu Alex Barba - END */
         },
         // Middle section
         middleSection: function () {

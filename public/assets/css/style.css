@@ -2545,7 +2545,10 @@ h6, .h6,
 ============================================================================= */
 /* Fixed
 ----------------------------------------------------------------------------- */
-@media (min-width: 1200px) {
+
+/* Fix mobile menu Alex Barba - START */
+/*@media (min-width: 1200px) {*/
+/* Fix mobile menu Alex Barba - END */
 
     .gfort-section-header-fixed .gfort-section-header-menu-stuck {
         top: 0;
@@ -2554,7 +2557,9 @@ h6, .h6,
         position: fixed;
     }
 
-}
+/* Fix mobile menu Alex Barba - START */
+/*}*/
+/* Fix mobile menu Alex Barba - END */
 
 /* Transparent
 ----------------------------------------------------------------------------- */
