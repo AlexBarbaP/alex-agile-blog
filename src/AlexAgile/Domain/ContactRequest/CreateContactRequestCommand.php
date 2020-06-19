@@ -14,15 +14,11 @@ class CreateContactRequestCommand
     /** @var string */
     private $name = '';
 
-    /** @var string */
-    private $phone = '';
-
-    public function __construct(string $email, string $message, string $name, string $phone)
+    public function __construct(string $email, string $message, string $name)
     {
         $this->email = $email;
         $this->message = $message;
         $this->name = $name;
-        $this->phone = $phone;
     }
 
     public function email(): string
@@ -38,10 +34,5 @@ class CreateContactRequestCommand
     public function name(): string
     {
         return $this->name;
-    }
-
-    public function phone(): string
-    {
-        return $this->phone;
     }
 }

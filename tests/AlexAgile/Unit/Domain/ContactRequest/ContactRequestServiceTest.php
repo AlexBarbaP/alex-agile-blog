@@ -21,7 +21,6 @@ class ContactRequestServiceTest extends TestCase
     private const VALID_EMAIL = 'valid@email.com';
     private const VALID_MESSAGE = 'This is a valid message.';
     private const VALID_NAME = 'Valid Name';
-    private const VALID_PHONE = '+31612123123';
 
     /**
      * @test
@@ -31,8 +30,7 @@ class ContactRequestServiceTest extends TestCase
         $contactRequest = new ContactRequest(
             Email::create(self::VALID_EMAIL),
             Message::create(self::VALID_MESSAGE),
-            Name::create(self::VALID_NAME),
-            Phone::create(self::VALID_PHONE)
+            Name::create(self::VALID_NAME)
         );
 
         $contactRequestRepository = new ContactRequestRepositoryInMemoryAdapter([]);
@@ -54,8 +52,7 @@ class ContactRequestServiceTest extends TestCase
         $contactRequest = new ContactRequest(
             Email::create(self::VALID_EMAIL),
             Message::create(self::VALID_MESSAGE),
-            Name::create(self::VALID_NAME),
-            Phone::create(self::VALID_PHONE)
+            Name::create(self::VALID_NAME)
         );
 
         $contactRequestRepository = new ContactRequestRepositoryInMemoryAdapter([]);

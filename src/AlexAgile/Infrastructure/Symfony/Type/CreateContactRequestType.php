@@ -21,9 +21,6 @@ class CreateContactRequestType extends AbstractType
             ->add('email', EmailType::class, [
                 'required'   => true,
             ])
-            ->add('phone', TextType::class, [
-                'required'   => true,
-            ])
             ->add('message', TextareaType::class, [
                 'required'   => true,
             ])

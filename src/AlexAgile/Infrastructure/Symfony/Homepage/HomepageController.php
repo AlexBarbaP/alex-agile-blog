@@ -27,7 +27,7 @@ class HomepageController extends AbstractController
     }
 
     /**
-     * @Route("/", methods={"GET", "POST"}, name="home")
+     * @Route("/home", methods={"GET", "POST"}, name="home")
      * @Template("Homepage/Homepage.html.twig")
      */
     public function __invoke(Request $request): array

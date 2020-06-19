@@ -6,7 +6,6 @@ namespace AlexAgile\Domain\ContactRequest;
 use AlexAgile\Domain\ValueObject\Email;
 use AlexAgile\Domain\ValueObject\Message;
 use AlexAgile\Domain\ValueObject\Name;
-use AlexAgile\Domain\ValueObject\Phone;
 use DateTimeImmutable;
 use Exception;
 use Ramsey\Uuid\Exception\InvalidUuidStringException;
@@ -31,9 +30,6 @@ class ContactRequest
     /** @var Name */
     private $name = '';
 
-    /** @var Phone */
-    private $phone = '';
-
     /**
      * @throws Exception
      * @throws InvalidUuidStringException
@@ -42,7 +38,6 @@ class ContactRequest
         Email $email,
         Message $message,
         Name $name,
-        Phone $phone,
         ContactRequestId $contactRequestId = null,
         DateTimeImmutable $created = null,
         DateTimeImmutable $modified = null
@@ -51,7 +46,6 @@ class ContactRequest
         $this->email = $email;
         $this->message = $message;
         $this->name = $name;
-        $this->phone = $phone;
         $this->created = $created ?: new DateTimeImmutable();
         $this->modified = $modified ?: new DateTimeImmutable();
     }
@@ -84,10 +78,5 @@ class ContactRequest
     public function getName(): Name
     {
         return $this->name;
-    }
-
-    public function getPhone(): Phone
-    {
-        return $this->phone;
     }
 }

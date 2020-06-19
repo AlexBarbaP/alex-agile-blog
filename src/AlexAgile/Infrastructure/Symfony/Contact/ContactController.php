@@ -27,7 +27,7 @@ class ContactController extends AbstractController
     }
 
     /**
-     * @Route("/contact", methods={"GET", "POST"}, name="contact")
+     * @Route("/old-contact", methods={"GET", "POST"}, name="old-contact")
      * @Template("Contact/Contact.html.twig")
      */
     public function __invoke(Request $request)

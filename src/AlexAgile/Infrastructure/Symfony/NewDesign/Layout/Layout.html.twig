@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+{{ include('NewDesign/Layout/Head.html.twig') }}
+
+<!-- body
+======================================================================== -->
+<body>
+
+    <!-- Main wrapper
+    ==================================================================== -->
+    <div id="gfort-main-wrapper">
+        <!-- Main container -->
+        <div id="gfort-main-container">
+
+
+            <!-- Back to top button
+            ============================================================ -->
+            <a href="#" id="gfort-btn-back-to-top" class="gfort-btn-back-to-top" title="Back to top">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+
+
+            <!-- Page menu
+            ============================================================ -->
+            {% block header %}{% endblock %}
+
+
+            <!-- Page body
+            ============================================================ -->
+            <div id="gfort-page-body" class="gfort-page-body">
+                <!-- row -->
+                <div class="row gfort-main-row justify-content-center">
+
+
+                    <!-- Content area
+                    ==================================================== -->
+                    <div id="primary" class="gfort-content-area col-lg-12">
+                        <!-- Main -->
+                        <main id="main" class="gfort-content-area-container site-main">
+
+                            {% block body %}{% endblock %}
+
+                        </main><!-- /End Main -->
+                    </div><!-- /End Content area -->
+
+
+                </div><!-- /End row -->
+            </div><!-- /End Page body -->
+
+            {{ include('NewDesign/Footer/Footer.html.twig') }}
+
+        </div><!-- /End Main container -->
+    </div><!-- /End Main wrapper -->
+
+
+    <!-- Java Script Files
+    ==================================================================== -->
+    <script src="/assets/js/plugins/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/plugins/jquery/jquery-ui.min.js"></script>
+
+    <script data-main="/assets/js/scripts.js" src="assets/js/require.js"></script>
+
+</body><!-- /End body -->
+
+
+</html><!-- /End html -->

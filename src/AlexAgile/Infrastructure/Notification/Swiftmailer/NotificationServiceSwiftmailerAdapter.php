@@ -38,7 +38,6 @@ final class NotificationServiceSwiftmailerAdapter implements NotificationService
 <b>Contact Request:</b> <br>
 Name: {$contactRequest->getName()}<br>
 Email: {$contactRequest->getEmail()}<br>
-Phone: {$contactRequest->getPhone()}<br>
 Message: <br>
 {$contactRequest->getMessage()}
 EOD;

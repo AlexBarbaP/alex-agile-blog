@@ -11,7 +11,6 @@ class CreateContactRequestTest extends IntegrationTestAbstract
     private const VALID_EMAIL = 'valid@email.com';
     private const VALID_MESSAGE = 'This is a valid message.';
     private const VALID_NAME = 'Valid Name';
-    private const VALID_PHONE = '+31612123123';
 
     /**
      * @test
@@ -23,8 +22,7 @@ class CreateContactRequestTest extends IntegrationTestAbstract
         $createContactRequestCommand = new CreateContactRequestCommand(
             self::VALID_EMAIL,
             self::VALID_MESSAGE,
-            self::VALID_NAME,
-            self::VALID_PHONE
+            self::VALID_NAME
         );
         $this->commandBus->handle($createContactRequestCommand);
 

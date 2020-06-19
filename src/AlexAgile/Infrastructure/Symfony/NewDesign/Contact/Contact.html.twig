@@ -1,0 +1,164 @@
+{% extends 'NewDesign/Layout/Layout.html.twig' %}
+
+{% block header %}
+    {{ include('NewDesign/Layout/Header-non-transparent.html.twig') }}
+{% endblock %}
+
+{% block body %}
+
+    <!-- Section -->
+    <div class="gfort-section gfort-section-2x-padding grey-1-bg-color" id="Contact">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+
+
+                <!-- col-md-12 -->
+                <div class="col-md-12">
+
+
+                    <!-- Section title -->
+                    <div class="gfort-block gfort-block-section-title">
+                        <!-- Block container -->
+                        <div class="gfort-block-container">
+
+                            <!-- Block body -->
+                            <div class="gfort-block-body gfort-block-section-title-body">
+
+                                <!-- Block heading -->
+                                <div class="gfort-block-heading gfort-block-section-title-heading">
+                                    <h2>Curious about leadership skills?</h2>
+                                </div><!-- /End Block heading -->
+
+                            </div><!--/End Block body -->
+
+                        </div><!-- /End Block container -->
+                    </div><!-- /End Section title -->
+
+                    <!-- GAP -->
+                    <div class="gfort-gap gfort-gap-36"></div>
+
+
+                </div><!-- /End col-md-12 -->
+
+                <!-- col-md-6 -->
+                <div class="col-md-6">
+
+
+                    <!-- Text block -->
+                    <div class="gfort-block gfort-block-text">
+                        <!-- Block container -->
+                        <div class="gfort-block-container gfort-block-text-container">
+
+                            <!-- Block body -->
+                            <div class="gfort-block-body gfort-block-text-body">
+
+                                <!-- Block content -->
+                                <div class="gfort-block-content gfort-block-text-content">
+
+                                    <p>Would you like to discover more about how we could collaborate together?</p>
+                                    <p>
+                                        Just plan a
+                                        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alex-barba-coaching/30min'});return false;">Free Virtual Coffee</a>
+                                        together when it works better for you, fill in the form or send me an email!
+                                    </p>
+
+                                    <br>
+                                    <p><b>Contact Information</b></p>
+                                    <p>
+                                        Alex Barba Coaching<br>
+                                        Pijlkruid 21<br>
+                                        1112PD Diemen<br>
+                                        The Netherlands<br>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <a href="mailto:alex@alexbarbacoaching.com" title="Alex Barba Coaching">alex@alexbarbacoaching.com</a>
+                                    </p>
+                                    <p>
+                                        <a href="tel:+31683098340">+31 683 098 340</a>
+                                    </p>
+
+                                </div><!-- /End Block content -->
+
+                            </div><!--/End Block body -->
+
+                        </div><!-- /End Block container -->
+                    </div><!-- /End Text block -->
+
+                </div><!-- /End col-md-6 -->
+
+
+                <!-- col-md-6 -->
+                <div class="col-md-6">
+
+
+                    <!-- Contact form -->
+                    <div class="gfort-form-block gfort-form-block-validation gfort-form-block-contact" data-gfort-contact-form-redirect-url="/thank-you">
+                        <!-- Form container -->
+                        <div class="gfort-form-block-container">
+                            <!-- Form -->
+                            {{ form_start(form, {'attr': {'novalidate': 'novalidate', 'margin': 0, 'padding': 0} } ) }}
+                                {% if error is not empty %}
+                                    <div class="form-warning-panel font-color-alert">
+                                        {{ error }}
+                                    </div>
+                                {% endif %}
+
+                                <!-- Name -->
+                                <div class="col-lg-12">
+                                    <label class="gfort-label">
+                                        Your Name <span class="red-color">*</span>
+                                        {{ form_widget(form.name, { 'attr': {'class' : 'gfort-form-control' } }) }}
+                                        {{ form_errors(form.name, { 'attr': {'class' : 'error'} }) }}
+                                    </label>
+                                </div><!-- /End Name -->
+
+
+                                <!-- Email address -->
+                                <div class="col-lg-12">
+                                    <label class="gfort-label">
+                                        Your Email <span class="red-color">*</span>
+                                        {{ form_widget(form.email, { 'attr': {'class' : 'gfort-form-control' } }) }}
+                                        {{ form_errors(form.email, { 'attr': {'class' : 'error'} }) }}
+                                    </label>
+                                </div><!-- /End Email address -->
+
+
+                                <!-- Message -->
+                                <div class="col-lg-12">
+                                    <label class="gfort-label">
+                                        Message <span class="red-color">*</span>
+                                        {{ form_widget(form.message, { 'attr': {'class' : 'gfort-form-control', 'rows' : '8' } }) }}
+                                        {{ form_errors(form.message, { 'attr': {'class' : 'error'} }) }}
+                                    </label>
+                                </div><!-- /End Message -->
+
+
+                                <!-- reCaptcha -->
+    {#                            <input class="g-recaptcha-response" type="hidden" name="g-recaptcha-response">#}
+
+
+                                <!-- Submit button -->
+                                <div class="col-lg-12 gfort-text-center">
+                                    {{ form_widget(form.submit, { 'label': 'Send', 'attr': {'class' : 'gfort-btn gfort-btn-primary gfort-btn-block gfort-btn-width-auto-lg gfort-btn-round' } }) }}
+                                </div><!-- /End Submit button -->
+
+                            {{ form_end(form) }}
+                        </div><!-- /End Form container -->
+                    </div><!-- /End Contact form -->
+
+
+                </div><!-- /End col-lg-6 -->
+
+
+            </div><!-- /End row -->
+        </div><!-- /End container -->
+    </div><!-- /End Section -->
+
+    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <!-- Calendly link widget end -->
+{% endblock %}

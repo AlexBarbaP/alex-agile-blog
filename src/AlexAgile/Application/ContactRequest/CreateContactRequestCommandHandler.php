@@ -26,9 +26,8 @@ class CreateContactRequestCommandHandler
         $email = Email::create($command->email());
         $message = Message::create($command->message());
         $name = Name::create($command->name());
-        $phone = Phone::create($command->phone());
 
-        $contactRequest = new ContactRequest($email, $message, $name, $phone);
+        $contactRequest = new ContactRequest($email, $message, $name);
 
         $this->createContactRequestService->execute([
             CreateContactRequestService::CONTACT_REQUEST_KEY => $contactRequest
