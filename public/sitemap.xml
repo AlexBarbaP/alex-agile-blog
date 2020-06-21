@@ -2,46 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://www.alexbarbacoaching.com/</loc>
-        <lastmod>2020-05-01</lastmod>
+        <lastmod>2020-06-21</lastmod>
     </url>
+
     <url>
-        <loc>http://www.alexbarbacoaching.com/page/one-on-one-coaching</loc>
-        <lastmod>2020-05-01</lastmod>
-    </url>
-    <url>
-        <loc>http://www.alexbarbacoaching.com/post/you</loc>
-        <lastmod>2020-05-01</lastmod>
-    </url>
-    <url>
-        <loc>http://www.alexbarbacoaching.com/post/me</loc>
-        <lastmod>2020-05-01</lastmod>
-    </url>
-    <url>
-        <loc>http://www.alexbarbacoaching.com/post/us</loc>
-        <lastmod>2020-05-01</lastmod>
-    </url>
-    <url>
-        <loc>http://www.alexbarbacoaching.com/page/business-coaching</loc>
-        <lastmod>2020-05-01</lastmod>
-    </url>
-    <url>
-        <loc>http://www.alexbarbacoaching.com/post/executive-coaching</loc>
-        <lastmod>2020-05-01</lastmod>
-    </url>
-    <url>
-        <loc>http://www.alexbarbacoaching.com/post/exponential-team-building</loc>
-        <lastmod>2020-05-01</lastmod>
-    </url>
-    <url>
-        <loc>http://www.alexbarbacoaching.com/page/group-coaching</loc>
-        <lastmod>2020-05-01</lastmod>
-    </url>
-    <url>
-        <loc>http://www.alexbarbacoaching.com/page/testimonials</loc>
-        <lastmod>2020-05-01</lastmod>
+        <loc>http://www.alexbarbacoaching.com/about</loc>
+        <lastmod>2020-06-21</lastmod>
     </url>
     <url>
         <loc>http://www.alexbarbacoaching.com/contact</loc>
-        <lastmod>2020-05-01</lastmod>
+        <lastmod>2020-06-21</lastmod>
     </url>
 </urlset>
