@@ -106,3 +106,13 @@
 ##### 10. Run the webapp:
 
 Load [http://localhost](http://localhost) on your browser
+
+##### 11. Generate Certbot Certificates:
+
+Execute this command on the server, not inside the containers:
+
+    certbot certonly --webroot -w /var/www/alex-agile-blog/public -d www.alexbarbacoaching.com -w /var/www/alex-agile-blog/public -d alexbarbacoaching.com -w /var/www/alex-agile-blog/public -d expanding-leadership.alexbarbacoaching.com
+
+##### 11. Renew Certbot Certificates:
+
+    certbot renew
