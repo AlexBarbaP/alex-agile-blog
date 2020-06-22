@@ -7,8 +7,6 @@ services:
         - APP_DOC_ROOT=/var/www/public
         - APP_ENV=dev #dev|ci|prod
         - APP_NAME=alexagile
-        - CERT_PATH=/path/to/fullchain.pem
-        - CERT_KEY_PATH=/path/to/privkey.pem
     environment:
       - APP_DOMAIN=alexagile.local
       - PHP_PROXY_ALIAS=php
