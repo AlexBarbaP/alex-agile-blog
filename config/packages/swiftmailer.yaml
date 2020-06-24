@@ -1,12 +1,8 @@
 swiftmailer:
-#  url: '%env(MAILER_URL)%'
-  transport:        gmail
-  username:         alex@alexbarbacoaching.com
-  password:         25ewb%AF39
-  host:             localhost
-  port:             465
-  encryption:       ssl
-  auth-mode:        login
+  url: '%env(MAILER_URL)%'
+  port: 465
+  encryption: ssl
+  auth-mode: login
   spool: { type: 'memory' }
   stream_options:
     ssl:
