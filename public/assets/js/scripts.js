@@ -15,7 +15,7 @@
         instagramUserID = 'Instagram user id',
         instagramAccessToken = 'Instagram access token',
         mailchimpFormURL = 'Mailchimp form URL',
-        reCaptchaSitekey = 'reCaptcha sitekey',
+        reCaptchaSitekey = '6LfoaqkZAAAAAEiNWO4XzZG1dfJ6EBv9d0QeSwPf',
         gmapAPIKey = 'Google map API key',
         currentPageFileName,
         isMobile,

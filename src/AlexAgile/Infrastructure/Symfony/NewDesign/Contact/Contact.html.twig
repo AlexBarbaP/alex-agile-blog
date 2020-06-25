@@ -137,10 +137,11 @@
 
 
                                 <!-- reCaptcha -->
-    {#                            <input class="g-recaptcha-response" type="hidden" name="g-recaptcha-response">#}
+                                <input class="g-recaptcha-response" type="hidden" name="g-recaptcha-response">
+                                <div class="g-recaptcha" data-sitekey="{{ google_recaptcha_site_key }}"></div>
 
 
-                                <!-- Submit button -->
+                            <!-- Submit button -->
                                 <div class="col-lg-12 gfort-text-center">
                                     {{ form_widget(form.submit, { 'label': 'Send', 'attr': {'class' : 'gfort-btn gfort-btn-primary gfort-btn-block gfort-btn-width-auto-lg gfort-btn-round' } }) }}
                                 </div><!-- /End Submit button -->
