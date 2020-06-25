@@ -15,7 +15,7 @@
         instagramUserID = 'Instagram user id',
         instagramAccessToken = 'Instagram access token',
         mailchimpFormURL = 'Mailchimp form URL',
-        reCaptchaSitekey = 'reCaptcha sitekey',
+        reCaptchaSitekey = '',
         gmapAPIKey = 'Google map API key',
         currentPageFileName,
         isMobile,
@@ -1480,18 +1480,18 @@
 
             var recaptchaID = $(recaptcha).attr('id');
 
-            $.ajax({
-                type: 'GET',
-                url: 'https://www.google.com/recaptcha/api.js?render=' + reCaptchaSitekey,
-                dataType: 'script',
-                cache: true
-            }).done(function () {
-                grecaptcha.ready(function () {
-                    grecaptcha.execute(reCaptchaSitekey, {action: 'homepage'}).then(function (token) {
-                        document.getElementById(recaptchaID).value = token;
-                    });
-                });
-            });
+            // $.ajax({
+            //     type: 'GET',
+            //     url: 'https://www.google.com/recaptcha/api.js?render=' + reCaptchaSitekey,
+            //     dataType: 'script',
+            //     cache: true
+            // }).done(function () {
+            //     grecaptcha.ready(function () {
+            //         grecaptcha.execute(reCaptchaSitekey, {action: 'homepage'}).then(function (token) {
+            //             document.getElementById(recaptchaID).value = token;
+            //         });
+            //     });
+            // });
 
         }
     };
@@ -1653,9 +1653,9 @@
 
                                 /* reCaptcha
                                 ------------------------------------------------- */
-                                if (form.find('.g-recaptcha-response').length) {
-                                    GRAPHICFORT.reCaptchafn.init($('#' + form.find('.g-recaptcha-response').attr('id')));
-                                }
+                                // if (form.find('.g-recaptcha-response').length) {
+                                //     GRAPHICFORT.reCaptchafn.init($('#' + form.find('.g-recaptcha-response').attr('id')));
+                                // }
 
                                 button.removeClass('show-spinner').removeAttr('disabled');
 
@@ -2804,12 +2804,12 @@
             }
 
             // reCaptcha
-            if ($('.g-recaptcha-response').length) {
-                $('.g-recaptcha-response').each(function (index) {
-                    $(this).attr('id', $(this).attr('class') + '-' + index);
-                    GRAPHICFORT.reCaptchafn.init($(this));
-                });
-            }
+            // if ($('.g-recaptcha-response').length) {
+            //     $('.g-recaptcha-response').each(function (index) {
+            //         $(this).attr('id', $(this).attr('class') + '-' + index);
+            //         GRAPHICFORT.reCaptchafn.init($(this));
+            //     });
+            // }
 
             // Form
             // Validation

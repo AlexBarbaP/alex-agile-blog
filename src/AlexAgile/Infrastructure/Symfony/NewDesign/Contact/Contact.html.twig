@@ -99,7 +99,7 @@
                         <!-- Form container -->
                         <div class="gfort-form-block-container">
                             <!-- Form -->
-                            {{ form_start(form, {'attr': {'novalidate': 'novalidate', 'margin': 0, 'padding': 0} } ) }}
+                            {{ form_start(form, {'attr': {'novalidate' : 'novalidate', 'margin': 0, 'padding': 0} } ) }}
                                 {% if error is not empty %}
                                     <div class="form-warning-panel font-color-alert">
                                         {{ error }}
@@ -137,8 +137,9 @@
 
 
                                 <!-- reCaptcha -->
-    {#                            <input class="g-recaptcha-response" type="hidden" name="g-recaptcha-response">#}
-
+                                <div style="padding: 0 0 20px 10px;">
+                                    <div class="g-recaptcha" data-sitekey="{{ google_recaptcha_site_key }}"></div>
+                                </div>
 
                                 <!-- Submit button -->
                                 <div class="col-lg-12 gfort-text-center">
@@ -161,4 +162,7 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
     <!-- Calendly link widget end -->
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endblock %}
