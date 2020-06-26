@@ -45,8 +45,7 @@ class LandingController extends AbstractController
                     $createContactRequestCommand = new CreateContactRequestCommand(
                         $formData['email'] ?: '',
                         $formData['message'] ?: '',
-                        $formData['name'] ?: '',
-                        $formData['phone'] ?: ''
+                        $formData['name'] ?: ''
                     );
                     $this->commandBus->handle($createContactRequestCommand);
                 } catch (\Throwable $t) {
