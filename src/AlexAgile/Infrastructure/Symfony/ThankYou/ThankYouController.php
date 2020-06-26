@@ -1,17 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace AlexAgile\Infrastructure\Symfony\Homepage;
+namespace AlexAgile\Infrastructure\Symfony\ThankYou;
 
-use AlexAgile\Domain\Post\GetHomepagePostsCommand;
-use AlexAgile\Domain\Post\Post;
+use AlexAgile\Infrastructure\Symfony\Home\HomeController;
 use League\Tactician\CommandBus;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomepageController extends AbstractController
+class ThankYouController extends AbstractController
 {
     /**
      * @var CommandBus
@@ -27,18 +26,14 @@ class HomepageController extends AbstractController
     }
 
     /**
-     * @Route("/home", methods={"GET", "POST"}, name="home")
-     * @Template("Homepage/Homepage.html.twig")
+     * @Route("/thank-you", methods={"GET", "POST"}, name="thank-you")
+     * @Template("ThankYou/ThankYou.html.twig")
      */
-    public function __invoke(Request $request): array
+    public function __invoke(Request $request)
     {
-        $getHomepagePostsCommand = new GetHomepagePostsCommand();
-
-        /** @var Post[] $post */
-        $postsArray = $this->commandBus->handle($getHomepagePostsCommand);
-
         return [
-            'posts' => $postsArray,
+            'homelink' => $this->generateUrl(HomeController::HOMEPAGE_ROUTE_NAME),
+            'error' => '',
         ];
     }
 }

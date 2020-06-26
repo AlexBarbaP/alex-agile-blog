@@ -1,0 +1,13 @@
+{% extends 'Layout/Layout.html.twig' %}
+
+{% block header %}
+    {{ include('Layout/Header-non-transparent.html.twig') }}
+{% endblock %}
+
+{% block body %}
+
+    {{ include('About/Hero.html.twig') }}
+
+    {{ include('About/Story.html.twig') }}
+
+{% endblock %}

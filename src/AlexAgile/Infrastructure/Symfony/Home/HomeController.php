@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AlexAgile\Infrastructure\Symfony\NewDesign\Home;
+namespace AlexAgile\Infrastructure\Symfony\Home;
 
 use League\Tactician\CommandBus;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -28,7 +28,7 @@ class HomeController extends AbstractController
 
     /**
      * @Route("/", methods={"GET", "POST"}, name="home")
-     * @Template("NewDesign/Home/Home.html.twig")
+     * @Template("Home/Home.html.twig")
      */
     public function __invoke(Request $request): array
     {
