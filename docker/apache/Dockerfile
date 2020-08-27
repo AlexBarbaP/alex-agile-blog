@@ -15,11 +15,8 @@ RUN mkdir -p ${APP_DOC_ROOT} \
     && chmod 0777 ${APP_DOC_ROOT}
 
 # Config apache
-COPY ./docker/apache/${APP_ENV}/certs/cert.pem /usr/local/apache2/conf/fullchain.pem
-COPY ./docker/apache/${APP_ENV}/certs/key.pem /usr/local/apache2/conf/privkey.pem
-COPY ./docker/apache/${APP_ENV}/conf/apache2.conf /usr/local/apache2/conf/httpd.conf
+COPY ./docker/apache/${APP_ENV}/conf/httpd.conf /usr/local/apache2/conf/httpd.conf
 COPY ./docker/apache/${APP_ENV}/conf/httpd-ssl.conf /usr/local/apache2/conf/extra/httpd-ssl.conf
-
 COPY ./docker/apache/${APP_ENV}/conf/httpd-vhosts.conf /usr/local/apache2/conf/extra/httpd-vhosts.conf
 
 COPY . ${APP_DOC_ROOT}

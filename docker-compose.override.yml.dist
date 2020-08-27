@@ -14,9 +14,10 @@ services:
       - APACHE_SERVERNAME=alexagile-server
       - APACHE_SERVER_ADMIN=info@example.com
     ports:
-      - 80:80
-      - 443:443
-      - 9998:80
+      - 9980:80
+      - 9443:443
+    volumes:  #dev|ci|prod
+      - ./docker/apache/dev/conf/cert:/usr/local/apache2/conf/cert/
   mysql:
     environment:
       - MYSQL_ROOT_PASSWORD=root-passwd
