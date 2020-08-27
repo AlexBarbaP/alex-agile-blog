@@ -15,6 +15,8 @@
         "ext-iconv": "*",
         "doctrine/orm": "^2.6",
         "google/recaptcha": "^1.2",
+        "laminas/laminas-code": "^3.4",
+        "laminas/laminas-eventmanager": "^3.2",
         "league/event": "^2.2",
         "league/tactician": "^1.0",
         "ramsey/uuid": "^3.8",
