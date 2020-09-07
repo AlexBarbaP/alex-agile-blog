@@ -77,13 +77,10 @@
     },
     "scripts": {
         "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "doctrine:schema:update --force": "symfony-cmd"
+            "cache:clear": "symfony-cmd"
         },
         "post-install-cmd": [
-            "@auto-scripts",
-            "yarn install"
+            "@auto-scripts"
         ],
         "post-update-cmd": [
             "@auto-scripts"
